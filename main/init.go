@@ -139,13 +139,13 @@ func InitCmdb() (err error) {
 	if err != nil {
 		panic(fmt.Sprintf("init logs level failed, err:%v", err))
 	}
+	
 	err = initDb()
 	if err != nil {
 		logs.Warn("init DB failed, err:%v", err)
 		return
 	}
 	
-
 	err = initRedis()
 	if err != nil {
 		logs.Warn("init redis failed, err:%v", err)

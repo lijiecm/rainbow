@@ -6,8 +6,6 @@ import (
 	 "fmt"
 )
 
-
-
 func main(){
 
 	err := InitConfig()
