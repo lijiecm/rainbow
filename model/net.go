@@ -103,3 +103,14 @@ func (p *NetIpInfoModel)UpdateIpStatus(addr string)(updateNum int, err error){
 	return
 }
 
+
+func (p *NetWorkModel)GetAllIp()(list []Ip, err error){
+	
+	sql := "select id, addr, ip_type, use_type, host_id, network_id, status from ip"
+	err = Db.Select(&list, sql)
+	if err != nil {
+		logs.Warn("select ip from mysql failed, err:%v sql:%v", err, sql)
+		return
+	}
+	return
+}

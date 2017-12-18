@@ -1198,3 +1198,19 @@ created by net/http.(*Server).Serve
 2017/12/18 14:15:00 [D] [asm_amd64.s:514] enter assetlist controller
 2017/12/18 14:15:00 [I] [asm_amd64.s:514] [0xc04207af20 0xc04207afd0 0xc04207b080 0xc04207b130 0xc04207b1e0 0xc04207b290 0xc04207b340 0xc04207b3f0 0xc04207b4a0]
 2017/12/18 14:15:02 [D] [asm_amd64.s:514] enter confmanage controller
+2017/12/18 15:39:52 [D] [init.go:143] connect to mysql succ
+2017/12/18 15:39:53 [E] [init.go:149] ping redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/18 15:39:53 [W] [main.go:15] init redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/18 15:41:27 [D] [init.go:143] connect to mysql succ
+2017/12/18 15:41:31 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/18 15:41:37 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 15:41:38 [W] [net.go:67] select ip from mysql failed, err:missing destination name iptype in *[]model.Ip sql:select id, addr, iptype, use_type, host_id, network_id, status from ip
+2017/12/18 15:41:38 [W] [asm_amd64.s:514] get ip list failed, err:获取Ip列表失败
+2017/12/18 15:46:44 [D] [init.go:143] connect to mysql succ
+2017/12/18 15:46:50 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/18 15:46:55 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 15:47:13 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 15:47:14 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 15:47:41 [D] [init.go:143] connect to mysql succ
+2017/12/18 15:47:45 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/18 15:47:46 [D] [asm_amd64.s:514] enter net manage controller

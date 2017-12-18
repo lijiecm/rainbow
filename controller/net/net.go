@@ -54,13 +54,31 @@ func (p *NetController) Network(){
 
 func (p *NetController) Ip(){
 	
-		logs.Debug("enter ip manage controller")
-		p.Layout = "layout/layout.html"  
-		m := make(map[string]interface{})
-		m["code"] = 200
-		m["message"] = "success"
-		m["type"] = "ipmanage"
+	logs.Debug("enter net manage controller")
+	p.Layout = "layout/layout.html"  
+	p.TplName = "net/ip.html"
+
+	errorMsg := "success"
+
+
 	
-		p.Data["ipmanage"] = m
-		p.TplName = "net/ip.html"
+
+	netWorkModel := model.NewNetWorkModel()
+	ipList, err := netWorkModel.GetAllIp()
+	if err != nil {
+		err =  fmt.Errorf("获取Ip列表失败")
+		errorMsg =  err.Error()
+		logs.Warn("get ip list failed, err:%v", err)
+		
+		return
+	}
+
+	defer func(){
+		if err != nil {
+			p.Data["error"] = errorMsg
+			p.TplName = "layout/error.html"
+		}
+	}()
+
+	p.Data["ip_list"] = ipList
 	}

@@ -81,7 +81,7 @@ CREATE TABLE `network` (
 CREATE TABLE `ip` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `addr` varchar(64) NOT NULL,
-  `iptype` varchar(64) NOT NULL,
+  `ip_type` varchar(64) NOT NULL,
   `use_type` varchar(64) NOT NULL,
   `host_id` int(11) DEFAULT '0',
   `network_id` int(11) DEFAULT '0',
