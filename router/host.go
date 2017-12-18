@@ -1,7 +1,7 @@
 package router
 import (
 	"github.com/astaxie/beego"
-	"zuoye/cmdb/controller/host"
+	"rainbow/controller/host"
 )
 func init(){
 	beego.Router("/host/host", &host.HostController{}, "*:Host")

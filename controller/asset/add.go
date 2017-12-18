@@ -3,7 +3,7 @@ package asset
 
 import (
 	"github.com/astaxie/beego/logs"
-	"zuoye/cmdb/model"
+	"rainbow/model"
 	"fmt"
 	//"net/http"
 )

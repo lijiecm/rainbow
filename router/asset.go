@@ -1,7 +1,7 @@
 package router
 import (
 	"github.com/astaxie/beego"
-	"zuoye/cmdb/controller/asset"
+	"rainbow/controller/asset"
 )
 func init(){
 	beego.Router("/", &asset.AssetController{}, "*:Asset")

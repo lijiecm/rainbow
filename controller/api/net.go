@@ -5,7 +5,7 @@ import (
 	"sync"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"zuoye/cmdb/model"
+	"rainbow/model"
 	"fmt"
 	"math/rand"
 	//"zuoye/cmdb/tools"

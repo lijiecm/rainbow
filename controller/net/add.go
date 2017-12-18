@@ -3,8 +3,8 @@ package net
 import (
 	"fmt"
 	"github.com/astaxie/beego/logs"
-	"zuoye/cmdb/model"
-	"zuoye/cmdb/tools"
+	"rainbow/model"
+	"rainbow/tools"
 )
 
 func (p *NetController) AddNetwork(){

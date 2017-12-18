@@ -1,7 +1,7 @@
 package router
 import (
 	"github.com/astaxie/beego"
-	"zuoye/cmdb/controller/net"
+	"rainbow/controller/net"
 )
 func init(){
 	beego.Router("/net/network", &net.NetController{}, "*:Network")   

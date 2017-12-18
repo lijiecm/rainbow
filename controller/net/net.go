@@ -3,7 +3,7 @@ package net
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"zuoye/cmdb/model"
+	"rainbow/model"
 	"fmt"
 )
 

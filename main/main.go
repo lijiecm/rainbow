@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	 _ "zuoye/cmdb/router"   //一定要导入这个，否则无法加载init模块
+	 _ "rainbow/router"   //一定要导入这个，否则无法加载init模块
 	 "fmt"
 )
 

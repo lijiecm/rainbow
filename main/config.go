@@ -4,7 +4,7 @@ import (
 	//"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego"
 	"fmt"
-	"zuoye/cmdb/controller/api"
+	"rainbow/controller/api"
 	//"github.com/garyburd/redigo/redis"
 )
 

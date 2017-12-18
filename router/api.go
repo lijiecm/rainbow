@@ -1,7 +1,7 @@
 package router
 import (
 	"github.com/astaxie/beego"
-	"zuoye/cmdb/controller/api"
+	"rainbow/controller/api"
 )
 func init(){
 	beego.Router("/api/getHostInfoBySn", &api.ApiHostController{}, "*:GetHostInfo")

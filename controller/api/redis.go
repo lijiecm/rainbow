@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"github.com/garyburd/redigo/redis"
 	"github.com/astaxie/beego/logs"
-	"zuoye/cmdb/tools"
+	"rainbow/tools"
 )
  
 func HostInfoByHostId(Id string)(hostInfo map[string]string, err error){

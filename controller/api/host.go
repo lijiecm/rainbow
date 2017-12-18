@@ -2,10 +2,7 @@ package api
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	//"zuoye/cmdb/model"
 	"fmt"
-	//"zuoye/cmdb/tools"
-	//"github.com/garyburd/redigo/redis"
 
 )
 

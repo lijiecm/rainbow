@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"github.com/jmoiron/sqlx"
 	"fmt"
-	"zuoye/cmdb/model"
-	"zuoye/cmdb/tools"
+	"rainbow/model"
+	"rainbow/tools"
 	"github.com/garyburd/redigo/redis"
 	"time"
 )
