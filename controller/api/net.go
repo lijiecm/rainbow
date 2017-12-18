@@ -144,15 +144,6 @@ func (p *ApiNetController) GetIpAddr(){
 	}
 	*/
 
-	defer func(){
-		if err != nil {
-			netIpInfo.Count -= 1
-			result["success"] = "false"
-			result["message"] = err
-			p.Data["json"] =  result
-			p.ServeJSON()  
-		}
-	}()
 	netIpInfo.Count -= 1
 	result["message"] = ip
 	p.Data["json"] =  result
