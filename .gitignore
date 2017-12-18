@@ -1,0 +1,7 @@
+.idea
+.idea*
+.idea/*
+*.log
+*.swp
+*.tmp
+conf/app.conf

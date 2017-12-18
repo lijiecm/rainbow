@@ -8,7 +8,6 @@ import (
 	"rainbow/model"
 	"fmt"
 	"math/rand"
-	//"zuoye/cmdb/tools"
 )
 type ApiNetController struct {
 	beego.Controller  

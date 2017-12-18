@@ -36,7 +36,7 @@ func (p *NetController) AddNetwork(){
 		err = fmt.Errorf("机房ID获取失败，err:%v", err)
 		errorMsg = "机房ID获取失败，err" 
 		logs.Warn(err.Error())
-			return
+		return
 	}
 
 	net_env := p.GetString("net_env")
