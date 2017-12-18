@@ -1,0 +1,199 @@
+<script src="/static/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/static/js/host.js"></script>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN STYLE CUSTOMIZER -->
+        <div class="color-panel hidden-phone">
+            <div class="color-mode-icons icon-color"></div>
+            <div class="color-mode-icons icon-color-close"></div>
+            <div class="color-mode">
+                <p>THEME COLOR</p>
+                <ul class="inline">
+                    <li class="color-black current color-default" data-style="default"></li>
+                    <li class="color-blue" data-style="blue"></li>
+                    <li class="color-brown" data-style="brown"></li>
+                    <li class="color-purple" data-style="purple"></li>
+                    <li class="color-grey" data-style="grey"></li>
+                    <li class="color-white color-light" data-style="light"></li>
+                </ul>
+                <label>
+                    <span>Layout</span>
+                    <select class="layout-option m-wrap small">
+                        <option value="fluid" selected>Fluid</option>
+                        <option value="boxed">Boxed</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Header</span>
+                    <select class="header-option m-wrap small">
+                        <option value="fixed" selected>Fixed</option>
+                        <option value="default">Default</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Sidebar</span>
+                    <select class="sidebar-option m-wrap small">
+                        <option value="fixed">Fixed</option>
+                        <option value="default" selected>Default</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Footer</span>
+                    <select class="footer-option m-wrap small">
+                        <option value="fixed">Fixed</option>
+                        <option value="default" selected>Default</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <!-- END BEGIN STYLE CUSTOMIZER --> 
+
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            主机管理
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index">首页</a> 
+                <i class="icon-angle-right"></i>
+            </li>
+            <li>
+                <a href="#">主机</a>
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a href="/host/host">主机管理</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN SAMPLE TABLE PORTLET-->
+<div class="portlet box red">     
+    <div class="portlet-title">
+        <div class="caption"><i class="icon-cogs"></i>IDC列表</div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"></a>
+            <a href="#add_host" data-toggle="modal" class="config"></a>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>主机id</th>
+                    <th>应用名</th>
+                    <th>机器类型</th>
+                    <th class="hidden-480">IP</th>
+                    <th>管理IP</th>
+                    <th>环境</th>
+                    <th>资产ID</th>
+                    <th>主机名</th>
+                    <th>操作系统</th>
+                    <th>管理员</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .host_list}}
+                <tr>
+                    <td>{{.HostId}}</td>
+                    <td>{{.AppName}}</td>
+                    <td>{{.MechineType}}</td>
+                    <td class="hidden-480">{{.IP}}</td>
+                    <td>{{.OobIp}}</td>
+                    <td>{{.Env}}</td>
+                    <td>{{.AssetId}}</td>
+                    <td>{{.HostName}}</td>
+                    <td>{{.OsId}}</td>
+                    <td>{{.Owner}}</td>
+                    <td>{{.Status}}</td>
+                </tr>
+                {{end}}
+            </tbody> 
+        </table>
+    </div>
+</div>
+
+<!-- END SAMPLE TABLE PORTLET-->
+
+<div id="add_host" class="modal hide">
+        <div class="modal-header">
+            <button data-dismiss="modal" class="close" type="button"></button>
+            <h3>新增主机</h3>
+        </div>
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label">应用名:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="app_name">
+                </div>
+            </div>
+      
+            <div class="control-group">
+                <label class="control-label">IP:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="host_ip">
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <label class="control-label">管理IP:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="host_oobip">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">环境:<span class="required">*</span></label>
+                <div class="controls">
+                    <select class="span6 m-wrap" id="host_env">
+                        <option value="pref">性能压测</option>
+                        <option value="dev">开发</option>
+                        <option value="test">测试</option>
+                        <option value="pre">预发</option>
+                        <option value="prod">线上</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">资产ID:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="asset_id">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">主机名:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="hostname">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">操作系统:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="os">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">管理员:<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" class="span6 m-wrap" id="owner">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">状态:<span class="required">*</span></label>
+                <div class="controls">
+                    <select class="span6 m-wrap" id="status">
+                        <option value="buffer">buffer</option>
+                        <option value="offline">offline</option>
+                        <option value="online">online</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-default" id="add_host_button">添加</button>
+        </div>
+    </div>
+    
