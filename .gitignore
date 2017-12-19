@@ -4,4 +4,4 @@
 *.log
 *.swp
 *.tmp
-conf/app.conf
+./conf/app.conf

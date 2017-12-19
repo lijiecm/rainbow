@@ -24,6 +24,17 @@ func (p *AssetModel)GetIdcList()(list []*Idc, err error){
 	return
 }
 
+func (p *AssetModel)DelIdc(idcId int)(err error){
+	sql := "delete from idc where id=?"
+	_, err = Db.Exec(sql, idcId)
+	if err != nil {
+		fmt.Println("del idc failed, err:%v", err)
+		return
+	}
+
+	return
+}
+
 func (p *AssetModel)GetAssetList()(list []*Asset, err error){
 	sql := "select id, idc_id, asset_type, model, conf_id, sn, service_code, rack_name, location, bios_version, power_state, site, network_id, contract_id from asset"
 	err = Db.Select(&list, sql)

@@ -1214,3 +1214,107 @@ created by net/http.(*Server).Serve
 2017/12/18 15:47:41 [D] [init.go:143] connect to mysql succ
 2017/12/18 15:47:45 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
 2017/12/18 15:47:46 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 15:49:23 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 16:51:44 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/18 16:57:50 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/19 09:59:30 [D] [init.go:143] connect to mysql succ
+2017/12/19 09:59:34 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 09:59:37 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/19 09:59:37 [I] [asm_amd64.s:514] [0xc0422e4000 0xc0422e40b0 0xc0422e4160 0xc0422e4210 0xc0422e42c0 0xc0422e4370 0xc0422e4420 0xc0422e44d0 0xc0422e4580]
+2017/12/19 10:01:12 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/19 10:01:12 [I] [asm_amd64.s:514] [0xc042428000 0xc0424280b0 0xc042428160 0xc042428210 0xc0424282c0 0xc042428370 0xc042428420 0xc0424284d0 0xc042428580]
+2017/12/19 10:01:14 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/19 10:01:14 [I] [asm_amd64.s:514] [0xc042428630 0xc0424286e0 0xc042428790 0xc042428840 0xc0424288f0 0xc0424289a0 0xc042428a50 0xc042428b00 0xc042428bb0]
+2017/12/19 10:01:16 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:08 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:09 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:11 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:40 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:41 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:04:42 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:11:25 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:11:52 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:16:03 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:17:06 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:17:09 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:17:15 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:17:52 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:17:55 [D] [init.go:143] connect to mysql succ
+2017/12/19 10:17:59 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 10:18:08 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:18:32 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:19:17 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:19:32 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:37:30 [D] [init.go:143] connect to mysql succ
+2017/12/19 10:37:33 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 10:37:35 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:37:51 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:39:07 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:39:17 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:40:45 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:40:52 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:42:20 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:43:06 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:43:28 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:44:24 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:46:42 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:46:52 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:47:08 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:47:16 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:47:22 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:47:34 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:47:45 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:48:47 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:50:14 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:51:38 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:51:58 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:52:49 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:53:02 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:53:16 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 10:56:51 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:00:26 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:01:03 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:01:20 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:01:41 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:02:03 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:02:46 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:03:08 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:03:33 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:05:15 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:05:45 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:12:33 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:15:01 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:19:16 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:19:41 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:20:01 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:21:04 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 11:24:22 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:13:41 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:13:55 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:14:08 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:14:12 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:14:18 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 12:14:21 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:20:59 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:26:47 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:26:54 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:27:18 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:28:01 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:28:26 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:28:52 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:34:21 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:34:32 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:45:45 [D] [init.go:143] connect to mysql succ
+2017/12/19 13:45:49 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 13:47:32 [D] [init.go:143] connect to mysql succ
+2017/12/19 13:47:43 [D] [init.go:143] connect to mysql succ
+2017/12/19 13:47:46 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 13:47:46 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:48:46 [D] [init.go:143] connect to mysql succ
+2017/12/19 13:48:50 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 13:49:00 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:49:03 [W] [asm_amd64.s:514] get idc id failed, err:删除机房失败
+2017/12/19 13:50:37 [D] [init.go:143] connect to mysql succ
+2017/12/19 13:50:38 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 13:50:39 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 13:50:42 [D] [asm_amd64.s:514] enter idclist controller

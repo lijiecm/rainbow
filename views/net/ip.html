@@ -1,5 +1,5 @@
 <script src="/static/js/jquery-1.10.1.min.js" type="text/javascript"></script>
-<script src="/static/js/net.js"></script>
+<script src="/static/cmdb/net.js"></script>
 
 <!-- BEGIN PAGE HEADER-->
 <div class="row-fluid">
@@ -96,7 +96,7 @@
             </thead>
             <tbody>
                 {{range .ip_list}}
-                <tr>
+                <tr id="pageLimit">
                     <td>{{.IpId}}</td>
                     <td>{{.Addr}}</td>
                     <td class="hidden-480">{{.IpType}}</td>
