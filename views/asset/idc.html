@@ -109,8 +109,8 @@
                     <td>{{.RoomNum}}</td>
                     <td>{{.MechineCount}}</td>
                     <td>
-                        <button type="button" class="btn btn-success" id="show_chanage_idc_button">修改</button>
-                        <button type="button" class="btn btn-warning" id="del_idc">删除</button>             
+                        <button type="button" class="btn btn-success show_chanage_idc">修改</button>
+                        <button type="button" class="btn btn-warning show_del_idc" id="del_idc">删除</button>             
                     </td>
                 </tr>
                 {{end}}
@@ -121,10 +121,10 @@
 
 <!-- END SAMPLE TABLE PORTLET-->
 
-<div id="chanage_idc_modal" class="modal hide">
+<div id="add_idc" class="modal hide">
     <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>更改机房信息</h3>
+        <h3>添加机房</h3>
     </div>
     <div class="modal-body">
         <div class="control-group">
@@ -165,7 +165,62 @@
                 <input type="text" class="span6 m-wrap" id="idc_count">
             </div>
             </div>
-        <button class="btn btn-default" id="update_idc_button">更新</button>
+        <button class="btn btn-default" id="add_idc_button">添加</button>
     </div>
 </div>
     
+
+
+<div id="change_idc_modal" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>更新机房</h3>
+    </div>
+    <div class="modal-body" id="get_idc_info">
+        <div class="control-group">
+            <label class="control-label">Id:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">机房名称:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">机房标签:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_tag">
+            </div>
+        </div>
+    
+        <div class="control-group">
+            <label class="control-label">机房位置:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_location">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">楼层:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_floor">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">房间号:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_room">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">机器数量:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_idc_count">
+            </div>
+            </div>
+        <button class="btn btn-default" id="update_idc_button">更新</button>
+    </div>
+</div>

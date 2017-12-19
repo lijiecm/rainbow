@@ -24,16 +24,6 @@ func (p *AssetModel)GetIdcList()(list []*Idc, err error){
 	return
 }
 
-func (p *AssetModel)DelIdc(idcId int)(err error){
-	sql := "delete from idc where id=?"
-	_, err = Db.Exec(sql, idcId)
-	if err != nil {
-		fmt.Println("del idc failed, err:%v", err)
-		return
-	}
-
-	return
-}
 
 func (p *AssetModel)GetAssetList()(list []*Asset, err error){
 	sql := "select id, idc_id, asset_type, model, conf_id, sn, service_code, rack_name, location, bios_version, power_state, site, network_id, contract_id from asset"
@@ -146,6 +136,30 @@ func (p *AssetModel)CreateIdc(idc *Idc)(err error){
 	logs.Debug("insert asset idc  into database succ")
 	return
 }
+
+
+func (p *AssetModel)DelIdc(idcId int)(err error){
+	sql := "delete from idc where id=?"
+	_, err = Db.Exec(sql, idcId)
+	if err != nil {
+		fmt.Println("del idc failed, err:%v", err)
+		return
+	}
+
+	return
+}
+
+func (p *AssetModel)UpdateIdc(name,tag,location,floor,room_num string, mechine_count,idcId int)(err error){
+	sql := "update idc set name=?,tag=?,location=?,floor=?,room_num=?,mechine_count=? where id=?"
+	_, err = Db.Exec(sql, name,tag,location,floor,room_num, mechine_count,idcId)
+	if err != nil {
+		fmt.Println("update idc failed, err:%v", err)
+		return
+	}
+
+	return
+}
+
 
 
 func (p *AssetModel)CreateAssetConf(assetconf *AssetConf)(err error){

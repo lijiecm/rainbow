@@ -1318,3 +1318,61 @@ created by net/http.(*Server).Serve
 2017/12/19 13:50:38 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
 2017/12/19 13:50:39 [D] [asm_amd64.s:514] enter idclist controller
 2017/12/19 13:50:42 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 14:55:48 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 14:56:27 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 14:57:24 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 14:57:43 [D] [add.go:207] insert asset idc  into database succ
+2017/12/19 14:57:43 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 14:58:45 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:09:43 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:09:59 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:10:15 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:10:32 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:11:21 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:12:33 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:12:42 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:13:50 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:14:04 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:14:14 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:14:23 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:17:34 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:18:19 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:20:02 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:50:36 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:51:16 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 15:54:06 [D] [init.go:143] connect to mysql succ
+2017/12/19 15:54:07 [E] [init.go:149] ping redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/19 15:54:07 [W] [main.go:15] init redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/19 15:54:34 [D] [init.go:143] connect to mysql succ
+2017/12/19 15:54:49 [D] [init.go:143] connect to mysql succ
+2017/12/19 15:55:32 [D] [init.go:143] connect to mysql succ
+2017/12/19 16:00:43 [D] [init.go:143] connect to mysql succ
+2017/12/19 16:02:19 [D] [init.go:143] connect to mysql succ
+2017/12/19 16:02:19 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/19 16:02:24 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:03:48 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:04:05 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/19 16:04:08 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/19 16:15:47 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/19 16:15:49 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:15:54 [W] [asm_amd64.s:514] 机房名称不能未空
+2017/12/19 16:16:00 [W] [asm_amd64.s:514] 机房名称不能未空
+2017/12/19 16:17:01 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:17:05 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:20:44 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:22:31 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:24:01 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:24:04 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:26:51 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:28:53 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:29:42 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:29:50 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:36:09 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:36:27 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:37:43 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:37:54 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:48:43 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:49:15 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:50:18 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:50:19 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/19 16:51:08 [D] [asm_amd64.s:514] enter idclist controller
