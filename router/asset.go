@@ -7,6 +7,8 @@ func init(){
 	beego.Router("/", &asset.AssetController{}, "*:Asset")
 	beego.Router("/asset/asset", &asset.AssetController{}, "*:Asset")
 	beego.Router("/asset/addasset", &asset.AssetController{}, "*:AddAsset")
+	beego.Router("/asset/updateasset", &asset.AssetController{}, "*:UpdateAsset")
+	beego.Router("/asset/delasset", &asset.AssetController{}, "*:DelAsset")
 	beego.Router("/asset/idc", &asset.AssetController{}, "*:Idc")
 	beego.Router("/asset/addidc", &asset.AssetController{}, "*:AddIdc")
 	beego.Router("/asset/delidc", &asset.AssetController{}, "*:DelIdc")

@@ -93,6 +93,28 @@ func (p *AssetModel)CreateAsset(asset *Asset)(err error){
 }
 
 
+func (p *AssetModel) UpdateAsset(asset *Asset)(err error){
+	sql := "update asset set idc_id=?,asset_type=?,model=?,conf_id=?,sn=?,service_code=?, rack_name=?,location=?, bios_version=?, power_state=?, site=?, network_id=?, contract_id=? where id=?"
+	_, err = Db.Exec(sql, asset.IdcId,asset.AssetType,asset.Model,asset.ConfId,asset.SN,asset.ServiceCode,asset.RackName,
+	asset.Location,asset.BiosVer,asset.PowerState,asset.Site,asset.NetworkId,asset.ContractId,asset.AssetId)
+	if err != nil {
+		fmt.Println("update asset failed, err:%v", err)
+		return
+	}
+	return
+}
+
+func (p *AssetModel)DelAsset(assetId int)(err error){
+	sql := "delete from asset where id=?"
+	_, err = Db.Exec(sql, assetId)
+	if err != nil {
+		fmt.Println("del asset failed, err:%v", err)
+		return
+	}
+
+	return
+}
+
 func (p *AssetModel) IdcValid(idcId int)(valid bool ,err error){
 	sql := "select name from idc where id = ?"
 	var idctList []*Idc

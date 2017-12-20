@@ -1766,3 +1766,89 @@ created by net/http.(*Server).Serve
 2017/12/19 21:32:03 [D] [asm_amd64.s:514] {5 10 102 1017 false false [{44 192.168.4.41 oobip  0 10 0} {45 192.168.4.42 oobip  0 10 0} {46 192.168.4.43 oobip  0 10 0} {47 192.168.4.44 oobip  0 10 0} {48 192.168.4.45 oobip  0 10 0} {49 192.168.4.46 oobip  0 10 0} {50 192.168.4.47 oobip  0 10 0} {51 192.168.4.48 oobip  0 10 0} {52 192.168.4.49 oobip  0 10 0} {53 192.168.4.50 oobip  0 10 0}]}
 2017/12/19 21:32:05 [D] [asm_amd64.s:514] enter net manage controller
 2017/12/19 21:32:05 [D] [asm_amd64.s:514] {6 10 102 1017 false false [{54 192.168.4.51 oobip  0 10 0} {55 192.168.4.52 oobip  0 10 0} {56 192.168.4.53 oobip  0 10 0} {57 192.168.4.54 oobip  0 10 0} {58 192.168.4.55 oobip  0 10 0} {59 192.168.4.56 oobip  0 10 0} {60 192.168.4.57 oobip  0 10 0} {61 192.168.4.58 oobip  0 10 0} {62 192.168.4.59 oobip  0 10 0} {63 192.168.4.60 oobip  0 10 0}]}
+2017/12/20 09:19:07 [D] [init.go:143] connect to mysql succ
+2017/12/20 09:19:08 [E] [init.go:149] ping redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/20 09:19:08 [W] [main.go:15] init redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/20 09:19:33 [D] [init.go:143] connect to mysql succ
+2017/12/20 09:19:35 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 09:19:55 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 09:19:55 [I] [asm_amd64.s:514] [0xc0420962c0]
+2017/12/20 09:20:12 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:20:15 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:20:17 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:20:19 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:20:21 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:20:24 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/20 09:21:11 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 09:21:11 [I] [asm_amd64.s:514] [0xc0420962c0]
+2017/12/20 09:21:14 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 09:21:31 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 09:21:31 [I] [asm_amd64.s:514] [0xc042082820]
+2017/12/20 09:21:34 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 09:22:05 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 09:22:13 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 09:27:15 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 10:06:50 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 10:06:54 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 10:06:54 [I] [asm_amd64.s:514] [0xc04235e000]
+2017/12/20 10:07:39 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 10:07:39 [I] [asm_amd64.s:514] [0xc0420962c0]
+2017/12/20 10:08:03 [D] [init.go:143] connect to mysql succ
+2017/12/20 10:08:06 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 10:08:27 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 10:08:27 [I] [asm_amd64.s:514] [0xc0420742c0]
+2017/12/20 10:08:29 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 10:08:29 [I] [asm_amd64.s:514] [0xc0423c2000]
+2017/12/20 13:16:50 [D] [init.go:143] connect to mysql succ
+2017/12/20 13:16:53 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 13:17:01 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:17:01 [I] [asm_amd64.s:514] [0xc04208e2c0]
+2017/12/20 13:17:43 [D] [init.go:143] connect to mysql succ
+2017/12/20 13:17:46 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 13:17:48 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:17:48 [I] [asm_amd64.s:514] [0xc04207b550]
+2017/12/20 13:17:51 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:18:52 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:18:52 [I] [asm_amd64.s:514] [0xc0421de000]
+2017/12/20 13:19:06 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:19:09 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:19:49 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:19:49 [I] [asm_amd64.s:514] [0xc04233c000]
+2017/12/20 13:19:55 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:20:09 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:20:47 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 13:20:56 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:20:56 [I] [asm_amd64.s:514] [0xc04207a370]
+2017/12/20 13:25:57 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:25:57 [I] [asm_amd64.s:514] [0xc04207a2c0]
+2017/12/20 13:26:03 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:26:05 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:27:32 [W] [asm_amd64.s:514] 获取机房id非法，err:strconv.Atoi: parsing "": invalid syntax
+2017/12/20 13:30:33 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:30:33 [I] [asm_amd64.s:514] [0xc04207a2c0]
+2017/12/20 13:30:37 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 13:30:44 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 13:30:47 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:30:47 [I] [asm_amd64.s:514] [0xc04207a2c0]
+2017/12/20 13:30:52 [W] [asm_amd64.s:514] 获取资产U位位置失败
+2017/12/20 13:31:02 [W] [asm_amd64.s:514] 获取资产U位位置失败
+2017/12/20 13:31:28 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:31:28 [I] [asm_amd64.s:514] [0xc04207a2c0]
+2017/12/20 13:31:32 [W] [asm_amd64.s:514] 更新IDC失败:Error 1054: Unknown column 'idc_id' in 'field list'
+2017/12/20 13:31:39 [W] [asm_amd64.s:514] 更新IDC失败:Error 1054: Unknown column 'idc_id' in 'field list'
+2017/12/20 13:32:39 [D] [init.go:143] connect to mysql succ
+2017/12/20 13:32:39 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 13:33:02 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:33:02 [I] [asm_amd64.s:514] [0xc042434000]
+2017/12/20 13:33:07 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:33:07 [I] [asm_amd64.s:514] [0xc042048000]
+2017/12/20 13:33:18 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/20 13:38:19 [D] [init.go:143] connect to mysql succ
+2017/12/20 13:38:20 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/20 13:38:23 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:38:23 [I] [asm_amd64.s:514] [0xc0420753f0]
+2017/12/20 13:38:25 [W] [asm_amd64.s:514] get asset id failed, err:获取资产ID失败
+2017/12/20 13:39:20 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:39:20 [I] [asm_amd64.s:514] [0xc042138000]
+2017/12/20 13:39:23 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/20 13:39:23 [I] [asm_amd64.s:514] []

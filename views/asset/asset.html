@@ -98,6 +98,7 @@
                     <th>尺寸</th>
                     <th>网络ID</th>
                     <th>合同ID</th>
+                    <th>详情</th>
                 </tr>
             </thead>
             <tbody>
@@ -117,6 +118,10 @@
                     <td>{{.Site}}</td>
                     <td>{{.NetworkId}}</td>
                     <td>{{.ContractId}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success show_chanage_asset">修改</button>
+                        <button type="button" class="btn btn-warning show_del_asset" id="del_asset">删除</button>             
+                    </td>
                 </tr>
                 {{end}}
             </tbody> 
@@ -235,6 +240,123 @@
         <button class="btn btn-default" id="add_asset_button">添加</button>
     </div>
 </div>
+
+
+<div id="change_asset_model" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>更新资产</h3>
+    </div>
+    <div class="modal-body" id="get_asset_info"> 
+        <div class="control-group">
+            <label class="control-label">Id:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">IDC机房:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="update_idc_id_select">
+                    {{range .idc_list}}
+                    <option value={{.IdcID}}>{{.Tag}}</option>
+                    {{end}}
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">设备类型:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_type">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">设备型号:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_model">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">配置:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="update_asset_conf_id">
+                    <option value="1">A3</option>
+                    <option value="2">A4</option>
+                    <option value="3">A5</option>
+                    <option value="4">S1</option>
+                    <option value="5">S2</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">sn:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_sn">
+            </div>
+        </div>
+  
+        <div class="control-group">
+            <label class="control-label">快速服务代码:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_code">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">机柜:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_rack">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">U位:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_location">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">BIOS版本:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_bios">
+            </div>
+        </div>
+
+        <div class="form-group mt-lg">
+            <label class="control-label">通电状态:<span class="required">*</span></label>
+            <div class="col-sm-9">
+                <select class="span6 m-wrap" id="update_asset_power">
+                    <option value="0">已上电</option>
+                    <option value="1">未上电</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group mt-lg">
+            <label class="control-label">尺寸:<span class="required">*</span></label>
+            <div class="col-sm-9">
+                <select class="span6 m-wrap" id="update_asset_size">
+                    <option value="1U">1U</option>
+                    <option value="2U">2U</option>
+                    <option value="4U">4U</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group mt-lg">
+            <label class="control-label">网络ID:<span class="required">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="span6 m-wrap" id="update_asset_network_id">
+            </div>
+        </div>
+        <div class="form-group mt-lg">
+            <label class="control-label">合同ID:<span class="required">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="span6 m-wrap" id="update_asset_contract_id">
+            </div>
+        </div>
+        <button class="btn btn-default" id="update_asset_button">更新</button>
+    </div>
+</div>
+
 
 
 

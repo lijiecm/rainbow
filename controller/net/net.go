@@ -4,43 +4,9 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"rainbow/model"
+	"rainbow/tools"
 	"fmt"
 )
-
-type Page struct {
-    PageNo     int
-    PageSize   int
-    TotalPage  int
-    TotalCount int
-    FirstPage  bool
-    LastPage   bool
-    List       interface{}
-}
-
-func PageUtil(count int, pageNo int, pageSize int, list interface{}) Page {
-	/*
-	pageNo:当前页
-	pageSize:每页的行数
-	count: 总数据行数
-	list: 总数据列表
-	*/
-	/*
-    tp := count / pageSize
-    if count % pageSize > 0 {
-        tp = count / pageSize + 1
-	}
-	star_currentt := (pageNo - 1) * pageSize
-	end_current := pageNo * pageSize
-	lList := list.([]model.Ip)
-	newList := lList[star_currentt:end_current]
-	return Page{TotalPage: tp, TotalCount: count, LastPage: pageNo == tp, List: newList}
-	*/
-	tp := count / pageSize
-    if count % pageSize > 0 {
-        tp = count / pageSize + 1
-    }
-    return Page{PageNo: pageNo, PageSize: pageSize, TotalPage: tp, TotalCount: count, FirstPage: pageNo == 1, LastPage: pageNo == tp, List: list}
-}
 
 type NetController struct {
 	beego.Controller  
@@ -120,14 +86,14 @@ func (p *NetController) Ip(){
 	end_current := pageNo * pageSize
 	newList := ipList[star_currentt:end_current]
 
-	page := PageUtil(count, pageNo, pageSize, newList) 
+	page := tools.PageUtil(count, pageNo, pageSize, newList) 
 	defer func(){
 		if err != nil {
 			p.Data["error"] = errorMsg
 			p.TplName = "layout/error.html"
 		}
 	}()
-	logs.Debug("%v", page)
+	//logs.Debug("%v", page)
 	p.Data["Page"] = page
 	return
 	}
