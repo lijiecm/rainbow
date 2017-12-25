@@ -1,12 +1,13 @@
 package contract
 
 import (
-	"github.com/astaxie/beego"
+	//"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
+	"rainbow/controller"
 )
 
 type ContractController struct {
-	beego.Controller  
+	controller.BaseController 
 }
 
 

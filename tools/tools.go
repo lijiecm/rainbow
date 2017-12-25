@@ -3,12 +3,9 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
-
 var (
 	RedisPool *redis.Pool
 )
-
-
 
 type Page struct {
     PageNo     int
@@ -24,8 +21,6 @@ func Init(redisPool *redis.Pool)(err error){
 	RedisPool = redisPool
 	return
 }
-
-
 
 func PageUtil(count int, pageNo int, pageSize int, list interface{}) Page {
 	/*

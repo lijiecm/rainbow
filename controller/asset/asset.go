@@ -1,15 +1,17 @@
 package asset
 
 import (
-	"github.com/astaxie/beego"
+	//"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"rainbow/model"
 	"fmt"
+	"rainbow/controller"
 	//"net/http"
 )
 
 type AssetController struct {
-	beego.Controller  
+	controller.AuthViewController  
+	//beego.Controller
 }
 
 func (p *AssetController) Asset(){
@@ -102,7 +104,7 @@ func (p *AssetController) Conf(){
 	if err != nil {
 		err =  fmt.Errorf("获取资产配置列表失败")
 		errorMsg =  err.Error()
-		logs.Warn("add idc faile, err:%v", err)
+		logs.Warn("add conf faile, err:%v", err)
 		return
 	}
 	p.Data["confList"] = confList

@@ -1,8 +1,6 @@
 package tools
 
-
 func DeleteStr(List []string, str string) (NewList []string) {
-	
 	index := 0
 	for i := range List {
 		if List[i] == str {
@@ -17,7 +15,6 @@ func DeleteStr(List []string, str string) (NewList []string) {
 	return
 }
 
-
 func FindStr(List []string, str string) (index, status int) {
 	/*
 	status 为0 的的时候，表示找不到字符串，status为1的时候，表示可以找到，切返回index值
@@ -29,8 +26,6 @@ func FindStr(List []string, str string) (index, status int) {
 			status = 1
 			break 
 		}
-		
 	}
 	return
-
 }

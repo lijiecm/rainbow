@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/astaxie/beego/logs"
 	"fmt"
+	"github.com/astaxie/beego/orm"
 )
 
 type AssetModel struct {
@@ -14,177 +15,181 @@ func NewAssetModel() *AssetModel {
 	return assetModel
 }
 
+
+func init() {
+	orm.RegisterModel(new(Idc))
+	orm.RegisterModel(new(Asset))
+	orm.RegisterModel(new(AssetConf))
+}
+
 func (p *AssetModel)GetIdcList()(list []*Idc, err error){
-	sql := "select id, name, tag, location, floor, room_num, mechine_count from idc"
-	err = Db.Select(&list, sql)
+
+	logs.Debug("select idc list info")
+	o := orm.NewOrm()
+
+	qs := o.QueryTable("idc")
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select asset from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("select idc list from mysql failed, err:%v", err)
 		return
 	}
 	return
 }
 
-
 func (p *AssetModel)GetAssetList()(list []*Asset, err error){
-	sql := "select id, idc_id, asset_type, model, conf_id, sn, service_code, rack_name, location, bios_version, power_state, site, network_id, contract_id from asset"
-	err = Db.Select(&list, sql)
+	logs.Debug("select asset list info")
+	o := orm.NewOrm()
+	qs := o.QueryTable("asset")
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select asset from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("select idc list from mysql failed, err:%v", err)
 		return
 	}
 	return
 }
 
 func (p *AssetModel)GetConfList()(list []*AssetConf, err error){
-	sql := "select id, name,  cpu, memory, disk, raid, detail from asset_conf"
-	err = Db.Select(&list, sql)
+	logs.Debug("select conf list info")
+	o := orm.NewOrm()
+	qs := o.QueryTable("asset_conf")
+
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select asset conf  from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("select asset conf list from mysql failed, err:%v", err)
 		return
 	}
 	return
 }
 
-
-
 func (p *AssetModel) AssetValid(assetId int)(valid bool ,err error){
-	sql := "select id from asset where id = ?"
+
 	var assetList []*Asset
-	err = Db.Select(&assetList, sql, assetId)
-	valid = false
-	if err != nil {
-		logs.Warn("select product failed, err:%v", err)
-		return
-	}
+	o := orm.NewOrm()
+	qs := o.QueryTable("asset")
+	qs.Filter("id",assetId).All(&assetList)
 	if len(assetList) != 0 {
-		err = fmt.Errorf("asset[%v] is not exists", assetId)
+		logs.Error("asset[%d] is not exists", assetId)
 		return
 	}
 
 	valid = true
-
 	return
 }
 
-func (p *AssetModel)CreateAsset(asset *Asset)(err error){
+func (p *AssetModel)CreateAsset(asset Asset)(err error){
 	//判断设备是否存在是否存在
-	valid, err := p.AssetValid(asset.AssetId)
+	valid, err := p.AssetValid(asset.Id)
 	if err != nil {
 		logs.Error("asset exists failed, err:%v", err)
 		return
 	}
 
 	if !valid {
-		err = fmt.Errorf("asset id[%v] err:%v", asset.AssetId, err)
+		err = fmt.Errorf("asset id[%v] err:%v", asset.Id, err)
 		logs.Error(err)
 		return
 	}
 
 	//插入数据库中
-	sql := "insert into asset(idc_id, asset_type, model, conf_id, sn, service_code, rack_name, location,  bios_version, power_state, site, network_id, contract_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)"
-	_, err = Db.Exec(sql, asset.IdcId, asset.AssetType, asset.Model, asset.ConfId, asset.SN, asset.ServiceCode, asset.RackName, asset.Location, 
-		asset.BiosVer, asset.PowerState, asset.Site, asset.NetworkId, asset.ContractId)
+	o := orm.NewOrm()
+	id, err := o.Insert(&asset)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert asset from mysql failed, err:%v", err)
 		return
 	}
-	logs.Debug("insert asset into database succ")
+	logs.Debug("insert asset into database succ, id:[%d]", id)
 	return
 }
 
 
-func (p *AssetModel) UpdateAsset(asset *Asset)(err error){
-	sql := "update asset set idc_id=?,asset_type=?,model=?,conf_id=?,sn=?,service_code=?, rack_name=?,location=?, bios_version=?, power_state=?, site=?, network_id=?, contract_id=? where id=?"
-	_, err = Db.Exec(sql, asset.IdcId,asset.AssetType,asset.Model,asset.ConfId,asset.SN,asset.ServiceCode,asset.RackName,
-	asset.Location,asset.BiosVer,asset.PowerState,asset.Site,asset.NetworkId,asset.ContractId,asset.AssetId)
+func (p *AssetModel) UpdateAsset(asset Asset)(err error){
+
+	o := orm.NewOrm()
+	id, err := o.Update(&asset)
 	if err != nil {
-		fmt.Println("update asset failed, err:%v", err)
+		logs.Error("update asset failed, err:%v", err)
 		return
 	}
+	logs.Debug("update asset into database succ, id:[%d]", id)
 	return
 }
 
 func (p *AssetModel)DelAsset(assetId int)(err error){
-	sql := "delete from asset where id=?"
-	_, err = Db.Exec(sql, assetId)
-	if err != nil {
-		fmt.Println("del asset failed, err:%v", err)
+	o := orm.NewOrm()
+	num, err := o.Delete(&Asset{Id: assetId})
+	if err !=nil {
+		logs.Error("del asset failed, err:%v", err)
 		return
 	}
-
+	logs.Debug("update asset into database succ, id:[%d], num:[%d]", assetId, num)
 	return
 }
 
 func (p *AssetModel) IdcValid(idcId int)(valid bool ,err error){
-	sql := "select name from idc where id = ?"
+
 	var idctList []*Idc
-	err = Db.Select(&idctList, sql, idcId)
-	valid = false
-	if err != nil {
-		logs.Warn("select product failed, err:%v", err)
-		return
-	}
+	o := orm.NewOrm()
+	qs := o.QueryTable("idc")
+	qs.Filter("id",idcId).All(&idctList)
 	if len(idctList) != 0 {
-		err = fmt.Errorf("idc[%v] is not exists", idcId)
+		logs.Error("idc[%d] is not exists", idcId)
 		return
 	}
 
 	valid = true
-
 	return
 }
 
-func (p *AssetModel)CreateIdc(idc *Idc)(err error){
+func (p *AssetModel)CreateIdc(idc Idc)(err error){
 	//判断IDC是否存在是否存在
-	valid, err := p.IdcValid(idc.IdcID)
+	valid, err := p.IdcValid(idc.Id)
 	if err != nil {
 		logs.Error("asset exists failed, err:%v", err)
 		return
 	}
 
 	if !valid {
-		err = fmt.Errorf("asset id[%v] err:%v", idc.IdcID, err)
+		err = fmt.Errorf("asset id[%v] err:%v", idc.Id, err)
 		logs.Error(err)
 		return
 	}
 
 	//插入数据库中
-	sql := "insert into idc(name, tag, location, floor, room_num, mechine_count) values (?,?,?,?,?,?)"
-	_, err = Db.Exec(sql, idc.Name, idc.Tag, idc.Location, idc.Floor, idc.RoomNum, idc.MechineCount)
+
+	o := orm.NewOrm()
+	id, err := o.Insert(&idc)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert idc from mysql failed, err:%v", err)
 		return
 	}
-	logs.Debug("insert asset idc  into database succ")
+	logs.Debug("insert idc into database succ, id:[%d]", id)
 	return
 }
 
 
 func (p *AssetModel)DelIdc(idcId int)(err error){
-	sql := "delete from idc where id=?"
-	_, err = Db.Exec(sql, idcId)
-	if err != nil {
-		fmt.Println("del idc failed, err:%v", err)
+	o := orm.NewOrm()
+	num, err := o.Delete(&Idc{Id: idcId})
+	if err !=nil {
+		logs.Error("del idc failed, err:%v", err)
 		return
 	}
-
+	logs.Debug("update idc into database succ, id:[%d], num:[%d]", idcId, num)
 	return
 }
 
-func (p *AssetModel)UpdateIdc(name,tag,location,floor,room_num string, mechine_count,idcId int)(err error){
-	sql := "update idc set name=?,tag=?,location=?,floor=?,room_num=?,mechine_count=? where id=?"
-	_, err = Db.Exec(sql, name,tag,location,floor,room_num, mechine_count,idcId)
+func (p *AssetModel)UpdateIdc(idc Idc)(err error){
+	o := orm.NewOrm()
+	id, err := o.Update(&idc)
 	if err != nil {
-		fmt.Println("update idc failed, err:%v", err)
+		logs.Error("update asset failed, err:%v", err)
 		return
 	}
-
+	logs.Debug("update asset into database succ, id:[%d]", id)
 	return
 }
 
-
-
-func (p *AssetModel)CreateAssetConf(assetconf *AssetConf)(err error){
+func (p *AssetModel)CreateAssetConf(assetconf AssetConf)(err error){
 	//判断IDC是否存在是否存在
 	/*
 	valid, err := p.IdcValid(idc.IdcID)
@@ -201,13 +206,13 @@ func (p *AssetModel)CreateAssetConf(assetconf *AssetConf)(err error){
 	*/
 
 	//插入数据库中
-	sql := "insert into asset_conf(name, cpu, memory, disk, raid, detail) values (?,?,?,?,?,?)"
-	_, err = Db.Exec(sql, assetconf.Name,assetconf.Cpu, assetconf.Memory,assetconf.Disk,assetconf.Raid,assetconf.Detail)
+	o := orm.NewOrm()
+	id, err := o.Insert(&assetconf)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert asset conf from mysql failed, err:%v", err)
 		return
 	}
-	logs.Debug("insert asset conf into database succ")
+	logs.Debug("insert asset conf  into database succ, id:[%d]", id)
 	return
-}
 
+}

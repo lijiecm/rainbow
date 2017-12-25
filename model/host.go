@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/astaxie/beego/logs"
+	"github.com/astaxie/beego/orm"
 )
 
 type HostModel struct {
@@ -13,12 +14,19 @@ func NewHostModel() *HostModel {
 	return hostModel
 }
 
+func init() {
+	orm.RegisterModel(new(Host))
+}
+
 
 func (p *HostModel)HostList()(list []*Host, err error){
-	sql := "select id, app_name, mechine_type, ip, oobip, env, asset_id, hostname, os_id, owner, status from host"
-	err = Db.Select(&list, sql)
+	logs.Debug("select hostlist info")
+	o := orm.NewOrm()
+
+	qs := o.QueryTable("host")
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select host from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("select host from mysql failed, err:%v", err)
 		return
 	}
 	return
@@ -26,14 +34,24 @@ func (p *HostModel)HostList()(list []*Host, err error){
 
 
 func (p *HostModel)CreateHost(host *Host)(err error){
-	
-	sql := "insert into host(app_name,  ip, oobip, env, asset_id, hostname, os_id, owner, status) values (?,?,?,?,?,?,?,?,?)"
-	_, err = Db.Exec(sql, host.AppName, host.IP, host.OobIp, host.Env, host.AssetId, host.HostName, host.OsId,host.Owner, host.Status)
+
+	o := orm.NewOrm()
+	id, err := o.Insert(&host)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert from mysql failed, err:%v", err)
 		return
 	}
-	logs.Debug("insert host into database succ")
+	logs.Debug("insert host into database succ, id:[%d]", id)
 	return
 }
 
+func (p *AssetModel) UpdateHost(host *Host)(err error){
+	o := orm.NewOrm()
+	id, err := o.Update(&host)
+	if err != nil {
+		logs.Warn("update host from mysql failed, err:%v", err)
+		return
+	}
+	logs.Debug("update host into database succ, id:[%d]", id)
+	return
+}

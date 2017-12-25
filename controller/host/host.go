@@ -2,15 +2,14 @@ package host
 
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"rainbow/model"
 	"fmt"
-	//"net/http"
+	"rainbow/controller"
 )
 
 type HostController struct {
-	beego.Controller  
+	controller.BaseController
 }
 
 func (p *HostController) Host(){

@@ -7,7 +7,6 @@ import (
 	"fmt"
 )
 
-
 func (p *AssetController) UpdateIdc(){
 	errorMsg := "success"
 	
@@ -17,6 +16,7 @@ func (p *AssetController) UpdateIdc(){
 	result["message"] = errorMsg
 
 	assetModel := model.NewAssetModel()
+	var idc model.Idc
 	var err error
 	defer func(){
 		if err != nil {
@@ -81,11 +81,16 @@ func (p *AssetController) UpdateIdc(){
 		err = fmt.Errorf("机房总数输入非法，err:%v", err)
 		errorMsg = "机房总数输入非法" 
 		logs.Warn(err.Error())
-			return
+		return
 	}
-
-
-	err = assetModel.UpdateIdc(idc_name,idc_tag,idc_location,idc_floor,idc_room,idc_count,idc_id )
+	idc.Id = idc_id
+	idc.Name = idc_name
+	idc.Tag = idc.Tag
+	idc.Location = idc_location
+	idc.Floor = idc_floor
+	idc.RoomNum = idc_room
+	idc.MechineCount = idc_count
+	err = assetModel.UpdateIdc(idc)
 	if err != nil {
 		err = fmt.Errorf("更新IDC失败:%v", err)
 		errorMsg = "更新IDC失败"  
@@ -199,22 +204,22 @@ func (p *AssetController) UpdateAsset(){
 		logs.Warn(err.Error())
 			return
 	}
-	asset.AssetId = asset_id
+	asset.Id = asset_id
 	asset.IdcId = idc_id
 	asset.AssetType = asset_type
 	asset.Model = asset_model
 	asset.ConfId = asset_conf_id
-	asset.SN = asset_sn
+	asset.Sn = asset_sn
 	asset.ServiceCode = asset_code
 	asset.RackName = asset_rack
 	asset.Location = asset_location
-	asset.BiosVer = asset_bios
+	asset.BiosVersion = asset_bios
 	asset.PowerState = asset_power
 	asset.Site = asset_size
 	asset.NetworkId = asset_network_id
 	asset.ContractId = asset_contract_id
 
-	err = assetModel.UpdateAsset(&asset)
+	err = assetModel.UpdateAsset(asset)
 	if err != nil {
 		err = fmt.Errorf("更新IDC失败:%v", err)
 		errorMsg = "更新IDC失败"  

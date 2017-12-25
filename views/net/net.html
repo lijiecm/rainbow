@@ -98,14 +98,14 @@
             <tbody>
                 {{range .network_list}}
                 <tr>
-                    <td>{{.NetWorkId}}</td>
+                    <td>{{.Id}}</td>
                     <td>{{.IdcId}}</td>
                     <td class="hidden-480">{{.Env}}</td>
                     <td>{{.Team}}</td>
                     <td>{{.Vlan}}</td>
                     <td>{{.Route}}</td>
                     <td>{{.Mask}}</td>
-                    <td>{{.GateWay}}</td>
+                    <td>{{.Gateway}}</td>
                 </tr>
                 {{end}}
             </tbody> 
@@ -126,7 +126,7 @@
                 <div class="controls">
                     <select class="span6 m-wrap" id="add_idc_id_select">
                         {{range .idc_list}}
-                        <option value={{.IdcID}}>{{.Tag}}</option>
+                        <option value={{.Id}}>{{.Tag}}</option>
                         {{end}}
                     </select>
                 </div>

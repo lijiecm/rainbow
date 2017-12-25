@@ -106,17 +106,17 @@ func (p *AssetController) AddAsset(){
 	asset.AssetType = asset_type
 	asset.Model = asset_model
 	asset.ConfId = asset_conf_id
-	asset.SN = asset_sn
+	asset.Sn = asset_sn
 	asset.ServiceCode = asset_code
 	asset.RackName = asset_rack
 	asset.Location = asset_location
-	asset.BiosVer = asset_bios
+	asset.BiosVersion = asset_bios
 	asset.PowerState = asset_power
 	asset.Site = asset_size
 	asset.NetworkId = asset_network_id
 	asset.ContractId = asset_contract_id
 
-	err = assetModel.CreateAsset(&asset)
+	err = assetModel.CreateAsset(asset)
 	if err != nil {
 		err = fmt.Errorf("添加资产设备失败:%v", err)
 		errorMsg = "添加资产设备失败"  
@@ -139,6 +139,7 @@ func (p *AssetController) AddIdc(){
 
 	assetModel := model.NewAssetModel()
 	var idc model.Idc
+
 	var err error
 	defer func(){
 		if err != nil {
@@ -204,7 +205,7 @@ func (p *AssetController) AddIdc(){
 	idc.RoomNum = idc_room
 	idc.MechineCount = idc_count
 
-	err = assetModel.CreateIdc(&idc)
+	err = assetModel.CreateIdc(idc)
 	if err != nil {
 		err = fmt.Errorf("添加IDC失败:%v", err)
 		errorMsg = "添加IDC失败"  
@@ -288,7 +289,7 @@ func (p *AssetController) AddConf(){
 	assetconf.Raid = asset_conf_raid
 	assetconf.Detail = asset_conf_detail
 
-	err = assetModel.CreateAssetConf(&assetconf)
+	err = assetModel.CreateAssetConf(assetconf)
 	if err != nil {
 		err = fmt.Errorf("添加资产配置失败:%v", err)
 		errorMsg = "添加资产配置失败"  

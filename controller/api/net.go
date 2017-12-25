@@ -26,56 +26,10 @@ var (
 	MaxInstallOsCount int
 )	
 
-/*
-暂时不需要这两个函数
-func setIpToChan(sn,ip string){
-	netIpInfo.FreeIpChan = make(chan map[string]string, 100)
-	ipMap := make(map[string]string)
-	ipMap[sn]= ip
-	netIpInfo.FreeIpChan <- ipMap
-	return
-}
-
-func getIpFromChan(sn string)(ip string, err error){
-	ticker := time.NewTicker(time.Second * 10)
-	select {
-		case <- ticker.C:   //如果用户超过10秒，则本次超时
-			//code = 1000
-			err = fmt.Errorf("request timeout")
-			return
-		case ipChan := <- netIpInfo.FreeIpChan:
-			// 修改IP可用状态
-			ip = ipChan[sn]
-	
-			netIpInfo.UpdateIpStatusLock.Lock()
-			updateNum, errUpIp := ipInfoModel.UpdateIpStatus(ip)
-			netIpInfo.UpdateIpStatusLock.Unlock()
-			logs.Debug("===============>end Lock")
-			if errUpIp != nil {
-				errMsg :=  fmt.Errorf("更新IP地址状态失败")
-				logs.Warn("update ip status failed, err:%v",errMsg)
-				err = errUpIp
-				return
-			}
-			if updateNum == 0 {
-				errMsg :=  fmt.Errorf("未找到需要更新的IP地址，请确定获取到的IP地址正确")
-				logs.Warn("update ip status failed , ipnum is 0 , err:%v",errMsg)
-				err = errUpIp
-				return
-			}
-	
-			//一个IP配置成功以后，则表示这个并发结束，所以需要减去1
-			netIpInfo.Count -= 1
-			return
-	}	
-}
-
-*/
 func (p *ApiNetController) GetIpAddr(){
 	/*
 	获取到IP信息
 	*/
-
 	errorMsg := "success"
 	
 	result := make(map[string]interface{})
@@ -136,13 +90,6 @@ func (p *ApiNetController) GetIpAddr(){
 		logs.Warn("don't ip use, err:%v",errorMsg)
 		return
 	}
-
-	/*
-	if len(ip) !=0 {
-		// 将IP写入channel，后续在写一个进程，从管道里面读取数据，然后更新到ip表，通过sn获取到主机host_id
-		go setIpToChan(sn, ip)   
-	}
-	*/
 
 	netIpInfo.Count -= 1
 	result["message"] = ip

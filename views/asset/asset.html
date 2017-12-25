@@ -104,16 +104,16 @@
             <tbody>
                 {{range .asset_list}}
                 <tr>
-                    <td>{{.AssetId}}</td>
+                    <td>{{.Id}}</td>
                     <td>{{.IdcId}}</td>
                     <td class="hidden-480">{{.AssetType}}</td>
                     <td>{{.Model}}</td>
                     <td>{{.ConfId}}</td>
-                    <td>{{.SN}}</td>
+                    <td>{{.Sn}}</td>
                     <td>{{.ServiceCode}}</td>
                     <td>{{.RackName}}</td>
                     <td>{{.Location}}</td>
-                    <td>{{.BiosVer}}</td>
+                    <td>{{.BiosVersion}}</td>
                     <td>{{.PowerState}}</td>
                     <td>{{.Site}}</td>
                     <td>{{.NetworkId}}</td>
@@ -143,7 +143,7 @@
             <div class="controls">
                 <select class="span6 m-wrap" id="add_idc_id_select">
                     {{range .idc_list}}
-                    <option value={{.IdcID}}>{{.Tag}}</option>
+                    <option value={{.Id}}>{{.Tag}}</option>
                     {{end}}
                 </select>
             </div>
@@ -259,7 +259,7 @@
             <div class="controls">
                 <select class="span6 m-wrap" id="update_idc_id_select">
                     {{range .idc_list}}
-                    <option value={{.IdcID}}>{{.Tag}}</option>
+                    <option value={{.Id}}>{{.Tag}}</option>
                     {{end}}
                 </select>
             </div>

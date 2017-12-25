@@ -2,12 +2,19 @@ package model
 
 import (
 	"github.com/astaxie/beego/logs"
+	"github.com/astaxie/beego/orm"
 )
 
 type NetIpInfoModel struct {
 }
 
 type NetWorkModel struct {
+}
+
+
+func init() {
+	orm.RegisterModel(new(Ip))
+	orm.RegisterModel(new(Network))
 }
 
 func NewNetWorkModel() *NetWorkModel {
@@ -23,46 +30,38 @@ func NewNetIpInfoModel() *NetIpInfoModel {
 	return netIpInfoModel
 }
 
-func (p *NetWorkModel)GetNetWork()(list []NetWork, err error){
-	
-	sql := "select id, idc_id, env, team, vlan, route, mask, gateway from network"
-	err = Db.Select(&list, sql)
+func (p *NetWorkModel)GetNetWork()(list []*Network, err error){
+
+	o := orm.NewOrm()
+
+	qs := o.QueryTable("network")
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select network from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("select network from mysql failed, err:%v", err)
 		return
 	}
 	return
 }
 
-func (p *NetWorkModel)CreateNetWork(netWork *NetWork)(netWorkId int, err error){
+func (p *NetWorkModel)CreateNetWork(network *Network)(netWorkId int, err error){
 	
-	sql := "insert into network(idc_id,  env, team, vlan, route, mask, gateway) values (?,?,?,?,?,?,?)"
-	v, err := Db.Exec(sql, netWork.IdcId, netWork.Env, netWork.Team, netWork.Vlan, netWork.Route, netWork.Mask, netWork.GateWay)
-	
-	//logs.Debug("Last:%d, Row:%d, netWorkId:%d",int(v.LastInsertId), int(v.RowsAffected), netWork.NetWorkId)
+	o := orm.NewOrm()
+	id, err := o.Insert(&network)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert from mysql failed, err:%v", err)
 		return
 	}
-
-	netId, err := v.LastInsertId()
-	if err != nil{
-		logs.Warn("insert network to mysql success, get netId failed, err: %s",err)
-		netWorkId = 0  
-		return
-	}
-	netWorkId = int(netId)
-	logs.Debug("insert network into database succ")
+	netWorkId = int(id)
+	logs.Debug("insert network into database succ, id:[%d]", netWorkId)
 	return
 }
 
+func (p *NetIpInfoModel)CreateIp(ip Ip)(err error){
 
-func (p *NetIpInfoModel)CreateIp(ip ,iptype string, netWorkId int)(err error){
-	
-	sql := "insert into ip(addr,  iptype, network_id, status) values (?,?,?,?)"
-	_, err = Db.Exec(sql, ip, iptype, netWorkId, 0)
+	o := orm.NewOrm()
+	_, err = o.Insert(&ip)
 	if err != nil {
-		logs.Warn("insert from mysql failed, err:%v sql:%v", err, sql)
+		logs.Warn("insert from mysql failed, err:%v", err)
 		return
 	}
 
@@ -70,46 +69,53 @@ func (p *NetIpInfoModel)CreateIp(ip ,iptype string, netWorkId int)(err error){
 	return
 }
 
-func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(list []string,err error){
+func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(ip string,err error){
 	//一次返回20个IP，也就是说最大支持20个宿主机的并发安装，然后让在取一个随机值
-	sql := "select ip.addr from ip,network where network.gateway = ? and ip.status = ? and ip.network_id= network.id limit ?"
-	err = Db.Select(&list, sql, gateway, status, limitCount)
-	if err != nil {
-		logs.Warn("select ip from mysql failed, err:%v sql:%v", err, sql)
+	//sql := "select ip.addr from ip,network where network.gateway = ? and ip.status = ? and ip.network_id= network.id limit ?"
+	var ipList []*Ip
+	o := orm.NewOrm()
+	qs := o.QueryTable("ip")
+	qs.Filter("network__gateway",gateway,"ip__status",status,"ip__network_id","network__id").Limit(limitCount)
+	if len(ipList) != 0 {
+		logs.Error("select ip from mysql failed")
 		return
 	}
+	ip = ipList[0].Addr
 	return
 }
 
-
-func (p *NetIpInfoModel)UpdateIpStatus(addr string)(updateNum int, err error){
+func (p *NetIpInfoModel)UpdateIpStatus(ip Ip)(updateNum int, err error){
 	
 	/*
 	更新主机带上状态去更新，在并发的前提下，如果前一个请求更新之后，则会更新失败，通知前端再次发出请求
-	*/
 	sql := "UPDATE ip SET status = 1 where addr=? and status = 0"
-	v, err := Db.Exec(sql, addr)
+	*/
+	
+	o := orm.NewOrm()
+	//批量更新
+	num, err := o.QueryTable("ip").Filter("addr",ip.Addr,"status",0).Update(orm.Params{
+		"status":1,
+	})
+
 	if err != nil {
-		logs.Warn("update from mysql failed, err:%v sql:%v", err, sql)
+		logs.Error("update asset failed, err:%v", err)
 		return
 	}
-	ipNum, err := v.RowsAffected()
-	if err != nil {
-		logs.Warn("update from mysql failed, err:%v sql:%v", err, sql)
-		return
-	}
-	updateNum = int(ipNum)
+
+	updateNum = int(num)
 	logs.Debug("update host into database succ")
 	return
 }
 
-
-func (p *NetWorkModel)GetAllIp()(list []Ip, err error){
+func (p *NetWorkModel)GetAllIp()(list []*Ip, err error){
 	
-	sql := "select id, addr, ip_type, use_type, host_id, network_id, status from ip"
-	err = Db.Select(&list, sql)
+	logs.Debug("select ip info")
+	o := orm.NewOrm()
+
+	qs := o.QueryTable("ip")
+	_, err = qs.All(&list)
 	if err != nil {
-		logs.Warn("select ip from mysql failed, err:%v sql:%v", err, sql)
+		logs.Error("select ip from mysql failed, err:%v", err)
 		return
 	}
 	return

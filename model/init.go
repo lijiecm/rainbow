@@ -1,49 +1,45 @@
 package model
 
 import (
-	"github.com/jmoiron/sqlx"
 	"github.com/astaxie/beego/logs"
 	"github.com/garyburd/redigo/redis"
 	"strconv"
-
+	"github.com/astaxie/beego/orm"
+	"fmt"
 )
-var (
-	Db *sqlx.DB
-
-
-)
-
-func Init(db *sqlx.DB)(err error){
-	Db = db
-	return
-}
-
 
 func GetIdcInfoById(id int)(idcList []Idc,err error){
-	idc_sql := "select name from idc where id=?"
-	err = Db.Select(&idcList, idc_sql, id)
-	if err != nil{
-		logs.Warn("select idc from %d failed, DB.Exec error:%v", id, err)
+
+	o := orm.NewOrm()
+	qs := o.QueryTable("idc")
+	qs.Filter("id",id).All(idcList)
+	if len(idcList) != 0 {
+		err = fmt.Errorf("idc[%d] is not exists", id)
+		logs.Error(err)
 		return
 	}
 	return
 }
 
 func GetHostInfoById(id int)(hostList []Host, err error) {
-	host_sql := "select app_name, ip, oobip, env, hostname, owner, status from host where asset_id=?"
-	err = Db.Select(&hostList, host_sql, id)
-	if err != nil{
-		logs.Warn("select host from  %d failed, DB.Exec error:%v", id, err)
+	o := orm.NewOrm()
+	qs := o.QueryTable("idc")
+	qs.Filter("id",id).All(hostList)
+	if len(hostList) != 0 {
+		err = fmt.Errorf("host[%d] is not exists", id)
+		logs.Error(err)
 		return
 	}
 	return
 }
 
 func GetOsInfoById(id int)(osList []Os, err error){
-	os_sql := "select mechine_type, name from os where id=?"
-	err = Db.Select(&osList, os_sql, id)
-	if err != nil{
-		logs.Warn("select os from  %d failed, DB.Exec error:%v", id, err)
+	o := orm.NewOrm()
+	qs := o.QueryTable("os")
+	qs.Filter("id",id).All(osList)
+	if len(osList) != 0 {
+		err = fmt.Errorf("os[%d] is not exists", id)
+		logs.Error(err)
 		return
 	}
 	return
@@ -59,19 +55,22 @@ func InfoToRedis(redisPool *redis.Pool)(snMap,hostNameMap,ipMap map[string]strin
 	ipMap = make(map[string]string)
 	hostInfoMap = make(map[string]interface{})
 
-	asset_sql := "select id, idc_id, model, sn from asset"
-	err = Db.Select(&assetList, asset_sql)
-	if err != nil || len(assetList) == 0{
-		logs.Warn("select asset from  failed, DB.Exec error:%v", err)
+	o := orm.NewOrm()
+
+	qs := o.QueryTable("asset")
+	_, err = qs.All(&assetList)
+	if err != nil {
+		logs.Warn("select asset list from mysql failed, err:%v", err)
 		return
 	}
+
 	for _, asset := range assetList {
 		hostInfo.Model = asset.Model
-		hostInfo.Sn = asset.SN
+		hostInfo.Sn = asset.Sn
 
-		asset_id := asset.AssetId
+		asset_id := asset.Id
 		assetIdStr := strconv.Itoa(asset_id)
-		snMap[asset.SN] = assetIdStr
+		snMap[asset.Sn] = assetIdStr
 
 		idc_id := asset.IdcId
 		idcList, errIdc := GetIdcInfoById(idc_id)
@@ -92,11 +91,11 @@ func InfoToRedis(redisPool *redis.Pool)(snMap,hostNameMap,ipMap map[string]strin
 		}
 
 		if len(hostList) != 0 {
-			hostName := hostList[0].HostName
-			ip := hostList[0].IP
+			hostName := hostList[0].Hostname
+			ip := hostList[0].Ip
 			hostInfo.AppName = hostList[0].AppName
 			hostInfo.Ip = ip
-			hostInfo.OobIp = hostList[0].OobIp
+			hostInfo.OobIp = hostList[0].Oobip
 			hostInfo.Env = hostList[0].Env
 			hostInfo.Owner = hostList[0].Owner
 			hostInfo.Status = hostList[0].Status
@@ -114,13 +113,9 @@ func InfoToRedis(redisPool *redis.Pool)(snMap,hostNameMap,ipMap map[string]strin
 
 			if len(osList) != 0 {
 				hostInfo.Os = osList[0].Name	
-			}
-			
+			}	
 		}
-
 		hostInfoMap[assetIdStr] = hostInfo
-
-		
 	}
 	
 	return

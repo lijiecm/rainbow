@@ -1,6 +1,21 @@
 CREATE DATABASE cmdb
 use cmdb
 
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `gender` int(11) DEFAULT '0' ,
+  `created_at` varchar(128) NOT NULL,
+  `last_login` varchar(128) NOT NULL,
+  `is_admin` tinyint(1)  DEFAULT NULL,
+  `frozen` tinyint(1)  DEFAULT NULL,
+  `deleted_at` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
 CREATE TABLE `asset` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idc_id` int(11) DEFAULT '0',
@@ -14,8 +29,8 @@ CREATE TABLE `asset` (
   `bios_version` varchar(64),
   `power_state` int(11) DEFAULT '0',
   `site` varchar(64),	
-  `network_id` varchar(64),	
-  `contract_id` varchar(64),	
+  `network_id` int(11) DEFAULT '0',	
+  `contract_id` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 

@@ -1,17 +1,16 @@
 package net
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"rainbow/model"
 	"rainbow/tools"
+	"rainbow/controller"
 	"fmt"
 )
 
 type NetController struct {
-	beego.Controller  
+	controller.BaseController
 }
-
 
 func (p *NetController) Network(){
 
@@ -50,7 +49,6 @@ func (p *NetController) Network(){
 
 	p.Data["network_list"] = netList
 	p.Data["idc_list"] = idcList
-	
 }
 
 func (p *NetController) Ip(){
@@ -76,7 +74,6 @@ func (p *NetController) Ip(){
 		err =  fmt.Errorf("获取Ip列表失败")
 		errorMsg =  err.Error()
 		logs.Warn("get ip list failed, err:%v", err)
-		
 		return
 	}
 
@@ -93,7 +90,6 @@ func (p *NetController) Ip(){
 			p.TplName = "layout/error.html"
 		}
 	}()
-	//logs.Debug("%v", page)
 	p.Data["Page"] = page
 	return
 	}

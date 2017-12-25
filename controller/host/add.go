@@ -87,13 +87,11 @@ func (p *HostController) AddHost(){
 	}
 
 	host.AppName = app_name
-	host.IP = host_ip
-	host.OobIp = host_oobip
+	host.Ip = host_ip
+	host.Oobip = host_oobip
 	host.Env = host_env
-	//host.AssetId = asset_sn
 	host.AssetId = 11
-	host.HostName = hostname
-	//host.OsId = os
+	host.Hostname = hostname
 	host.OsId = 11
 	host.Owner = owner
 	host.Status = status

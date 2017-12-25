@@ -101,14 +101,14 @@
             <tbody>
                 {{range .host_list}}
                 <tr>
-                    <td>{{.HostId}}</td>
+                    <td>{{.Id}}</td>
                     <td>{{.AppName}}</td>
                     <td>{{.MechineType}}</td>
-                    <td class="hidden-480">{{.IP}}</td>
-                    <td>{{.OobIp}}</td>
+                    <td class="hidden-480">{{.Ip}}</td>
+                    <td>{{.Oobip}}</td>
                     <td>{{.Env}}</td>
                     <td>{{.AssetId}}</td>
-                    <td>{{.HostName}}</td>
+                    <td>{{.Hostname}}</td>
                     <td>{{.OsId}}</td>
                     <td>{{.Owner}}</td>
                     <td>{{.Status}}</td>
@@ -122,78 +122,78 @@
 <!-- END SAMPLE TABLE PORTLET-->
 
 <div id="add_host" class="modal hide">
-        <div class="modal-header">
-            <button data-dismiss="modal" class="close" type="button"></button>
-            <h3>新增主机</h3>
-        </div>
-        <div class="modal-body">
-            <div class="control-group">
-                <label class="control-label">应用名:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="app_name">
-                </div>
-            </div>
-      
-            <div class="control-group">
-                <label class="control-label">IP:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="host_ip">
-                </div>
-            </div>
-    
-            <div class="control-group">
-                <label class="control-label">管理IP:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="host_oobip">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">环境:<span class="required">*</span></label>
-                <div class="controls">
-                    <select class="span6 m-wrap" id="host_env">
-                        <option value="pref">性能压测</option>
-                        <option value="dev">开发</option>
-                        <option value="test">测试</option>
-                        <option value="pre">预发</option>
-                        <option value="prod">线上</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">资产ID:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="asset_id">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">主机名:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="hostname">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">操作系统:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="os">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">管理员:<span class="required">*</span></label>
-                <div class="controls">
-                    <input type="text" class="span6 m-wrap" id="owner">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">状态:<span class="required">*</span></label>
-                <div class="controls">
-                    <select class="span6 m-wrap" id="status">
-                        <option value="buffer">buffer</option>
-                        <option value="offline">offline</option>
-                        <option value="online">online</option>
-                    </select>
-                </div>
-            </div>
-            <button class="btn btn-default" id="add_host_button">添加</button>
-        </div>
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>新增主机</h3>
     </div>
+    <div class="modal-body">
+        <div class="control-group">
+            <label class="control-label">应用名:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="app_name">
+            </div>
+        </div>
+    
+        <div class="control-group">
+            <label class="control-label">IP:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="host_ip">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">管理IP:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="host_oobip">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">环境:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="host_env">
+                    <option value="pref">性能压测</option>
+                    <option value="dev">开发</option>
+                    <option value="test">测试</option>
+                    <option value="pre">预发</option>
+                    <option value="prod">线上</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">资产ID:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="asset_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">主机名:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="hostname">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">操作系统:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="os">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">管理员:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="owner">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">状态:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="status">
+                    <option value="buffer">buffer</option>
+                    <option value="offline">offline</option>
+                    <option value="online">online</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-default" id="add_host_button">添加</button>
+    </div>
+</div>
     

@@ -3,17 +3,20 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/astaxie/beego/logs"
 	"encoding/json"
-	"github.com/jmoiron/sqlx"
+	//"github.com/jmoiron/sqlx"
 	"fmt"
 	"rainbow/model"
 	"rainbow/tools"
 	"github.com/garyburd/redigo/redis"
 	"time"
+	"github.com/astaxie/beego/orm"
+	"github.com/astaxie/beego/session"
 )
 
 var (
-	Db *sqlx.DB
+	//Db *sqlx.DB
 	redisPool *redis.Pool
+	globalSessions *session.Manager
 
 )
 
@@ -67,17 +70,34 @@ func initRedis()(err error){
 }
 
 func initDb()(err error){
-	dns := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s", CmdbConf.mysqlConfig.UserName, CmdbConf.mysqlConfig.Passwd,
-	CmdbConf.mysqlConfig.Host, CmdbConf.mysqlConfig.Port, CmdbConf.mysqlConfig.DataBase)
-	database ,err := sqlx.Open("mysql", dns)
+
+	orm.RegisterDriver("mysql", orm.DRMySQL)
+
+	dns := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8", CmdbConf.mysqlConfig.UserName, CmdbConf.mysqlConfig.Passwd,
+	CmdbConf.mysqlConfig.Host, CmdbConf.mysqlConfig.Port,CmdbConf.mysqlConfig.DataBase)
+	orm.RegisterDataBase("default", "mysql", dns)
+	
 	if err != nil {
 		logs.Error("open mysql failed, err:%v", err)
 		return
 	}
 	logs.Debug("connect to mysql succ")
-	Db = database
 	return
 }
+
+func initSession() {
+	sessionConfig := &session.ManagerConfig{
+		CookieName:"gosessionid", 
+		EnableSetCookie: true, 
+		Gclifetime:3600,
+		Maxlifetime: 3600, 
+		Secure: false,
+		CookieLifeTime: 3600,
+		ProviderConfig: "./tmp",
+		}
+		globalSessions, _ = session.NewManager("memory",sessionConfig)
+		go globalSessions.GC()
+	}
 
 func initInfoToRedis()(err error){
 	/*
@@ -145,13 +165,14 @@ func InitCmdb() (err error) {
 		logs.Warn("init DB failed, err:%v", err)
 		return
 	}
-	
+
 	err = initRedis()
 	if err != nil {
 		logs.Warn("init redis failed, err:%v", err)
 		return
 	}
-
+	/*
+	
 	err = model.Init(Db)
 	if err != nil {
 		logs.Warn("init model failed, err:%v", err)
@@ -163,6 +184,7 @@ func InitCmdb() (err error) {
 		logs.Warn("init info to redis failed, err:%v", err)
 		return
 	}
+	*/
 
 	return
 }

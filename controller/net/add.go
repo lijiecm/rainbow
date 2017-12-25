@@ -16,7 +16,7 @@ func (p *NetController) AddNetwork(){
 	result["message"] = errorMsg
 	
 	networkModel := model.NewNetWorkModel()
-	var network model.NetWork
+	var network model.Network
 	
 	var err error
 	defer func(){
@@ -93,7 +93,7 @@ func (p *NetController) AddNetwork(){
 	network.Vlan = vlan
 	network.Route = route
 	network.Mask = netmask
-	network.GateWay = gateway	
+	network.Gateway = gateway	
 	netWorkId, err := networkModel.CreateNetWork(&network)
 	if err != nil {
 		err = fmt.Errorf("添加网段失败:%v", err)
@@ -112,8 +112,10 @@ func (p *NetController) AddNetwork(){
 	// 添加IP的时候，去掉网段地址
 	ipList = tools.DeleteStr(ipList,  gateway)
 	ipModel := model.NetIpInfoModel{}
-	for _, ip := range ipList{
-		err = ipModel.CreateIp(ip, net_type,netWorkId)
+	var ip model.Ip
+	for _, ipAddr := range ipList{
+		ip.Addr = ipAddr
+		err = ipModel.CreateIp(ip)
 		if err != nil {
 			logs.Error("insert ip[%s] failed, networkid[%d], err:[%v]", ip, netWorkId, err)
 		}
