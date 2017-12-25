@@ -43,7 +43,7 @@ func (p *NetWorkModel)GetNetWork()(list []*Network, err error){
 	return
 }
 
-func (p *NetWorkModel)CreateNetWork(network *Network)(netWorkId int, err error){
+func (p *NetWorkModel)CreateNetWork(network Network)(netWorkId int, err error){
 	
 	o := orm.NewOrm()
 	id, err := o.Insert(&network)

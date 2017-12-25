@@ -33,7 +33,7 @@ func (p *HostModel)HostList()(list []*Host, err error){
 }
 
 
-func (p *HostModel)CreateHost(host *Host)(err error){
+func (p *HostModel)CreateHost(host Host)(err error){
 
 	o := orm.NewOrm()
 	id, err := o.Insert(&host)
@@ -45,7 +45,7 @@ func (p *HostModel)CreateHost(host *Host)(err error){
 	return
 }
 
-func (p *AssetModel) UpdateHost(host *Host)(err error){
+func (p *AssetModel) UpdateHost(host Host)(err error){
 	o := orm.NewOrm()
 	id, err := o.Update(&host)
 	if err != nil {

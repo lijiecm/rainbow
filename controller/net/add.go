@@ -94,7 +94,7 @@ func (p *NetController) AddNetwork(){
 	network.Route = route
 	network.Mask = netmask
 	network.Gateway = gateway	
-	netWorkId, err := networkModel.CreateNetWork(&network)
+	netWorkId, err := networkModel.CreateNetWork(network)
 	if err != nil {
 		err = fmt.Errorf("添加网段失败:%v", err)
 		errorMsg = "添加网段失败"  

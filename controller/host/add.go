@@ -96,7 +96,7 @@ func (p *HostController) AddHost(){
 	host.Owner = owner
 	host.Status = status
 
-	err = hostModel.CreateHost(&host)
+	err = hostModel.CreateHost(host)
 	if err != nil {
 		err = fmt.Errorf("添加服务器失败:%v", err)
 		errorMsg = "添加服务器失败"  

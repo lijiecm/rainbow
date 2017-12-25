@@ -1989,3 +1989,111 @@ created by net/http.(*Server).Serve
 2017/12/25 13:19:11 [D] [asm_amd64.s:514] enter assetlist controller
 2017/12/25 13:19:11 [D] [host.go:31] select hostlist info
 2017/12/25 13:19:11 [I] [asm_amd64.s:514] [0xc0421b0a00]
+2017/12/25 13:35:28 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:35:28 [D] [host.go:31] select hostlist info
+2017/12/25 13:35:28 [I] [asm_amd64.s:514] [0xc042048c80]
+2017/12/25 13:46:45 [D] [init.go:163] connect to mysql succ
+2017/12/25 13:46:45 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/25 13:46:58 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2017/12/25 13:46:58 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:46:58 [D] [asset.go:33] select asset list info
+2017/12/25 13:46:58 [D] [asset.go:42] select idc list info
+2017/12/25 13:46:58 [I] [asm_amd64.s:514] [0xc042144370]
+2017/12/25 13:47:00 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:47:00 [D] [host.go:31] select hostlist info
+2017/12/25 13:47:00 [I] [asm_amd64.s:514] [0xc04213d4a0]
+2017/12/25 13:47:02 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/25 13:47:02 [D] [net.go:24] select idc list info
+2017/12/25 13:47:04 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/25 13:47:04 [D] [net.go:72] select ip info
+2017/12/25 13:47:09 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:47:09 [D] [host.go:31] select hostlist info
+2017/12/25 13:47:09 [I] [asm_amd64.s:514] [0xc042049ea0]
+2017/12/25 13:47:48 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7276: <Ormer> table: `.` not found, make sure it was registered with `RegisterModel()`
+goroutine 13 [running]:
+net/http.(*conn).serve.func1(0xc04213ce60)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x951640, 0xc0422a2900)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04228d7a0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x951640, 0xc0422a2900)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*orm).getMiInd(0xc0423086e0, 0x9100a0, 0xc042004078, 0x410701, 0x20, 0x98fe80, 0x127d01, 0xc0423086e0)
+	D:/project/src/github.com/astaxie/beego/orm/orm.go:110 +0x221
+github.com/astaxie/beego/orm.(*orm).Insert(0xc0423086e0, 0x9100a0, 0xc042004078, 0xc042368420, 0xc042307170, 0x7cbc59)
+	D:/project/src/github.com/astaxie/beego/orm/orm.go:159 +0x66
+rainbow/model.(*HostModel).CreateHost(0xc0423071f8, 0xc04213c0a0, 0x6, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x97
+rainbow/controller/host.(*HostController).AddHost(0xc042278870)
+	D:/project/src/rainbow/controller/host/add.go:99 +0x6a5
+reflect.Value.call(0x9f0480, 0xc042278870, 0x613, 0x9f51cb, 0x4, 0xcc48a0, 0x0, 0x0, 0xc042004060, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f0480, 0xc042278870, 0x613, 0xcc48a0, 0x0, 0x0, 0xcc48a0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207adc0, 0xc71a40, 0xc042328460, 0xc0423dc500)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207ae70, 0xc71a40, 0xc042328460, 0xc0423dc500)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04213ce60, 0xc72200, 0xc0423acc00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2017/12/25 13:47:48 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7354: <Ormer> table: `.` not found, make sure it was registered with `RegisterModel()`
+goroutine 113 [running]:
+net/http.(*conn).serve.func1(0xc04210e820)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x951640, 0xc0423804d0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04228d7a0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x951640, 0xc0423804d0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*orm).getMiInd(0xc04237ea00, 0x9100a0, 0xc04211e188, 0x410701, 0x20, 0x98fe80, 0xc042380401, 0xc04237ea00)
+	D:/project/src/github.com/astaxie/beego/orm/orm.go:110 +0x221
+github.com/astaxie/beego/orm.(*orm).Insert(0xc04237ea00, 0x9100a0, 0xc04211e188, 0xc04234e580, 0xc042467170, 0x7cbc59)
+	D:/project/src/github.com/astaxie/beego/orm/orm.go:159 +0x66
+rainbow/model.(*HostModel).CreateHost(0xc0424671f8, 0xc04210e8c0, 0x6, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x97
+rainbow/controller/host.(*HostController).AddHost(0xc042306000)
+	D:/project/src/rainbow/controller/host/add.go:99 +0x6a5
+reflect.Value.call(0x9f0480, 0xc042306000, 0x613, 0x9f51cb, 0x4, 0xcc48a0, 0x0, 0x0, 0xc04211e168, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f0480, 0xc042306000, 0x613, 0xcc48a0, 0x0, 0x0, 0xcc48a0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207adc0, 0xc71a40, 0xc042300000, 0xc04247b400)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207ae70, 0xc71a40, 0xc042300000, 0xc04247b400)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210e820, 0xc72200, 0xc042291a40)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2017/12/25 13:51:46 [D] [init.go:163] connect to mysql succ
+2017/12/25 13:51:46 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/25 13:51:59 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2017/12/25 13:51:59 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:51:59 [D] [asset.go:33] select asset list info
+2017/12/25 13:51:59 [D] [asset.go:42] select idc list info
+2017/12/25 13:51:59 [I] [asm_amd64.s:514] [0xc0420758c0]
+2017/12/25 13:52:02 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:52:02 [D] [host.go:31] select hostlist info
+2017/12/25 13:52:02 [I] [asm_amd64.s:514] [0xc042192820]
+2017/12/25 13:52:27 [D] [add.go:99] insert host into database succ, id:[5]
+2017/12/25 13:52:27 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:52:27 [D] [host.go:31] select hostlist info
+2017/12/25 13:52:27 [I] [asm_amd64.s:514] [0xc042350280 0xc042350320]
+2017/12/25 13:52:32 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:52:32 [D] [asset.go:73] select idc list info
+2017/12/25 13:52:35 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:52:35 [D] [asset.go:73] select idc list info
+2017/12/25 13:52:37 [D] [asm_amd64.s:514] enter confmanage controller
+2017/12/25 13:52:37 [D] [asset.go:102] select conf list info
+2017/12/25 13:52:38 [D] [asm_amd64.s:514] enter confmanage controller
+2017/12/25 13:52:38 [D] [asset.go:102] select conf list info
+2017/12/25 13:52:47 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/25 13:52:47 [D] [net.go:24] select idc list info
+2017/12/25 13:52:48 [D] [asm_amd64.s:514] enter net manage controller
+2017/12/25 13:52:48 [D] [net.go:72] select ip info
+2017/12/25 13:53:00 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:53:00 [D] [asset.go:73] select idc list info
