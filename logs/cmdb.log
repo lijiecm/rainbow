@@ -1984,3 +1984,8 @@ created by net/http.(*Server).Serve
 2017/12/25 11:08:32 [D] [asset.go:33] select asset list info
 2017/12/25 11:08:32 [D] [asset.go:42] select idc list info
 2017/12/25 11:08:32 [I] [asm_amd64.s:514] [0xc042074bb0]
+2017/12/25 13:18:58 [D] [init.go:163] connect to mysql succ
+2017/12/25 13:18:58 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2017/12/25 13:19:11 [D] [asm_amd64.s:514] enter assetlist controller
+2017/12/25 13:19:11 [D] [host.go:31] select hostlist info
+2017/12/25 13:19:11 [I] [asm_amd64.s:514] [0xc0421b0a00]

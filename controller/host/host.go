@@ -9,7 +9,7 @@ import (
 )
 
 type HostController struct {
-	controller.BaseController
+	controller.AuthViewController 
 }
 
 func (p *HostController) Host(){

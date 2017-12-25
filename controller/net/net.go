@@ -9,7 +9,7 @@ import (
 )
 
 type NetController struct {
-	controller.BaseController
+	controller.AuthViewController
 }
 
 func (p *NetController) Network(){

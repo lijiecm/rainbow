@@ -7,7 +7,7 @@ import (
 )
 
 type ContractController struct {
-	controller.BaseController 
+	controller.AuthViewController 
 }
 
 
