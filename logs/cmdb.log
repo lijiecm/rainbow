@@ -2097,3 +2097,18 @@ created by net/http.(*Server).Serve
 2017/12/25 13:52:48 [D] [net.go:72] select ip info
 2017/12/25 13:53:00 [D] [asm_amd64.s:514] enter idclist controller
 2017/12/25 13:53:00 [D] [asset.go:73] select idc list info
+2017/12/25 13:54:09 [D] [update.go:93] update asset into database succ, id:[1]
+2017/12/25 13:54:09 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:54:09 [D] [asset.go:73] select idc list info
+2017/12/25 13:54:14 [D] [update.go:93] update asset into database succ, id:[0]
+2017/12/25 13:54:14 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:54:14 [D] [asset.go:73] select idc list info
+2017/12/25 13:54:30 [D] [update.go:93] update asset into database succ, id:[0]
+2017/12/25 13:54:30 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:54:30 [D] [asset.go:73] select idc list info
+2017/12/25 13:54:36 [D] [update.go:93] update asset into database succ, id:[1]
+2017/12/25 13:54:36 [D] [asm_amd64.s:514] enter idclist controller
+2017/12/25 13:54:36 [D] [asset.go:73] select idc list info
+2017/12/25 13:55:31 [D] [init.go:163] connect to mysql succ
+2017/12/25 13:55:32 [E] [init.go:169] ping redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2017/12/25 13:55:32 [W] [main.go:15] init redis failed, err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.

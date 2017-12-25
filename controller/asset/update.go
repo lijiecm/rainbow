@@ -85,7 +85,7 @@ func (p *AssetController) UpdateIdc(){
 	}
 	idc.Id = idc_id
 	idc.Name = idc_name
-	idc.Tag = idc.Tag
+	idc.Tag = idc_tag
 	idc.Location = idc_location
 	idc.Floor = idc_floor
 	idc.RoomNum = idc_room
