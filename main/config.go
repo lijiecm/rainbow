@@ -28,6 +28,11 @@ type RedisConfig struct {
 	RedisTimeout int
 }
 
+type RelayConfig struct {
+	RelayHost string
+	RelayPort int
+}
+
 type Config struct {
 	LogPath string
 	LogLevel string
@@ -35,8 +40,7 @@ type Config struct {
 
 	mysqlConfig MysqlConfig
 	redisConfig RedisConfig
-
-	
+	relayConfig RelayConfig
 }
 
 func InitConfig()(err error){
@@ -104,7 +108,6 @@ func InitConfig()(err error){
 		return
 	}
 
-
 	CmdbConf.MaxInstallOs, err = beego.AppConfig.Int("max_install_os")
 	if err != nil {
 		// 设置默认值为20
@@ -112,5 +115,18 @@ func InitConfig()(err error){
 	}
 
 	api.MaxInstallOsCount = CmdbConf.MaxInstallOs 
+
+	CmdbConf.relayConfig.RelayHost = beego.AppConfig.String("relay_host")
+	if len(CmdbConf.relayConfig.RelayHost) == 0 {
+		err = fmt.Errorf("load config relay_host failed, is null")
+		return
+	}
+
+	CmdbConf.relayConfig.RelayPort, err = beego.AppConfig.Int("relay_port")
+	if err != nil {
+		// 设置默认值为80
+		CmdbConf.relayConfig.RelayPort = 80
+	}
+
 	return
 }

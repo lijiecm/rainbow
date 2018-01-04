@@ -26,7 +26,7 @@ func (p *HostController) Host(){
 			p.TplName = "layout/error.html"
 		}
 	}()
-	
+
 	hostModel := model.NewHostModel()
 	hostList,err := hostModel.HostList()
 	
@@ -36,7 +36,6 @@ func (p *HostController) Host(){
 		logs.Warn("get host list failed, err:%v", err)
 		return
 	}
-
 
 	logs.Info("%v", hostList)
 	p.Data["host_list"] = hostList

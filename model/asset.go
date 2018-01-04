@@ -121,7 +121,7 @@ func (p *AssetModel)DelAsset(assetId int)(err error){
 		logs.Error("del asset failed, err:%v", err)
 		return
 	}
-	logs.Debug("update asset into database succ, id:[%d], num:[%d]", assetId, num)
+	logs.Debug("delete asset succ, id:[%d], num:[%d]", assetId, num)
 	return
 }
 

@@ -1,5 +1,6 @@
 <script src="/static/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 <script src="/static/cmdb/host.js"></script>
+<!--link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/-->
 
 <!-- BEGIN PAGE HEADER-->
 <div class="row-fluid">
@@ -96,6 +97,7 @@
                     <th>操作系统</th>
                     <th>管理员</th>
                     <th>状态</th>
+                    <th>详情</th>
                 </tr>
             </thead>
             <tbody>
@@ -112,6 +114,18 @@
                     <td>{{.OsId}}</td>
                     <td>{{.Owner}}</td>
                     <td>{{.Status}}</td>
+                    <td>
+                        <!--i>堡垒机</i-->
+                        <a class="relay" style="display: inline;" href="javascript:void(0)" title="堡垒机">
+                            <i class="icon-leaf" aria-hidden="true"></i>
+                        </a>
+                        <a class="host_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
+                                <i class="icon-edit" aria-hidden="true"></i>
+                            </a>
+                        <a class="host_delete" style="display: inline;" href="javascript:void(0)" title="删除">
+                            <i class="icon-remove" aria-hidden="true"></i>
+                        </a>
+                    </td>
                 </tr>
                 {{end}}
             </tbody> 
@@ -131,6 +145,12 @@
             <label class="control-label">应用名:<span class="required">*</span></label>
             <div class="controls">
                 <input type="text" class="span6 m-wrap" id="app_name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">机器类型:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="mechine_type">
             </div>
         </div>
     
@@ -197,3 +217,94 @@
     </div>
 </div>
     
+
+
+
+<div id="change_host_model" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>更新主机</h3>
+    </div>
+    <div class="modal-body" id="get_host_info">
+        <div class="control-group">
+            <label class="control-label">Id:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_host_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">应用名:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_app_name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">机器类型:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_mechine_type">
+            </div>
+        </div>
+    
+        <div class="control-group">
+            <label class="control-label">IP:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_host_ip">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">管理IP:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_host_oobip">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">环境:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="update_host_env">
+                    <option value="pref">性能压测</option>
+                    <option value="dev">开发</option>
+                    <option value="test">测试</option>
+                    <option value="pre">预发</option>
+                    <option value="prod">线上</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">资产ID:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_asset_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">主机名:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_hostname">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">操作系统:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_os">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">管理员:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_owner">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">状态:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="update_status">
+                    <option value="buffer">buffer</option>
+                    <option value="offline">offline</option>
+                    <option value="online">online</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-default" id="update_host_button">更新</button>
+    </div>
+</div>
+        

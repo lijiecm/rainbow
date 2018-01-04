@@ -119,8 +119,12 @@
                     <td>{{.NetworkId}}</td>
                     <td>{{.ContractId}}</td>
                     <td>
-                        <button type="button" class="btn btn-success show_chanage_asset">修改</button>
-                        <button type="button" class="btn btn-warning show_del_asset" id="del_asset">删除</button>             
+                        <a class="show_chanage_asset" style="display: inline;" href="javascript:void(0)" title="编辑">
+                            <i class="icon-edit" aria-hidden="true"></i>
+                        </a>
+                        <a class="show_del_asset" style="display: inline;" href="javascript:void(0)" title="删除">
+                            <i class="icon-remove" aria-hidden="true"></i>
+                        </a>
                     </td>
                 </tr>
                 {{end}}

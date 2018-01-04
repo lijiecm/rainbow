@@ -98,6 +98,7 @@ func (this *AuthViewController) setUserData() error {
 	if err != nil {
 		return errors.New("get user by id failed")
 	} else {
+		this.Data["username"] = user.Username
 		this.Data["_user_"] = user
 		return nil
 	}

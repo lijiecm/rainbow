@@ -45,7 +45,7 @@ func (p *HostModel)CreateHost(host Host)(err error){
 	return
 }
 
-func (p *AssetModel) UpdateHost(host Host)(err error){
+func (p *HostModel) UpdateHost(host Host)(err error){
 	o := orm.NewOrm()
 	id, err := o.Update(&host)
 	if err != nil {
@@ -53,5 +53,16 @@ func (p *AssetModel) UpdateHost(host Host)(err error){
 		return
 	}
 	logs.Debug("update host into database succ, id:[%d]", id)
+	return
+}
+
+func (p *HostModel)DelHost(hostId int)(err error){
+	o := orm.NewOrm()
+	num, err := o.Delete(&Host{Id: hostId})
+	if err !=nil {
+		logs.Error("del host failed, err:%v", err)
+		return
+	}
+	logs.Debug("delete host succ, id:[%d], num:[%d]", hostId, num)
 	return
 }

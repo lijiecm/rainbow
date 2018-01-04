@@ -40,6 +40,14 @@ func (p *HostController) AddHost(){
 		return
 	}
 
+	mechine_type := p.GetString("mechine_type")
+	if len(mechine_type) == 0 {
+		err =  fmt.Errorf("机器类型不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
 	host_ip := p.GetString("host_ip")
 	if len(host_ip) == 0 {
 		err =  fmt.Errorf("IP地址不能为空")
@@ -87,6 +95,7 @@ func (p *HostController) AddHost(){
 	}
 
 	host.AppName = app_name
+	host.MechineType = mechine_type
 	host.Ip = host_ip
 	host.Oobip = host_oobip
 	host.Env = host_env
