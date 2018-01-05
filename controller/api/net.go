@@ -18,20 +18,21 @@ type NetIpInfo struct {
 	Count int  //控制当前并发数
 	UpdateIpStatusLock *sync.RWMutex   //更新IP地址的时候需要上锁
 	//FreeIpChan chan map[string]string
-	FreeIpChan chan string
+	//FreeIpChan chan string
 }
 
 var (
 	netIpInfo = &NetIpInfo{}
 	ipInfoModel model.NetIpInfoModel
 	MaxInstallOsCount int
+	NetMap map[string]chan string
 )	
 
 
 /*
 暂时不需要这两个函数
 */
-func setIpToChan(ip string)(err error){
+func setIpToChan(gateway, ip string)(err error){
 	logs.Debug("Start function setIpToChan")
 	oldStatus := 0
 	status := 2
@@ -47,15 +48,17 @@ func setIpToChan(ip string)(err error){
 		err = errUpIp
 		return
 	}
+	NetMap = make(map[string]chan string)
+	NetMap[gateway] = make(chan string, 100)
+	NetMap[gateway] <- ip
 
-	netIpInfo.FreeIpChan = make(chan string, 100)
-	
-	netIpInfo.FreeIpChan <- ip
+	//netIpInfo.FreeIpChan = make(chan string, 100)
+	//netIpInfo.FreeIpChan <- ip
 	return
 }
 
 
-func getIpFromChan()(ip string, err error){
+func getIpFromChan(gateway string)(ip string, err error){
 	logs.Debug("Start function getIpFromChan")
 	ticker := time.NewTicker(time.Second * 10)
 	select {
@@ -63,8 +66,9 @@ func getIpFromChan()(ip string, err error){
 			//code = 1000
 			err = fmt.Errorf("request timeout")
 			return
-		case ipChan := <- netIpInfo.FreeIpChan:
-			//此处有bug，当不通网段的地址来申请IP的时候，有可能拿到其他网段的IP地址，后续考虑根据网段来获取channel信息
+		//case ipChan := <- netIpInfo.FreeIpChan:
+		case ipChan := <- NetMap[gateway]:
+			//此处有bug，当不同网段的地址来申请IP的时候，有可能拿到其他网段的IP地址，后续考虑根据网段来获取channel信息
 			netIpInfo.UpdateIpStatusLock = new(sync.RWMutex)
 			//拿到IP以后，把IP地址改为已使用状态1
 			oldStatus := 2
@@ -153,7 +157,7 @@ func (p *ApiNetController) GetIpAddr(){
 	ip := ipList[index]
 	
 	// 把获取到的IP地址放到管道里面
-	errIp :=  setIpToChan(string(ip))
+	errIp :=  setIpToChan(gateway, ip)
 	if errIp != nil {
 		err :=  fmt.Errorf("无法拿到可用IP")
 		errorMsg =  err.Error()
@@ -162,7 +166,7 @@ func (p *ApiNetController) GetIpAddr(){
 	}
 
 	//从管道里面读取IP，无需传入参数，管道是先进先出，即使是第二个请求写入搞到里面的IP，也可以当未使用IP分配下去
-	newIp, err := getIpFromChan()
+	newIp, err := getIpFromChan(gateway)
 	if err != nil {
 		logs.Warn("cann't get ip[%s] from chan, err:%v",ip,err)
 		return

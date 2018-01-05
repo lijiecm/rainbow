@@ -2132,3 +2132,153 @@ created by net/http.(*Server).Serve
 2018/01/05 13:24:11 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.13], status[1],oldStatus[2]
 2018/01/05 13:24:11 [D] [net.go:73] update host into database succ
 2018/01/05 13:24:11 [D] [net.go:165] ===============>end Lock
+2018/01/05 15:45:48 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/05 15:45:48 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 15:45:48 [D] [asset.go:33] select asset list info
+2018/01/05 15:45:48 [D] [asset.go:42] select idc list info
+2018/01/05 15:45:48 [I] [asm_amd64.s:514] [0xc042336160]
+2018/01/05 15:45:50 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 15:45:50 [D] [host.go:31] select hostlist info
+2018/01/05 15:45:50 [I] [asm_amd64.s:514] [0xc042129400 0xc0421294a0]
+2018/01/05 15:45:54 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/05 15:45:54 [D] [net.go:24] select idc list info
+2018/01/05 15:45:58 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 15:45:58 [D] [asset.go:33] select asset list info
+2018/01/05 15:45:58 [D] [asset.go:42] select idc list info
+2018/01/05 15:45:58 [I] [asm_amd64.s:514] [0xc0423c26e0]
+2018/01/05 15:46:00 [D] [asm_amd64.s:514] enter idclist controller
+2018/01/05 15:46:00 [D] [asset.go:73] select idc list info
+2018/01/05 15:46:01 [D] [asm_amd64.s:514] enter confmanage controller
+2018/01/05 15:46:01 [D] [asset.go:102] select conf list info
+2018/01/05 15:46:03 [D] [asm_amd64.s:514] enter Approval controller
+2018/01/05 15:46:04 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 15:46:04 [D] [asset.go:33] select asset list info
+2018/01/05 15:46:04 [D] [asset.go:42] select idc list info
+2018/01/05 15:46:04 [I] [asm_amd64.s:514] [0xc042134580]
+2018/01/05 15:56:02 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 15:56:02 [D] [asset.go:33] select asset list info
+2018/01/05 15:56:02 [D] [asset.go:42] select idc list info
+2018/01/05 15:56:02 [I] [asm_amd64.s:514] [0xc042088f20]
+2018/01/05 16:08:41 [D] [init.go:163] connect to mysql succ
+2018/01/05 16:08:42 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 16:08:49 [I] [host.go:48] get HostInfoBySn success 
+2018/01/05 16:08:52 [I] [host.go:48] get HostInfoBySn success 
+2018/01/05 16:09:01 [I] [host.go:48] get HostInfoBySn success 
+2018/01/05 16:09:08 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:08 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.7 192.168.4.12 192.168.4.14 192.168.4.17 192.168.4.19 192.168.4.22 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.34 192.168.4.35 192.168.4.36 192.168.4.37], index:1
+2018/01/05 16:09:08 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:08 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.3], status[2],oldStatus[0]
+2018/01/05 16:09:08 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:08 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:08 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.3], status[1],oldStatus[2]
+2018/01/05 16:09:08 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:08 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:10 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:10 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.12 192.168.4.14 192.168.4.17 192.168.4.19 192.168.4.22 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.34 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38], index:3
+2018/01/05 16:09:10 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:10 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.12], status[2],oldStatus[0]
+2018/01/05 16:09:10 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:10 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:10 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.12], status[1],oldStatus[2]
+2018/01/05 16:09:10 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:10 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:11 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:11 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.17 192.168.4.19 192.168.4.22 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.34 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39], index:6
+2018/01/05 16:09:11 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:11 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.22], status[2],oldStatus[0]
+2018/01/05 16:09:11 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:11 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:11 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.22], status[1],oldStatus[2]
+2018/01/05 16:09:11 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:11 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:11 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:11 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.17 192.168.4.19 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.34 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40], index:5
+2018/01/05 16:09:11 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:11 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.19], status[2],oldStatus[0]
+2018/01/05 16:09:11 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:11 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:11 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.19], status[1],oldStatus[2]
+2018/01/05 16:09:11 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:11 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:12 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:12 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.17 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.34 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40 192.168.4.41], index:12
+2018/01/05 16:09:12 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:12 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.34], status[2],oldStatus[0]
+2018/01/05 16:09:12 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:12 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:12 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.34], status[1],oldStatus[2]
+2018/01/05 16:09:12 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:12 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:12 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:12 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.17 192.168.4.25 192.168.4.26 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42], index:6
+2018/01/05 16:09:12 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:12 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.26], status[2],oldStatus[0]
+2018/01/05 16:09:13 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:13 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:13 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.26], status[1],oldStatus[2]
+2018/01/05 16:09:13 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:13 [D] [net.go:165] ===============>end Lock
+2018/01/05 16:09:13 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 16:09:13 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.17 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43], index:4
+2018/01/05 16:09:13 [D] [net.go:156] Start function setIpToChan
+2018/01/05 16:09:13 [D] [net.go:42] start model function UpdateIpStatus,ip[192.168.4.17], status[2],oldStatus[0]
+2018/01/05 16:09:13 [D] [net.go:42] update host into database succ
+2018/01/05 16:09:13 [D] [net.go:165] Start function getIpFromChan
+2018/01/05 16:09:13 [D] [net.go:73] start model function UpdateIpStatus,ip[192.168.4.17], status[1],oldStatus[2]
+2018/01/05 16:09:13 [D] [net.go:73] update host into database succ
+2018/01/05 16:09:13 [D] [net.go:165] ===============>end Lock
+2018/01/05 18:03:26 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:03:26 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:03:33 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:03:33 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.33 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44], index:9
+2018/01/05 18:03:33 [D] [net.go:157] Start function setIpToChan
+2018/01/05 18:03:33 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.33], status[2],oldStatus[0]
+2018/01/05 18:03:33 [D] [net.go:43] update host into database succ
+2018/01/05 18:05:36 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:05:36 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:05:36 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:05:36 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.38 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45], index:12
+2018/01/05 18:05:36 [D] [net.go:158] Start function setIpToChan
+2018/01/05 18:05:36 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.38], status[2],oldStatus[0]
+2018/01/05 18:05:36 [D] [net.go:43] update host into database succ
+2018/01/05 18:05:36 [D] [net.go:158] ===> ，开始写入参数了
+2018/01/05 18:06:27 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:06:27 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:06:29 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:06:29 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.14 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45 192.168.4.46], index:3
+2018/01/05 18:06:29 [D] [net.go:159] Start function setIpToChan
+2018/01/05 18:06:29 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.14], status[2],oldStatus[0]
+2018/01/05 18:06:29 [D] [net.go:43] update host into database succ
+2018/01/05 18:06:29 [D] [net.go:159] ===> ，开始写入参数了
+2018/01/05 18:06:49 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:06:50 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:06:52 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:06:52 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.32 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45 192.168.4.46 192.168.4.47], index:7
+2018/01/05 18:06:52 [D] [net.go:159] Start function setIpToChan
+2018/01/05 18:06:52 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.32], status[2],oldStatus[0]
+2018/01/05 18:06:52 [D] [net.go:43] update host into database succ
+2018/01/05 18:06:52 [D] [net.go:159] ===> ，开始写入参数了
+2018/01/05 18:09:21 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:09:22 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:09:23 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:09:23 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.25 192.168.4.27 192.168.4.28 192.168.4.31 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45 192.168.4.46 192.168.4.47 192.168.4.48], index:5
+2018/01/05 18:09:23 [D] [net.go:161] Start function setIpToChan
+2018/01/05 18:09:23 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.28], status[2],oldStatus[0]
+2018/01/05 18:09:23 [D] [net.go:43] update host into database succ
+2018/01/05 18:09:23 [D] [net.go:161] ===> ，开始写入参数了
+2018/01/05 18:09:23 [D] [net.go:161] ===> ，参数写完了
+2018/01/05 18:09:23 [D] [net.go:170] Start function getIpFromChan
+2018/01/05 18:09:23 [D] [net.go:78] start model function UpdateIpStatus,ip[192.168.4.28], status[1],oldStatus[2]
+2018/01/05 18:09:23 [D] [net.go:78] update host into database succ
+2018/01/05 18:09:23 [D] [net.go:170] ===============>end Lock
+2018/01/05 18:10:06 [D] [init.go:163] connect to mysql succ
+2018/01/05 18:10:06 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 18:10:09 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:10:09 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.25 192.168.4.27 192.168.4.31 192.168.4.35 192.168.4.36 192.168.4.37 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45 192.168.4.46 192.168.4.47 192.168.4.48 192.168.4.49], index:8
+2018/01/05 18:10:09 [D] [net.go:160] Start function setIpToChan
+2018/01/05 18:10:09 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.37], status[2],oldStatus[0]
+2018/01/05 18:10:09 [D] [net.go:43] update host into database succ
+2018/01/05 18:10:09 [D] [net.go:169] Start function getIpFromChan
+2018/01/05 18:10:09 [D] [net.go:77] start model function UpdateIpStatus,ip[192.168.4.37], status[1],oldStatus[2]
+2018/01/05 18:10:09 [D] [net.go:77] update host into database succ
+2018/01/05 18:10:09 [D] [net.go:169] ===============>end Lock

@@ -73,17 +73,6 @@ func (p *NetIpInfoModel)CreateIp(ip Ip)(err error){
 func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(ipList []string,err error){
 	//一次返回20个IP，也就是说最大支持20个宿主机的并发安装，然后让在取一个随机值
 	//sql := "select ip.addr from ip,network where network.gateway = ? and ip.status = ? and ip.network_id= network.id limit ?"
-	/*
-	var ipList []*Ip
-	o := orm.NewOrm()
-	qs := o.QueryTable("ip")
-	qs.Filter("network__gateway",gateway,"ip__status",status,"ip__network_id","network__id").Limit(limitCount)
-	if len(ipList) != 0 {
-		logs.Error("select ip from mysql failed")
-		return
-	}
-	ip = ipList[0].Addr
-	*/
 
 	var ips []Ip
 	o := orm.NewOrm()
