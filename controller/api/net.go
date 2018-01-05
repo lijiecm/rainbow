@@ -16,8 +16,9 @@ type ApiNetController struct {
 type NetIpInfo struct {
 	Addr string
 	Count int  //控制当前并发数
-	UpdateIpStatusLock sync.RWMutex   //更新IP地址的时候需要上锁
-	FreeIpChan chan map[string]string
+	UpdateIpStatusLock *sync.RWMutex   //更新IP地址的时候需要上锁
+	//FreeIpChan chan map[string]string
+	FreeIpChan chan string
 }
 
 var (
@@ -25,6 +26,68 @@ var (
 	ipInfoModel model.NetIpInfoModel
 	MaxInstallOsCount int
 )	
+
+
+/*
+暂时不需要这两个函数
+*/
+func setIpToChan(ip string)(err error){
+	logs.Debug("Start function setIpToChan")
+	oldStatus := 0
+	status := 2
+
+	netIpInfo.UpdateIpStatusLock = new(sync.RWMutex)
+	netIpInfo.UpdateIpStatusLock.Lock()
+	// status 状态为2的时候，说明该地址已经被标记待使用，等确定分配以后在把状态改为1
+	errUpIp := ipInfoModel.UpdateIpStatus(ip,oldStatus, status)
+	netIpInfo.UpdateIpStatusLock.Unlock()
+	if errUpIp != nil {
+		errMsg :=  fmt.Errorf("更新IP地址状态失败")
+		logs.Warn("update ip[%s] status failed, err:%v, errUpIp:%v",ip,errMsg,errUpIp)
+		err = errUpIp
+		return
+	}
+
+	netIpInfo.FreeIpChan = make(chan string, 100)
+	
+	netIpInfo.FreeIpChan <- ip
+	return
+}
+
+
+func getIpFromChan()(ip string, err error){
+	logs.Debug("Start function getIpFromChan")
+	ticker := time.NewTicker(time.Second * 10)
+	select {
+		case <- ticker.C:   //如果用户超过10秒，则本次超时
+			//code = 1000
+			err = fmt.Errorf("request timeout")
+			return
+		case ipChan := <- netIpInfo.FreeIpChan:
+			//此处有bug，当不通网段的地址来申请IP的时候，有可能拿到其他网段的IP地址，后续考虑根据网段来获取channel信息
+			netIpInfo.UpdateIpStatusLock = new(sync.RWMutex)
+			//拿到IP以后，把IP地址改为已使用状态1
+			oldStatus := 2
+			status := 1
+			netIpInfo.UpdateIpStatusLock.Lock()
+			errUpIp := ipInfoModel.UpdateIpStatus(ipChan,oldStatus,status)
+			netIpInfo.UpdateIpStatusLock.Unlock()
+			logs.Debug("===============>end Lock")
+			if errUpIp != nil {
+				errMsg :=  fmt.Errorf("更新IP地址状态失败")
+				logs.Warn("update ip status failed, err:%v",errMsg)
+				err = errUpIp
+				return
+			}
+
+			ip = ipChan
+			//一个IP配置成功以后，则表示这个并发结束，所以需要减去1
+			netIpInfo.Count -= 1
+			return
+	}	
+}
+
+
 
 func (p *ApiNetController) GetIpAddr(){
 	/*
@@ -66,7 +129,7 @@ func (p *ApiNetController) GetIpAddr(){
 	ipList, err := ipInfoModel.GetFreeIp(gateway,status, MaxInstallOsCount)
 
 	if err != nil {
-		err :=  fmt.Errorf("无法获取到可用IP")
+		err :=  fmt.Errorf("获取空闲IP失败")
 		errorMsg =  err.Error()
 		logs.Warn("get ip failed, err:%v",err)
 		return
@@ -78,21 +141,33 @@ func (p *ApiNetController) GetIpAddr(){
 		return
 	}
 	// 取一个10以内的随机值
+	var index int
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	index := r.Intn(MaxInstallOsCount - 1)
+	if MaxInstallOsCount < len(ipList) {
+		index = len(ipList) - 1
+	} else{
+		index = r.Intn(MaxInstallOsCount - 1)
+	}
 	
 	logs.Debug("===============>%s, index:%d",ipList,index)
 	ip := ipList[index]
 	
-	if len(ipList) == 0 {
+	// 把获取到的IP地址放到管道里面
+	errIp :=  setIpToChan(string(ip))
+	if errIp != nil {
 		err :=  fmt.Errorf("无法拿到可用IP")
 		errorMsg =  err.Error()
-		logs.Warn("don't ip use, err:%v",errorMsg)
+		logs.Warn("cann't send ip[%s] to chan, err:%v",ip,errIp)
 		return
 	}
 
-	netIpInfo.Count -= 1
-	result["message"] = ip
+	//从管道里面读取IP，无需传入参数，管道是先进先出，即使是第二个请求写入搞到里面的IP，也可以当未使用IP分配下去
+	newIp, err := getIpFromChan()
+	if err != nil {
+		logs.Warn("cann't get ip[%s] from chan, err:%v",ip,err)
+		return
+	}
+	result["message"] = newIp
 	p.Data["json"] =  result
 	
 	p.ServeJSON()  	

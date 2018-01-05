@@ -1105,3 +1105,944 @@ created by net/http.(*Server).Serve
 2018/01/04 19:37:41 [D] [asm_amd64.s:514] enter assetlist controller
 2018/01/04 19:37:41 [D] [host.go:31] select hostlist info
 2018/01/04 19:37:41 [I] [asm_amd64.s:514] [0xc0421c8960 0xc0421c8a00]
+2018/01/04 19:46:44 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:46:44 [D] [asset.go:33] select asset list info
+2018/01/04 19:46:44 [D] [asset.go:42] select idc list info
+2018/01/04 19:46:44 [I] [asm_amd64.s:514] [0xc04229e160]
+2018/01/04 19:46:47 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:46:47 [D] [net.go:24] select idc list info
+2018/01/04 19:46:48 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:46:48 [D] [host.go:31] select hostlist info
+2018/01/04 19:46:48 [I] [asm_amd64.s:514] [0xc04210c0a0 0xc04210c320]
+2018/01/04 19:46:50 [D] [asm_amd64.s:514] enter confmanage controller
+2018/01/04 19:46:50 [D] [asset.go:102] select conf list info
+2018/01/04 19:46:54 [D] [asm_amd64.s:514] enter idclist controller
+2018/01/04 19:46:54 [D] [asset.go:73] select idc list info
+2018/01/04 19:46:56 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:46:56 [D] [host.go:31] select hostlist info
+2018/01/04 19:46:56 [I] [asm_amd64.s:514] [0xc0421da640 0xc0421da6e0]
+2018/01/04 19:46:57 [D] [asm_amd64.s:514] enter confmanage controller
+2018/01/04 19:46:57 [D] [asset.go:102] select conf list info
+2018/01/04 19:47:04 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:47:04 [D] [net.go:72] select ip info
+2018/01/04 19:47:35 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:47:35 [D] [net.go:72] select ip info
+2018/01/04 19:49:04 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:49:04 [D] [net.go:72] select ip info
+2018/01/04 19:50:03 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:50:03 [D] [net.go:72] select ip info
+2018/01/04 19:50:06 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:50:06 [D] [host.go:31] select hostlist info
+2018/01/04 19:50:06 [I] [asm_amd64.s:514] [0xc0421a4280 0xc0421a4320]
+2018/01/04 19:50:30 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:50:30 [D] [host.go:31] select hostlist info
+2018/01/04 19:50:30 [I] [asm_amd64.s:514] [0xc04210c1e0 0xc04210c320]
+2018/01/04 19:51:53 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:51:53 [D] [host.go:31] select hostlist info
+2018/01/04 19:51:53 [I] [asm_amd64.s:514] [0xc04210dea0 0xc04210df40]
+2018/01/04 19:51:55 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:51:55 [D] [asset.go:33] select asset list info
+2018/01/04 19:51:55 [D] [asset.go:42] select idc list info
+2018/01/04 19:51:55 [I] [asm_amd64.s:514] [0xc0422ba2c0]
+2018/01/04 19:51:59 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:51:59 [D] [net.go:24] select idc list info
+2018/01/04 19:52:02 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:52:02 [D] [net.go:72] select ip info
+2018/01/04 19:52:17 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:52:17 [D] [net.go:72] select ip info
+2018/01/04 19:52:21 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:52:21 [D] [net.go:24] select idc list info
+2018/01/04 19:52:24 [D] [asm_amd64.s:514] enter idclist controller
+2018/01/04 19:52:24 [D] [asset.go:73] select idc list info
+2018/01/04 19:52:32 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:52:32 [D] [host.go:31] select hostlist info
+2018/01/04 19:52:32 [I] [asm_amd64.s:514] [0xc042512000 0xc0425120a0]
+2018/01/04 19:52:37 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/04 19:52:37 [D] [net.go:72] select ip info
+2018/01/04 19:52:42 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:52:42 [D] [asset.go:33] select asset list info
+2018/01/04 19:52:42 [D] [asset.go:42] select idc list info
+2018/01/04 19:52:42 [I] [asm_amd64.s:514] [0xc04207adc0]
+2018/01/04 19:52:45 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/04 19:52:45 [D] [asset.go:33] select asset list info
+2018/01/04 19:52:45 [D] [asset.go:42] select idc list info
+2018/01/04 19:52:45 [I] [asm_amd64.s:514] [0xc04246c000]
+2018/01/05 09:28:18 [D] [init.go:163] connect to mysql succ
+2018/01/05 09:28:18 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 09:28:42 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/05 09:28:42 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/05 09:28:42 [D] [asset.go:33] select asset list info
+2018/01/05 09:28:42 [D] [asset.go:42] select idc list info
+2018/01/05 09:28:42 [I] [asm_amd64.s:514] [0xc042308840]
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4802: runtime error: index out of range
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0421bc280)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042059ec0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x9350a0)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e4b0)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04214e4b0, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc0420680e8, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04214e4b0, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc04233e0e0, 0xc0421e8200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc04233e0e0, 0xc0421e8200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421bc280, 0xc76200, 0xc0420dc980)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4805: runtime error: index out of range
+goroutine 60 [running]:
+net/http.(*conn).serve.func1(0xc04210f5e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042059ec0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e5a0)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04214e5a0, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042068120, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04214e5a0, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc04233e1c0, 0xc042032500)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc04233e1c0, 0xc042032500)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f5e0, 0xc76200, 0xc042067700)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4806: runtime error: index out of range
+goroutine 61 [running]:
+net/http.(*conn).serve.func1(0xc04210f680)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042059ec0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e690)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04214e690, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042068150, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04214e690, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc04233e2a0, 0xc042032600)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc04233e2a0, 0xc042032600)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f680, 0xc76200, 0xc042067880)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4807: runtime error: index out of range
+goroutine 62 [running]:
+net/http.(*conn).serve.func1(0xc04210f720)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042059ec0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04244c1e0)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04244c1e0, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc0421b80b0, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04244c1e0, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc0421b22a0, 0xc042032700)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc0421b22a0, 0xc042032700)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f720, 0xc76200, 0xc042067a00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4808: runtime error: index out of range
+goroutine 63 [running]:
+net/http.(*conn).serve.func1(0xc04210f7c0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04229e7b0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e780)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04214e780, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042068168, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04214e780, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc04233e380, 0xc042032800)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc04233e380, 0xc042032800)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f7c0, 0xc76200, 0xc042067c00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4809: runtime error: index out of range
+goroutine 64 [running]:
+net/http.(*conn).serve.func1(0xc04210f860)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300c0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0422c0780)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc0422c0780, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042004218, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc0422c0780, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc0422a0a80, 0xc042032900)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc0422a0a80, 0xc042032900)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f860, 0xc76200, 0xc042067e00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:00 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:00 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4810: runtime error: index out of range
+goroutine 66 [running]:
+net/http.(*conn).serve.func1(0xc04210f900)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300c0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0422c0870)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc0422c0870, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042004238, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc0422c0870, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc0422a0c40, 0xc042032a00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc0422a0c40, 0xc042032a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f900, 0xc76200, 0xc0422c2180)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:01 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4811: runtime error: index out of range
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0xc042047180)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04229e7b0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e870)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc04214e870, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042068188, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc04214e870, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc04233e540, 0xc042001a00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc04233e540, 0xc042001a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042047180, 0xc76200, 0xc04227a300)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 09:29:06 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 09:29:06 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:4812: runtime error: index out of range
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0xc04210f9a0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300c0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x961f80, 0xc9c510)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/model.(*NetIpInfoModel).GetFreeIp(0xcc8580, 0x0, 0x0, 0x0, 0x14, 0x0, 0x0, 0x0, 0x40ff4c)
+	D:/project/src/rainbow/model/net.go:84 +0x377
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0422c0960)
+	D:/project/src/rainbow/controller/api/net.go:122 +0x5a5
+reflect.Value.call(0x9f19a0, 0xc0422c0960, 0x4a13, 0x9f88ab, 0x4, 0xcc88c0, 0x0, 0x0, 0xc042004260, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f19a0, 0xc0422c0960, 0x4a13, 0xcc88c0, 0x0, 0x0, 0xcc88c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc75a40, 0xc0422a0e00, 0xc042032b00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc75a40, 0xc0422a0e00, 0xc042032b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210f9a0, 0xc76200, 0xc0422c2440)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:07 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:35:07 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:35:42 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:35:43 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7518: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 24 [running]:
+net/http.(*conn).serve.func1(0xc042046000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc042367130)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0420deab0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc042367130)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc042371500, 0xc042346fc0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc0420deae0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc0421e42d0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc0421e42d0, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc0421e42d0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc0421b20e0, 0xc0421e6400)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc0421b20e0, 0xc0421e6400)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042046000, 0xc77200, 0xc042068a40)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7519: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc042046640)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc042367980)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0420deab0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc042367980)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc042371650, 0xc042347da0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc042188120, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc0421e43c0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc0421e43c0, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc0421e43c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc0421b21c0, 0xc042350300)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc0421b21c0, 0xc042350300)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042046640, 0xc77200, 0xc04200e280)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7520: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 41 [running]:
+net/http.(*conn).serve.func1(0xc0421ba0a0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc04211ca00)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042176f90)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc04211ca00)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc04200c1c0, 0xc0420a10c0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc042176fc0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc042150000, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc042150000, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc042150000, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc0422880e0, 0xc042032700)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc0422880e0, 0xc042032700)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421ba0a0, 0xc77200, 0xc0420dc740)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7521: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0420466e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc04211d250)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042176f90)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc04211d250)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc04200c310, 0xc0421230e0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc042177e00, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc0421501e0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc0421501e0, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc0421501e0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc0422881c0, 0xc042350900)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc0422881c0, 0xc042350900)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0420466e0, 0xc77200, 0xc04200e6c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7522: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc042046820)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc04212d0f0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422800c0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc04212d0f0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc0420c6150, 0xc04215e3e0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc0422800f0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc04241c000, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc04241c000, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc04241c000, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc042418000, 0xc042350a00)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc042418000, 0xc042350a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042046820, 0xc77200, 0xc04200e980)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7523: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 28 [running]:
+net/http.(*conn).serve.func1(0xc042046960)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc04211dfa0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042176f90)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc04211dfa0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc04200c540, 0xc0421701e0, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc0421aade0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc0421502d0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc0421502d0, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc0421502d0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc0422882a0, 0xc042350b00)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc0422882a0, 0xc042350b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042046960, 0xc77200, 0xc04200ed00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:35:50 [D] [asm_amd64.s:514] ====>gateway:, status:0, MaxInstallOsCount:20
+2018/01/05 11:35:50 [E] [net.go:122] 获取不到地址哦
+2018/01/05 11:35:50 [W] [asm_amd64.s:514] get ip failed, err:无法获取到可用IP
+2018/01/05 11:35:50 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7525: can't find templatefile in the path:views//apinetcontroller/getipaddr.tpl
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc0421ba8c0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x935240, 0xc04214ea50)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042176f90)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x935240, 0xc04214ea50)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.ExecuteViewPathTemplate(0xc6fdc0, 0xc04200c690, 0xc042171120, 0x1e, 0xc042009ff0, 0x6, 0x95cd20, 0xc0421abc50, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/template.go:73 +0x3a2
+github.com/astaxie/beego.(*Controller).renderTemplate(0xc0421503c0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/controller.go:263 +0x38f
+github.com/astaxie/beego.(*Controller).RenderBytes(0xc0421503c0, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:214 +0x67
+github.com/astaxie/beego.(*Controller).Render(0xc0421503c0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/controller.go:194 +0x45
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b1e0, 0xc76a40, 0xc042288460, 0xc0423f0c00)
+	D:/project/src/github.com/astaxie/beego/router.go:827 +0x1e93
+net/http.serverHandler.ServeHTTP(0xc04207b290, 0xc76a40, 0xc042288460, 0xc0423f0c00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421ba8c0, 0xc77200, 0xc04227a840)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:38:42 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:38:43 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:39:03 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:39:03 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:14
+2018/01/05 11:39:03 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:5692: operator `exact` need 1 args not 3
+goroutine 53 [running]:
+net/http.(*conn).serve.func1(0xc0421a8460)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x954ec0, 0xc04212d990)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0420df680)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x954ec0, 0xc04212d990)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc04211d830, 0xc04210e8c0, 0xc042136340, 0x9f9ecb, 0x5, 0xc04216ee10, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc04202eb70, 0xc042122d80, 0x0, 0xcad120, 0x0, 0x1, 0x3100000020, 0x3a00000031, 0x3900000033)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc04211d830, 0xc77440, 0xc04210eaa0, 0xc0421ae380, 0xc04210e8c0, 0xc042122d80, 0xc04216ee70, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc0421ae380, 0xc04216ee70, 0xc04202eec8, 0xc0421302c8, 0xc04216ee70)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc04212c810, 0xc, 0x2, 0xc04202efe0, 0x708114)
+	D:/project/src/rainbow/model/net.go:119 +0x36d
+rainbow/controller/api.setIpToChan(0xc04212c810, 0xc, 0xc04202f310, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:38 +0x7f
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0423881e0)
+	D:/project/src/rainbow/controller/api/net.go:144 +0x997
+reflect.Value.call(0x9f1e40, 0xc0423881e0, 0x4a13, 0x9f8d4b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc0421aa170, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f1e40, 0xc0423881e0, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc76a40, 0xc0422861c0, 0xc0421ee100)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc76a40, 0xc0422861c0, 0xc0421ee100)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421a8460, 0xc77200, 0xc04200e900)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:39:03 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:39:03 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:5
+2018/01/05 11:41:29 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:41:29 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:41:31 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:41:31 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:12
+2018/01/05 11:41:31 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:5760: operator `exact` need 1 args not 3
+goroutine 30 [running]:
+net/http.(*conn).serve.func1(0xc0420ce5a0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x955000, 0xc042082b30)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042079860)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x955000, 0xc042082b30)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc042151740, 0xc04214a820, 0xc0421676c0, 0x9fa00b, 0x5, 0xc042424f60, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc0423fcb20, 0xc04207e720, 0x0, 0xcad120, 0x0, 0x1, 0x3100000020, 0x3a00000031, 0x3100000034)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc042151740, 0xc77440, 0xc04204c140, 0xc0423c2580, 0xc04214a820, 0xc04207e720, 0xc042424f90, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc0423c2580, 0xc042424f90, 0xc0423fce78, 0xc0423da628, 0xc042424f90)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc042055070, 0xc, 0x2, 0xc0423fcf90, 0x708114)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc042055070, 0xc, 0xc0423fd310, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:38 +0x7f
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc042180000)
+	D:/project/src/rainbow/controller/api/net.go:144 +0x99d
+reflect.Value.call(0x9f1f80, 0xc042180000, 0x4a13, 0x9f8e8b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc04206a040, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f1f80, 0xc042180000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042096dc0, 0xc76a40, 0xc042190460, 0xc0420ca300)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042096e70, 0xc76a40, 0xc042190460, 0xc0420ca300)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0420ce5a0, 0xc77200, 0xc042084080)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:41:31 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:41:31 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:4
+2018/01/05 11:43:24 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:43:24 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:43:26 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:43:26 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:5
+2018/01/05 11:43:26 [D] [net.go:147] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:43:26 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:3293: operator `exact` need 1 args not 3
+goroutine 12 [running]:
+net/http.(*conn).serve.func1(0xc042446000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x955140, 0xc0421263c0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042442150)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x955140, 0xc0421263c0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc042119830, 0xc0421088c0, 0xc042130680, 0x9fa14b, 0x5, 0xc042442540, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc042382af0, 0xc0422c6c80, 0x0, 0xcad120, 0x0, 0x1, 0x0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc042119830, 0xc77440, 0xc042108aa0, 0xc04217e500, 0xc0421088c0, 0xc0422c6c80, 0xc042442570, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc04217e500, 0xc042442570, 0xc042382e48, 0xc04205a628, 0xc042442570)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc0422e0660, 0xb, 0x2, 0x0, 0x3)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc0422e0660, 0xb, 0xc042383310, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:39 +0xea
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc042148000)
+	D:/project/src/rainbow/controller/api/net.go:147 +0x99d
+reflect.Value.call(0x9f20c0, 0xc042148000, 0x4a13, 0x9f8fcb, 0x4, 0xcc98c0, 0x0, 0x0, 0xc042004008, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f20c0, 0xc042148000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042075130, 0xc76a40, 0xc04227a000, 0xc042001600)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc0420751e0, 0xc76a40, 0xc04227a000, 0xc042001600)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042446000, 0xc77200, 0xc0420d7e80)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:43:26 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:43:26 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:7
+2018/01/05 11:43:50 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:43:50 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:43:54 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:43:54 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:0
+2018/01/05 11:43:54 [D] [net.go:148] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:43:54 [D] [net.go:148] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:43:54 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:3397: operator `exact` need 1 args not 3
+goroutine 14 [running]:
+net/http.(*conn).serve.func1(0xc042042000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x9551a0, 0xc04211f1a0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042059590)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x9551a0, 0xc04211f1a0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc04211f830, 0xc04210e960, 0xc0421381a0, 0x9fa1ab, 0x5, 0xc0420dea80, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc042274ae0, 0xc0420d8600, 0x0, 0xcad120, 0x0, 0x1, 0x0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc04211f830, 0xc77440, 0xc04210eb40, 0xc042280400, 0xc04210e960, 0xc0420d8600, 0xc0420deab0, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc042280400, 0xc0420deab0, 0xc042274e38, 0xc04211abc8, 0xc0420deab0)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc04211e2c0, 0xb, 0x2, 0x0, 0x1)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc04211e2c0, 0xb, 0xc042275310, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:40 +0x158
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0421e2000)
+	D:/project/src/rainbow/controller/api/net.go:148 +0x99d
+reflect.Value.call(0x9f2120, 0xc0421e2000, 0x4a13, 0x9f902b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc042154048, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2120, 0xc0421e2000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207adc0, 0xc76a40, 0xc0422682a0, 0xc042046300)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207ae70, 0xc76a40, 0xc0422682a0, 0xc042046300)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042042000, 0xc77200, 0xc04200e200)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:43:54 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:43:54 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:0
+2018/01/05 11:43:54 [D] [net.go:148] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:48:12 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:48:12 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:48:19 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:48:19 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:16
+2018/01/05 11:48:19 [D] [net.go:153] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:48:19 [D] [net.go:153] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:48:19 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:3830: operator `exact` need 1 args not 3
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc0421bc1e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x9551c0, 0xc0421386b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04200a4e0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x9551c0, 0xc0421386b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc0421397d0, 0xc042128a00, 0xc04214f860, 0x9fa1cb, 0x5, 0xc042060cc0, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc042380ae0, 0xc0420ee1c0, 0x0, 0xcad120, 0x0, 0x1, 0x0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc0421397d0, 0xc77440, 0xc042128d20, 0xc042064900, 0xc042128a00, 0xc0420ee1c0, 0xc042060d20, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc042064900, 0xc042060d20, 0xc042380e38, 0xc04206c628, 0xc042060d20)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc042039640, 0xc, 0x2, 0x0, 0x1)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc042039640, 0xc, 0xc0423812f0, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:40 +0x158
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc042168000)
+	D:/project/src/rainbow/controller/api/net.go:153 +0x98c
+reflect.Value.call(0x9f2140, 0xc042168000, 0x4a13, 0x9f904b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc042004008, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2140, 0xc042168000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042089290, 0xc76a40, 0xc0422fa000, 0xc0421ac700)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042089340, 0xc76a40, 0xc0422fa000, 0xc0421ac700)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421bc1e0, 0xc77200, 0xc042074500)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:48:19 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:48:19 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:3
+2018/01/05 11:48:19 [D] [net.go:153] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:49:12 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:49:12 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:49:15 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:49:15 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:4
+2018/01/05 11:49:15 [D] [net.go:153] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:49:15 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:3940: runtime error: invalid memory address or nil pointer dereference
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc042048000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x962720, 0xc9d560)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0420de900)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x962720, 0xc9d560)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+sync.(*RWMutex).Lock(0x0)
+	D:/go/src/sync/rwmutex.go:86 +0x29
+rainbow/controller/api.setIpToChan(0xc042464400, 0xb, 0xc0423f32f0, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:37 +0xb8
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e000)
+	D:/project/src/rainbow/controller/api/net.go:153 +0x98c
+reflect.Value.call(0x9f2140, 0xc04214e000, 0x4a13, 0x9f904b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc042172000, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2140, 0xc04214e000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b290, 0xc76a40, 0xc0420c4000, 0xc042032200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207b340, 0xc76a40, 0xc0420c4000, 0xc042032200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042048000, 0xc77200, 0xc04216c000)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:49:15 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:49:15 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:8
+2018/01/05 11:49:15 [D] [net.go:153] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:49:15 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:3941: runtime error: invalid memory address or nil pointer dereference
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc04210e000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x962720, 0xc9d560)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421301b0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x962720, 0xc9d560)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+sync.(*RWMutex).Lock(0x0)
+	D:/go/src/sync/rwmutex.go:86 +0x29
+rainbow/controller/api.setIpToChan(0xc04211c650, 0xb, 0xc0423ef2f0, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:37 +0xb8
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc0422ac000)
+	D:/project/src/rainbow/controller/api/net.go:153 +0x98c
+reflect.Value.call(0x9f2140, 0xc0422ac000, 0x4a13, 0x9f904b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc04215e090, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2140, 0xc0422ac000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207b290, 0xc76a40, 0xc04219a0e0, 0xc04206a200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207b340, 0xc76a40, 0xc04219a0e0, 0xc04206a200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210e000, 0xc77200, 0xc04228e080)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:50:23 [D] [init.go:163] connect to mysql succ
+2018/01/05 11:50:23 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 11:50:26 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:50:26 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:13
+2018/01/05 11:50:26 [D] [net.go:154] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:50:26 [D] [net.go:154] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:50:26 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13452: operator `exact` need 1 args not 3
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc042046780)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x955200, 0xc04211f300)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc042058ea0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x955200, 0xc04211f300)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc04211f830, 0xc04210e960, 0xc0421381a0, 0x9fa20b, 0x5, 0xc042059e30, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc042400ae0, 0xc0420d90a0, 0x0, 0xcad120, 0x0, 0x1, 0x0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc04211f830, 0xc77440, 0xc04210eb40, 0xc04205a900, 0xc04210e960, 0xc0420d90a0, 0xc042059e60, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc04205a900, 0xc042059e60, 0xc042400e38, 0xc04211abc8, 0xc042059e60)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc04211e760, 0xc, 0x2, 0x0, 0x1)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc04211e760, 0xc, 0xc0424012f0, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:41 +0x18a
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc042290000)
+	D:/project/src/rainbow/controller/api/net.go:154 +0x986
+reflect.Value.call(0x9f2180, 0xc042290000, 0x4a13, 0x9f908b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc0421aa018, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2180, 0xc042290000, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc76a40, 0xc042288000, 0xc042000800)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc76a40, 0xc042288000, 0xc042000800)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042046780, 0xc77200, 0xc04200e700)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 11:50:26 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 11:50:26 [D] [asm_amd64.s:514] ===============>[192.168.4.1 192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21], index:13
+2018/01/05 11:50:26 [D] [net.go:154] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 11:50:26 [D] [net.go:154] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 11:50:26 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13453: operator `exact` need 1 args not 3
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc0421a8140)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x955200, 0xc04212cea0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0423509f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x955200, 0xc04212cea0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).GenerateOperatorSQL(0xc04211f830, 0xc04210e960, 0xc0421381a0, 0x9fa20b, 0x5, 0xc042350c90, 0x3, 0x3, 0xcad120, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:1138 +0x12e1
+github.com/astaxie/beego/orm.(*dbTables).getCondSQL(0xc0423fcae0, 0xc042122840, 0x0, 0xcad120, 0x0, 0x1, 0x0, 0x0, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/db_tables.go:375 +0x38b
+github.com/astaxie/beego/orm.(*dbBase).UpdateBatch(0xc04211f830, 0xc77440, 0xc04210eb40, 0xc0421bc600, 0xc04210e960, 0xc042122840, 0xc042350cc0, 0xcad120, 0x0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:718 +0x605
+github.com/astaxie/beego/orm.(*querySet).Update(0xc0421bc600, 0xc042350cc0, 0xc0423fce38, 0xc042060748, 0xc042350cc0)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:174 +0x84
+rainbow/model.(*NetIpInfoModel).UpdateIpStatus(0xcc9580, 0xc0420097d0, 0xc, 0x2, 0x0, 0x1)
+	D:/project/src/rainbow/model/net.go:118 +0x36d
+rainbow/controller/api.setIpToChan(0xc0420097d0, 0xc, 0xc0423fd2f0, 0x2)
+	D:/project/src/rainbow/controller/api/net.go:41 +0x18a
+rainbow/controller/api.(*ApiNetController).GetIpAddr(0xc04214e1e0)
+	D:/project/src/rainbow/controller/api/net.go:154 +0x986
+reflect.Value.call(0x9f2180, 0xc04214e1e0, 0x4a13, 0x9f908b, 0x4, 0xcc98c0, 0x0, 0x0, 0xc04217a058, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9f2180, 0xc04214e1e0, 0x4a13, 0xcc98c0, 0x0, 0x0, 0xcc98c0, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207af20, 0xc76a40, 0xc0421be1c0, 0xc0421f4200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207afd0, 0xc76a40, 0xc0421be1c0, 0xc0421f4200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421a8140, 0xc77200, 0xc0420dce00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/05 12:14:41 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:14:41 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:14:47 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:14:47 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.8 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22], index:6
+2018/01/05 12:14:47 [D] [net.go:157] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:14:47 [D] [net.go:157] @@@@@@@@@@@@@@@@@@@@
+2018/01/05 12:14:47 [D] [net.go:42] update host into database succ
+2018/01/05 12:14:47 [D] [net.go:157] !!!!!!!!!!!!!!!
+2018/01/05 12:14:47 [D] [net.go:157] ###############
+2018/01/05 12:15:25 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:15:25 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:15:26 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:15:27 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.18 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.23], index:14
+2018/01/05 12:15:27 [D] [net.go:41] update host into database succ
+2018/01/05 12:16:13 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:16:13 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:16:19 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:16:19 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:16:21 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:16:21 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.15 192.168.4.16 192.168.4.17 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.23 192.168.4.24], index:11
+2018/01/05 12:16:21 [D] [net.go:41] update host into database succ
+2018/01/05 12:16:21 [D] [net.go:157] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:17:46 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:17:46 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:17:49 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:17:49 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.16 192.168.4.17 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.23 192.168.4.24 192.168.4.25], index:18
+2018/01/05 12:17:49 [D] [net.go:41] update host into database succ
+2018/01/05 12:17:49 [D] [net.go:158] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:17:49 [D] [net.go:158] #################
+2018/01/05 12:17:49 [D] [asm_amd64.s:514] @@@@@@@@@@@@@@@@@@@@@@@@@@@@[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.16 192.168.4.17 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.23 192.168.4.24 192.168.4.25], index:18
+2018/01/05 12:17:49 [D] [net.go:168] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:17:49 [W] [net.go:75] update ip status failed , ipnum is 0 , err:未找到需要更新的IP地址，请确定获取到的IP地址正确
+2018/01/05 12:17:49 [D] [net.go:168] ===============>end Lock
+2018/01/05 12:17:49 [W] [net.go:168] update ip status failed, err:更新IP地址状态失败
+2018/01/05 12:17:49 [W] [asm_amd64.s:514] cann't get ip[192.168.4.24] from chan, err:未找到需要更新的IP地址，请确定获取到的IP地址正确
+2018/01/05 12:25:01 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:25:01 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:25:03 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:25:03 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.16 192.168.4.17 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.23 192.168.4.25 192.168.4.26], index:17
+2018/01/05 12:25:03 [D] [net.go:41] !!!!!!===>ip[192.168.4.23], status[2],oldStatus[0]
+2018/01/05 12:25:03 [D] [net.go:41] update host into database succ
+2018/01/05 12:25:03 [D] [net.go:165] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:25:03 [D] [net.go:73] !!!!!!===>ip[], status[1],oldStatus[2]
+2018/01/05 12:25:03 [W] [net.go:73] update ip status failed , ipnum is 0 , err:未找到需要更新的IP地址，请确定获取到的IP地址正确
+2018/01/05 12:25:03 [D] [net.go:165] ===============>end Lock
+2018/01/05 12:25:03 [W] [net.go:165] update ip status failed, err:更新IP地址状态失败
+2018/01/05 12:25:03 [W] [asm_amd64.s:514] cann't get ip[192.168.4.23] from chan, err:未找到需要更新的IP地址，请确定获取到的IP地址正确
+2018/01/05 12:25:45 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:25:45 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:25:52 [D] [init.go:163] connect to mysql succ
+2018/01/05 12:25:52 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/05 12:25:53 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 12:25:53 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.3 192.168.4.4 192.168.4.5 192.168.4.6 192.168.4.7 192.168.4.9 192.168.4.10 192.168.4.12 192.168.4.13 192.168.4.14 192.168.4.16 192.168.4.17 192.168.4.19 192.168.4.20 192.168.4.21 192.168.4.22 192.168.4.25 192.168.4.26 192.168.4.27], index:15
+2018/01/05 12:25:53 [D] [net.go:41] !!!!!!===>ip[192.168.4.21], status[2],oldStatus[0]
+2018/01/05 12:25:53 [D] [net.go:41] update host into database succ
+2018/01/05 12:25:53 [D] [net.go:165] ^^^^^^^^^^^^^^^^^^^
+2018/01/05 12:25:53 [D] [net.go:73] !!!!!!===>ip[192.168.4.21], status[1],oldStatus[2]
+2018/01/05 12:25:53 [D] [net.go:73] update host into database succ
+2018/01/05 12:25:53 [D] [net.go:165] ===============>end Lock

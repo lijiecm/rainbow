@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"fmt"
 )
 
 type NetIpInfoModel struct {
@@ -69,9 +70,10 @@ func (p *NetIpInfoModel)CreateIp(ip Ip)(err error){
 	return
 }
 
-func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(ip string,err error){
+func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(ipList []string,err error){
 	//一次返回20个IP，也就是说最大支持20个宿主机的并发安装，然后让在取一个随机值
 	//sql := "select ip.addr from ip,network where network.gateway = ? and ip.status = ? and ip.network_id= network.id limit ?"
+	/*
 	var ipList []*Ip
 	o := orm.NewOrm()
 	qs := o.QueryTable("ip")
@@ -81,10 +83,28 @@ func (p *NetIpInfoModel)GetFreeIp(gateway string, status ,limitCount int)(ip str
 		return
 	}
 	ip = ipList[0].Addr
+	*/
+
+	var ips []Ip
+	o := orm.NewOrm()
+	num, err := o.Raw("select ip.addr from ip,network where network.gateway = ? and ip.status = ? and ip.network_id= network.id limit ?", gateway,status,limitCount).QueryRows(&ips)
+	if num == 0 {
+		logs.Error("获取不到地址哦")
+		return
+	}
+	if err != nil {
+		logs.Error("获取IP地址失败")
+		return
+	}
+	fmt.Println(ips)
+	for _, ip := range ips{
+		ipList = append(ipList,ip.Addr)
+	}
+	fmt.Println(ipList)
 	return
 }
 
-func (p *NetIpInfoModel)UpdateIpStatus(ip Ip)(updateNum int, err error){
+func (p *NetIpInfoModel)UpdateIpStatus(ip string, oldStatus,status int)(err error){
 	
 	/*
 	更新主机带上状态去更新，在并发的前提下，如果前一个请求更新之后，则会更新失败，通知前端再次发出请求
@@ -93,16 +113,23 @@ func (p *NetIpInfoModel)UpdateIpStatus(ip Ip)(updateNum int, err error){
 	
 	o := orm.NewOrm()
 	//批量更新
-	num, err := o.QueryTable("ip").Filter("addr",ip.Addr,"status",0).Update(orm.Params{
-		"status":1,
+	logs.Debug("!!!!!!===>ip[%s], status[%d],oldStatus[%d]",ip,status,oldStatus)
+	num, err := o.QueryTable("ip").Filter("addr",ip).Filter("status",oldStatus).Update(orm.Params{
+		"status":status,
 	})
 
 	if err != nil {
-		logs.Error("update asset failed, err:%v", err)
+		logs.Error("update ip failed, err:%v", err)
 		return
 	}
 
-	updateNum = int(num)
+	updateNum := int(num)
+	if updateNum == 0 {
+		errMsg :=  fmt.Errorf("未找到需要更新的IP地址，请确定获取到的IP地址正确")
+		logs.Warn("update ip status failed , ipnum is 0 , err:%v",errMsg)
+		err = errMsg
+		return
+	}
 	logs.Debug("update host into database succ")
 	return
 }
