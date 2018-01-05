@@ -112,9 +112,9 @@ func (p *NetIpInfoModel)UpdateIpStatus(ip string, oldStatus,status int)(err erro
 	*/
 	
 	o := orm.NewOrm()
-	//批量更新
-	logs.Debug("!!!!!!===>ip[%s], status[%d],oldStatus[%d]",ip,status,oldStatus)
-	num, err := o.QueryTable("ip").Filter("addr",ip).Filter("status",oldStatus).Update(orm.Params{
+	//更新IP使用状态，一次更新一条
+	logs.Debug("start model function UpdateIpStatus,ip[%s], status[%d],oldStatus[%d]",ip,status,oldStatus)
+	num, err := o.QueryTable("ip").Filter("addr",ip).Filter("status",oldStatus).Limit(1).Update(orm.Params{
 		"status":status,
 	})
 
