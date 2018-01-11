@@ -28,7 +28,6 @@ var (
 	NetMap map[string]chan string
 )	
 
-
 /*
 暂时不需要这两个函数
 */
@@ -56,7 +55,6 @@ func setIpToChan(gateway, ip string)(err error){
 	//netIpInfo.FreeIpChan <- ip
 	return
 }
-
 
 func getIpFromChan(gateway string)(ip string, err error){
 	logs.Debug("Start function getIpFromChan")
@@ -90,8 +88,6 @@ func getIpFromChan(gateway string)(ip string, err error){
 			return
 	}	
 }
-
-
 
 func (p *ApiNetController) GetIpAddr(){
 	/*

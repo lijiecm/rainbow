@@ -2282,3 +2282,153 @@ created by net/http.(*Server).Serve
 2018/01/05 18:10:09 [D] [net.go:77] start model function UpdateIpStatus,ip[192.168.4.37], status[1],oldStatus[2]
 2018/01/05 18:10:09 [D] [net.go:77] update host into database succ
 2018/01/05 18:10:09 [D] [net.go:169] ===============>end Lock
+2018/01/05 18:25:53 [D] [asm_amd64.s:514] ====>gateway:192.168.7.1, status:0, MaxInstallOsCount:20
+2018/01/05 18:25:53 [D] [asm_amd64.s:514] ===============>[192.168.4.2 192.168.4.4 192.168.4.7 192.168.4.25 192.168.4.27 192.168.4.31 192.168.4.35 192.168.4.36 192.168.4.39 192.168.4.40 192.168.4.41 192.168.4.42 192.168.4.43 192.168.4.44 192.168.4.45 192.168.4.46 192.168.4.47 192.168.4.48 192.168.4.49 192.168.4.50], index:18
+2018/01/05 18:25:53 [D] [net.go:160] Start function setIpToChan
+2018/01/05 18:25:53 [D] [net.go:43] start model function UpdateIpStatus,ip[192.168.4.49], status[2],oldStatus[0]
+2018/01/05 18:25:53 [D] [net.go:43] update host into database succ
+2018/01/05 18:25:53 [D] [net.go:169] Start function getIpFromChan
+2018/01/05 18:25:53 [D] [net.go:77] start model function UpdateIpStatus,ip[192.168.4.49], status[1],oldStatus[2]
+2018/01/05 18:25:53 [D] [net.go:77] update host into database succ
+2018/01/05 18:25:53 [D] [net.go:169] ===============>end Lock
+2018/01/08 15:11:57 [D] [init.go:163] connect to mysql succ
+2018/01/08 15:13:01 [D] [init.go:163] connect to mysql succ
+2018/01/08 15:13:02 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/08 15:13:13 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/08 15:13:13 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/08 15:13:13 [D] [asset.go:33] select asset list info
+2018/01/08 15:13:13 [D] [asset.go:42] select idc list info
+2018/01/08 15:13:13 [I] [asm_amd64.s:514] [0xc042276210]
+2018/01/08 15:15:55 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/08 15:15:55 [D] [asset.go:33] select asset list info
+2018/01/08 15:15:55 [D] [asset.go:42] select idc list info
+2018/01/08 15:15:55 [I] [asm_amd64.s:514] [0xc042280000]
+2018/01/08 15:16:40 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/08 15:16:40 [D] [asset.go:33] select asset list info
+2018/01/08 15:16:40 [D] [asset.go:42] select idc list info
+2018/01/08 15:16:40 [I] [asm_amd64.s:514] [0xc0422802c0]
+2018/01/08 15:28:42 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/08 15:28:42 [D] [asset.go:33] select asset list info
+2018/01/08 15:28:42 [D] [asset.go:42] select idc list info
+2018/01/08 15:28:42 [I] [asm_amd64.s:514] [0xc04207afd0]
+2018/01/08 15:30:38 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/08 15:30:38 [D] [asset.go:33] select asset list info
+2018/01/08 15:30:38 [D] [asset.go:42] select idc list info
+2018/01/08 15:30:38 [I] [asm_amd64.s:514] [0xc0423042c0]
+2018/01/09 09:21:03 [D] [init.go:163] connect to mysql succ
+2018/01/09 09:21:04 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/09 09:21:41 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 09:21:42 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 09:21:42 [D] [asset.go:33] select asset list info
+2018/01/09 09:21:42 [D] [asset.go:42] select idc list info
+2018/01/09 09:21:42 [I] [asm_amd64.s:514] [0xc0424569a0]
+2018/01/09 09:21:46 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 09:21:46 [D] [host.go:31] select hostlist info
+2018/01/09 09:21:46 [I] [asm_amd64.s:514] [0xc042434dc0 0xc042434e60]
+2018/01/09 09:21:57 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 09:21:57 [D] [net.go:24] select idc list info
+2018/01/09 09:21:59 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 09:21:59 [D] [net.go:72] select ip info
+2018/01/09 09:22:31 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 09:22:31 [D] [net.go:24] select idc list info
+2018/01/09 09:22:35 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 09:22:35 [D] [net.go:72] select ip info
+2018/01/09 09:22:37 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 09:22:37 [D] [host.go:31] select hostlist info
+2018/01/09 09:22:37 [I] [asm_amd64.s:514] [0xc0421c00a0 0xc0421c0140]
+2018/01/09 09:25:58 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 09:25:58 [D] [host.go:31] select hostlist info
+2018/01/09 09:25:58 [I] [asm_amd64.s:514] [0xc04210e0a0 0xc04210e1e0]
+2018/01/09 14:11:02 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 14:11:03 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 14:11:05 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 14:11:05 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 14:11:05 [D] [asset.go:33] select asset list info
+2018/01/09 14:11:05 [D] [asset.go:42] select idc list info
+2018/01/09 14:11:05 [I] [asm_amd64.s:514] [0xc0423266e0]
+2018/01/09 14:11:53 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 14:11:53 [D] [net.go:24] select idc list info
+2018/01/09 14:11:58 [D] [asm_amd64.s:514] enter idclist controller
+2018/01/09 14:11:58 [D] [asset.go:73] select idc list info
+2018/01/09 14:12:10 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 14:12:10 [D] [net.go:24] select idc list info
+2018/01/09 14:12:13 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/09 14:12:13 [D] [net.go:72] select ip info
+2018/01/09 19:38:51 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 19:38:53 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/09 19:38:54 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/09 19:38:54 [D] [asset.go:33] select asset list info
+2018/01/09 19:38:54 [D] [asset.go:42] select idc list info
+2018/01/09 19:38:54 [I] [asm_amd64.s:514] [0xc04234a370]
+2018/01/10 09:16:55 [D] [init.go:163] connect to mysql succ
+2018/01/10 09:17:02 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/10 09:17:40 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/10 09:17:41 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/10 09:17:41 [D] [asset.go:33] select asset list info
+2018/01/10 09:17:41 [D] [asset.go:42] select idc list info
+2018/01/10 09:17:41 [I] [asm_amd64.s:514] [0xc0420753f0]
+2018/01/10 10:13:48 [D] [init.go:163] connect to mysql succ
+2018/01/10 10:13:49 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/10 10:13:52 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/10 10:13:52 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/10 10:13:52 [D] [asset.go:33] select asset list info
+2018/01/10 10:13:52 [D] [asset.go:42] select idc list info
+2018/01/10 10:13:52 [I] [asm_amd64.s:514] [0xc04207b4a0]
+2018/01/10 10:13:59 [D] [asm_amd64.s:514] enter contractlist controller
+2018/01/10 10:14:46 [D] [asm_amd64.s:514] enter contractlist controller
+2018/01/10 10:14:49 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/10 10:14:49 [D] [asset.go:33] select asset list info
+2018/01/10 10:14:49 [D] [asset.go:42] select idc list info
+2018/01/10 10:14:49 [I] [asm_amd64.s:514] [0xc042286b00]
+2018/01/10 10:15:52 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/10 10:15:52 [D] [asset.go:33] select asset list info
+2018/01/10 10:15:52 [D] [asset.go:42] select idc list info
+2018/01/10 10:15:52 [I] [asm_amd64.s:514] [0xc04207a4d0]
+2018/01/10 10:15:58 [W] [asm_amd64.s:514] 主机角色不能为空
+2018/01/10 10:16:04 [W] [asm_amd64.s:514] 获取用户名失败
+2018/01/11 13:13:59 [D] [init.go:163] connect to mysql succ
+2018/01/11 13:14:00 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/11 13:14:21 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/11 13:14:21 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/11 13:14:21 [D] [asset.go:33] select asset list info
+2018/01/11 13:14:21 [D] [asset.go:42] select idc list info
+2018/01/11 13:14:21 [I] [asm_amd64.s:514] [0xc04207b290]
+2018/01/11 13:14:25 [D] [asm_amd64.s:514] enter contractlist controller
+2018/01/11 13:14:28 [D] [asm_amd64.s:514] enter contractlist controller
+2018/01/11 13:18:43 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/11 13:18:43 [D] [asset.go:33] select asset list info
+2018/01/11 13:18:43 [D] [asset.go:42] select idc list info
+2018/01/11 13:18:43 [I] [asm_amd64.s:514] [0xc04217e160]
+2018/01/11 13:21:21 [D] [init.go:163] connect to mysql succ
+2018/01/11 13:21:22 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/11 13:21:25 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/11 13:21:25 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/11 13:21:25 [D] [asset.go:33] select asset list info
+2018/01/11 13:21:25 [D] [asset.go:42] select idc list info
+2018/01/11 13:21:25 [I] [asm_amd64.s:514] [0xc04227c420]
+2018/01/11 13:21:28 [W] [asm_amd64.s:514] 主机角色不能为空
+2018/01/11 13:28:14 [D] [init.go:163] connect to mysql succ
+2018/01/11 13:28:14 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/11 13:28:18 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/11 13:28:18 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/11 13:28:18 [D] [asset.go:33] select asset list info
+2018/01/11 13:28:18 [D] [asset.go:42] select idc list info
+2018/01/11 13:28:18 [I] [asm_amd64.s:514] [0xc04207b4a0]
+2018/01/11 13:28:22 [W] [asm_amd64.s:514] 主机角色不能为空
+2018/01/11 13:30:03 [D] [init.go:163] connect to mysql succ
+2018/01/11 13:30:03 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/11 13:30:07 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/11 13:30:07 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/11 13:30:07 [D] [asset.go:33] select asset list info
+2018/01/11 13:30:07 [D] [asset.go:42] select idc list info
+2018/01/11 13:30:07 [I] [asm_amd64.s:514] [0xc042087ad0]
+2018/01/11 13:30:09 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:34:08 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:35:51 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:36:55 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:40:25 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:41:24 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:42:35 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:42:59 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:49:41 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/11 13:49:57 [D] [asm_amd64.s:514] enter get host role controller

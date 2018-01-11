@@ -1,0 +1,127 @@
+<script src="/static/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/static/cmdb/relay.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/bootstrap-paginator/bootstrap-paginator.js"></script>
+
+<!-- BEGIN PAGE HEADER-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            用户管理
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index">首页</a> 
+                <i class="icon-angle-right"></i>
+            </li>
+            <li>
+                <a href="#">堡垒机</a>
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a href="/relay/host">用户管理</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN SAMPLE TABLE PORTLET-->
+<div class="portlet box red">     
+    <div class="portlet-title">
+        <div class="caption"><i class="icon-cogs"></i>权限列表</div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"></a>
+            <a href="#add_role" data-toggle="modal" class="config"></a>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>用户</th>
+                    <th>角色</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>详情</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Page.role_list}}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.Username}}</td>
+                    <td>{{.RoleId}}</td>
+                    <td>{{.StartTime}}</td>
+                    <td>{{.EndTime}}</td>
+                    <td>
+                        <!--i>堡垒机</i-->
+            
+                        <a class="role_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
+                                <i class="icon-edit" aria-hidden="true"></i>
+                            </a>
+                        <a class="role_delete" style="display: inline;" href="javascript:void(0)" title="删除">
+                            <i class="icon-remove" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody> 
+        </table>
+        
+    </div>
+    
+    
+</div>
+<div class="pagination pagination-centered">
+    <ul id="paginator" ></ul>
+</div>
+
+
+<!-- END SAMPLE TABLE PORTLET-->
+
+<div id="add_role" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>授权管理</h3>
+    </div>
+    <div class="modal-body">
+        <div class="control-group">
+            <label class="control-label">主机:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="host_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">用户名:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="username">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">有效期:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="days">
+                    <option value=1>1天</option>
+                    <option value=1>3天</option>
+                    <option value=1>7天</option>
+                    <option value=1>15天</option>
+                    <option value=1>60天</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">角色:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="role">
+                    {{range .role_list}}
+                        <option value={{.Id}}>{{.Role}}</option>
+                    {{end}}
+                </select>
+            </div>
+        </div>
+       
+        <button class="btn btn-default" id="add_role_button">添加</button>
+    </div>
+</div>

@@ -29,7 +29,7 @@ type Idc struct {
 	Name string `orm:"size(128)"`
 	Tag string `orm:"size(64)"`
 	Location string `orm:"size(128)"`  //记录机房位置
-	Floor string `orm:"size(32)"64"`
+	Floor string `orm:"size(32)"`
 	RoomNum string `orm:"size(64)"`
 	//MechineType string`db:"mechine_type"`
 	MechineCount  int `orm:"default(0)"`
@@ -83,7 +83,6 @@ type Part struct {
 	ContractId int `db:"contract_id"`
 }
 
-
 type AssetConf struct {
 	Id int
 	Name string `orm:"size(64)"`
@@ -113,6 +112,22 @@ type Ip struct {
 	HostId int `orm:"default(0)"`
 	NetworkId int `orm:"default(0)"`
 	Status int `orm:"default(0)"`  //是否使用
+}
+
+//默认有root/admin/readonly权限，可以对特殊主机添加特殊用户
+type RelayRole struct {	
+	Id int
+	Role string `orm:"size(64)"`
+	HostId int `orm:"default(0)"`
+}
+
+type RelayAuth struct {
+	Id int
+	Username string `orm:"size(64)"`
+	//用role_id关联relayRole表的Id
+	RoleId int `orm:"default(0)"`
+	StartTime string `orm:"size(128)"`
+	EndTime string `orm:"size(128)"`
 }
 
 type Contract struct {
