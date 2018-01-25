@@ -6,6 +6,18 @@ import (
 	//"fmt"
 )
 
+type RelayHost struct {
+	Id int
+	Username string 
+	Hostname string 
+	Ip string 
+	Role string 
+	StartTime string 
+	EndTime string 
+}
+
+
+
 type RelayModel struct {
 }
 
@@ -20,6 +32,7 @@ func NewRelayModel() *RelayModel {
 	return relayModel
 }
 
+/*
 func (p *RelayModel)GetHostRoleByUser(username string)(relayList []*RelayAuth ,err error){
 
 	o := orm.NewOrm()
@@ -30,6 +43,44 @@ func (p *RelayModel)GetHostRoleByUser(username string)(relayList []*RelayAuth ,e
 		return
 	}
 
+	return
+}
+*/
+
+func (p *RelayModel)GetHostRoleByUser(username string)(relayList []*RelayHost,err error){
+
+	o := orm.NewOrm()
+	_, err = o.Raw("select ra.id,ra.username,h.hostname,h.ip,rr.role,ra.start_time,ra.end_time from host h, relay_auth ra, relay_role rr where h.id = rr.host_id and ra.role_id = rr.id and ra.username = ?;",username).QueryRows(&relayList)
+	if err != nil {
+		logs.Error("获取用户权限信息失败")
+		return
+	}
+	return
+}
+
+func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayRole,err error){
+
+	o := orm.NewOrm()
+	qs := o.QueryTable("relay_role")
+	qs.Filter("host_id",host_id).All(&roleList)
+	if len(roleList) == 0 {
+		logs.Error("host_id[%d] is not exists", host_id)
+		return
+	}
+
+	return
+}
+
+func (p *RelayModel)GetRoleIdByRoleAndIp(host_id int,role string)(relayRole []*RelayRole,err error){
+
+	o := orm.NewOrm()
+	qs := o.QueryTable("relay_role")
+	qs.Filter("host_id",host_id).Filter("role",role).All(&relayRole)
+	logs.Info("======>, %v", relayRole)
+	if len(relayRole) == 0 {
+		logs.Error("host_id[%d] and role[%s] is not exists", host_id, role)
+		return
+	}
 	return
 }
 

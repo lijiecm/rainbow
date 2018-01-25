@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	"rainbow/model"
 	"fmt"
+	"time"
 )
 
 func (p *RelayController) AddHostRole(){
@@ -15,7 +16,6 @@ func (p *RelayController) AddHostRole(){
 	result["message"] = errorMsg
 	
 	newRelayModel := model.NewRelayModel()
-	var relayRole model.RelayRole
 	
 	var err error
 	defer func(){
@@ -35,6 +35,14 @@ func (p *RelayController) AddHostRole(){
 		return
 	}
 
+	username := p.GetString("username")
+	if len(role) == 0 {
+		err =  fmt.Errorf("用户不可为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
 	host_id, err := p.GetInt("host_id")
 	if err != nil {
 		err = fmt.Errorf("获取主机ID失败，请输入正确的HostId:%v", err)
@@ -42,18 +50,43 @@ func (p *RelayController) AddHostRole(){
 		logs.Warn(err.Error())
 		return
 	}
-
-	relayRole.Role = role
-	relayRole.HostId = host_id
 	
-	err = newRelayModel.AddRelayRole(relayRole)
+	days, err := p.GetInt("days")
+	if err != nil {
+		err = fmt.Errorf("获取授权时间失败，请输入正确的days:%v", err)
+		errorMsg = "获取授权时间失败，请输入正确的days"
+		logs.Warn(err.Error())
+		return
+	}
+
+	relayRole, err := newRelayModel.GetRoleIdByRoleAndIp(host_id,role)
 	if err != nil {
 		err = fmt.Errorf("添加主机权限失败:err:%v", err)
 		errorMsg = "添加主机权限失败"  
 	   	logs.Warn(err.Error())
 	   	return
 	}
+	relay_id := relayRole[0].Id
+	var relayAuth model.RelayAuth
+	relayAuth.RoleId = relay_id
+	relayAuth.Username = username
+	nowTime := time.Now()
+    t := nowTime.String()
+	start_time := t[:19]
+	dt := nowTime.AddDate(0,0,days)
+	end_time := dt.String()[:19]
 
+	relayAuth.StartTime = start_time
+	relayAuth.EndTime = end_time
+
+	/* 导入  */
+	err = newRelayModel.AddRelayAuth(relayAuth)
+	if err != nil {
+		err = fmt.Errorf("用户授权失败:err:%v", err)
+		errorMsg = "用户授权失败"  
+	   	logs.Warn(err.Error())
+	   	return
+	}
 	p.Data["json"] =  result
 	p.ServeJSON()  
 }

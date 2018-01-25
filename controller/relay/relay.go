@@ -40,6 +40,7 @@ func (p *RelayController) GetHostRoleByUser(){
 
 	newRelayModel := model.NewRelayModel()
 	hostRoleList, err:= newRelayModel.GetHostRoleByUser(username)
+	logs.Info("=====>, %v", hostRoleList)
 	
 	if err != nil {
 		err =  fmt.Errorf("获取全权限列表失败")
@@ -48,6 +49,10 @@ func (p *RelayController) GetHostRoleByUser(){
 		return
 	}
 
-	p.Data["role_list"] = hostRoleList
+	host_id := 7
+	roleList, err := newRelayModel.GetRelayRoleByHostId(host_id)
+
+	p.Data["host_role_list"] = hostRoleList
+	p.Data["role_list"] = roleList
 	return
 }

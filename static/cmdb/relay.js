@@ -6,10 +6,11 @@ $(function(){
         var username = $("#username").val();
         var role = $("#role").val();
         var days = $("#days").val();
-        $.post("/relay/addrole", {username:username,role:role,days:days},
+        console.log(host_id)
+        $.post("/relay/addrole", {host_id:host_id,username:username,role:role,days:days},
             function(data){
                 if ( data.success == "true" ){
-                    window.location.href="/net/network"; 
+                    window.location.href="/relay/host"; 
                 }else{
                     alert(data.message)
                 }

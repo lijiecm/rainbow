@@ -41,6 +41,8 @@
                 <tr>
                     <th>id</th>
                     <th>用户</th>
+                    <th>主机名</th>
+                    <th>IP</th>
                     <th>角色</th>
                     <th>开始时间</th>
                     <th>结束时间</th>
@@ -48,11 +50,13 @@
                 </tr>
             </thead>
             <tbody>
-                {{range .Page.role_list}}
+                {{range .host_role_list}}
                 <tr>
                     <td>{{.Id}}</td>
                     <td>{{.Username}}</td>
-                    <td>{{.RoleId}}</td>
+                    <td>{{.Hostname}}</td>
+                    <td>{{.Ip}}</td>
+                    <td>{{.Role}}</td>
                     <td>{{.StartTime}}</td>
                     <td>{{.EndTime}}</td>
                     <td>
@@ -116,7 +120,7 @@
             <div class="controls">
                 <select class="span6 m-wrap" id="role">
                     {{range .role_list}}
-                        <option value={{.Id}}>{{.Role}}</option>
+                        <option value={{.Role}}>{{.Role}}</option>
                     {{end}}
                 </select>
             </div>

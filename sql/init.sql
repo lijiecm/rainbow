@@ -104,4 +104,21 @@ CREATE TABLE `ip` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `relay_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` varchar(64) NOT NULL,
+  `host_id` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `relay_auth` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL,
+  `role_id` int(11) DEFAULT '0',
+  `start_time` varchar(64) NOT NULL,
+  `end_time` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+
 INSERT INTO users ("username", "password", frozen) VALUES ("root", "25d55ad283aa400af464c76d713c07ad", 0)
