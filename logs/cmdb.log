@@ -31,3 +31,5 @@
 2018/01/25 14:35:14 [E] [server.go:2568] template: relay/relay.html:59:26: executing "relay/relay.html" at <.RoleId>: can't evaluate field RoleId in type *model.RelayHost
 2018/01/25 14:35:44 [D] [asm_amd64.s:514] enter get host role controller
 2018/01/25 14:35:45 [I] [asm_amd64.s:514] =====>, [0xc0420ed880]
+2018/01/25 14:39:15 [D] [init.go:163] connect to mysql succ
+2018/01/25 14:39:15 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
