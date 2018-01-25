@@ -1,35 +1,63 @@
-2018/01/25 14:28:28 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:28:37 [I] [add.go:62] ======>, [0xc04217c900]
-2018/01/25 14:28:37 [D] [add.go:83] insert role[{%!s(int=4) lijie %!s(int=5) 2018-01-25 14:28:37 2018-01-26 14:28:37}] into database succ
-2018/01/25 14:28:37 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:28:44 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:28:53 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:29:07 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:29:28 [I] [add.go:62] ======>, [0xc042135fc0]
-2018/01/25 14:29:28 [D] [add.go:83] insert role[{%!s(int=5) root %!s(int=4) 2018-01-25 14:29:28 2018-01-26 14:29:28}] into database succ
-2018/01/25 14:29:28 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:30:59 [D] [init.go:163] connect to mysql succ
-2018/01/25 14:30:59 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 14:31:03 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 14:31:03 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 14:31:03 [D] [asset.go:33] select asset list info
-2018/01/25 14:31:03 [D] [asset.go:42] select idc list info
-2018/01/25 14:31:03 [I] [asm_amd64.s:514] [0xc042306370]
-2018/01/25 14:31:05 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:34:16 [D] [init.go:163] connect to mysql succ
-2018/01/25 14:34:17 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 14:34:25 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 14:34:25 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 14:34:25 [D] [asset.go:33] select asset list info
-2018/01/25 14:34:25 [D] [asset.go:42] select idc list info
-2018/01/25 14:34:25 [I] [asm_amd64.s:514] [0xc0422c82c0]
-2018/01/25 14:34:27 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:34:27 [I] [asm_amd64.s:514] =====>, [0xc0420ed110]
-2018/01/25 14:35:14 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:35:14 [I] [asm_amd64.s:514] =====>, [0xc0420f2bd0]
-2018/01/25 14:35:14 [D] [controller.go:263] template Execute err: template: relay/relay.html:59:26: executing "relay/relay.html" at <.RoleId>: can't evaluate field RoleId in type *model.RelayHost
-2018/01/25 14:35:14 [E] [server.go:2568] template: relay/relay.html:59:26: executing "relay/relay.html" at <.RoleId>: can't evaluate field RoleId in type *model.RelayHost
-2018/01/25 14:35:44 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 14:35:45 [I] [asm_amd64.s:514] =====>, [0xc0420ed880]
-2018/01/25 14:39:15 [D] [init.go:163] connect to mysql succ
-2018/01/25 14:39:15 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:22:59 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:22:59 [E] [relay.go:85] host_id[0] is not exists
+2018/01/25 16:23:01 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:23:01 [E] [relay.go:85] host_id[0] is not exists
+2018/01/25 16:25:23 [D] [init.go:163] connect to mysql succ
+2018/01/25 16:25:23 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:25:28 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/25 16:25:28 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/25 16:25:28 [D] [asset.go:33] select asset list info
+2018/01/25 16:25:28 [D] [asset.go:42] select idc list info
+2018/01/25 16:25:28 [I] [asm_amd64.s:514] [0xc04208b6b0]
+2018/01/25 16:25:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:25:30 [E] [relay.go:82] host_id[0] is not exists
+2018/01/25 16:25:30 [E] [asm_amd64.s:514] get host role failed
+2018/01/25 16:26:54 [D] [init.go:163] connect to mysql succ
+2018/01/25 16:26:55 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:26:58 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/25 16:26:58 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/25 16:26:58 [D] [asset.go:33] select asset list info
+2018/01/25 16:26:58 [D] [asset.go:42] select idc list info
+2018/01/25 16:26:58 [I] [asm_amd64.s:514] [0xc04208b6b0]
+2018/01/25 16:27:00 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:29:34 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:31:28 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:31:28 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
+2018/01/25 16:31:28 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
+2018/01/25 16:32:23 [D] [init.go:163] connect to mysql succ
+2018/01/25 16:32:24 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:32:27 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/25 16:32:27 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/25 16:32:27 [D] [asset.go:33] select asset list info
+2018/01/25 16:32:27 [D] [asset.go:42] select idc list info
+2018/01/25 16:32:27 [I] [asm_amd64.s:514] [0xc0420754a0]
+2018/01/25 16:32:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:32:30 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
+2018/01/25 16:32:30 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
+2018/01/25 16:33:30 [D] [init.go:163] connect to mysql succ
+2018/01/25 16:33:30 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:33:35 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/25 16:33:35 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/25 16:33:35 [D] [asset.go:33] select asset list info
+2018/01/25 16:33:35 [D] [asset.go:42] select idc list info
+2018/01/25 16:33:35 [I] [asm_amd64.s:514] [0xc0422cc160]
+2018/01/25 16:33:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:33:38 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:33:38 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:42:35 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:42:35 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:42:35 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:42:47 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:42:47 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:42:47 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:43:05 [D] [init.go:163] connect to mysql succ
+2018/01/25 16:43:06 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/25 16:43:09 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/25 16:43:09 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/25 16:43:09 [D] [asset.go:33] select asset list info
+2018/01/25 16:43:09 [D] [asset.go:42] select idc list info
+2018/01/25 16:43:09 [I] [asm_amd64.s:514] [0xc0420758c0]
+2018/01/25 16:43:11 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/25 16:43:11 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:43:11 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/01/25 16:43:44 [D] [asm_amd64.s:514] enter get host role controller

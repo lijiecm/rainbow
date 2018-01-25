@@ -16,6 +16,12 @@ type RelayHost struct {
 	EndTime string 
 }
 
+type RelayHostRole struct {
+	Id int
+	Hostname string 
+	Ip string 
+	Role string 
+}
 
 
 type RelayModel struct {
@@ -58,11 +64,17 @@ func (p *RelayModel)GetHostRoleByUser(username string)(relayList []*RelayHost,er
 	return
 }
 
-func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayRole,err error){
+func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayHostRole,err error){
 
 	o := orm.NewOrm()
-	qs := o.QueryTable("relay_role")
-	qs.Filter("host_id",host_id).All(&roleList)
+	if host_id == 0 {
+		_, err = o.Raw("select rr.id,h.hostname,h.ip,rr.role from host h, relay_role rr where h.id = rr.host_id;").QueryRows(&roleList)
+		} else {
+		_, err = o.Raw("select rr.id,h.hostname,h.ip,rr.role from host h, relay_role rr where h.id = rr.host_id and rr.host_id = ?;",host_id).QueryRows(&roleList)
+
+	
+	}
+	
 	if len(roleList) == 0 {
 		logs.Error("host_id[%d] is not exists", host_id)
 		return
@@ -76,7 +88,6 @@ func (p *RelayModel)GetRoleIdByRoleAndIp(host_id int,role string)(relayRole []*R
 	o := orm.NewOrm()
 	qs := o.QueryTable("relay_role")
 	qs.Filter("host_id",host_id).Filter("role",role).All(&relayRole)
-	logs.Info("======>, %v", relayRole)
 	if len(relayRole) == 0 {
 		logs.Error("host_id[%d] and role[%s] is not exists", host_id, role)
 		return

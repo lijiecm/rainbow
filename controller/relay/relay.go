@@ -56,3 +56,36 @@ func (p *RelayController) GetHostRoleByUser(){
 	p.Data["role_list"] = roleList
 	return
 }
+
+func (p *RelayController) GetHostRole(){
+
+	logs.Debug("enter get host role controller")
+	p.Layout = "layout/layout.html"  
+	p.TplName = "relay/role.html"
+
+	errorMsg := "success"
+
+	var err error
+	defer func(){
+		if err != nil {
+			p.Data["error"] = errorMsg
+			p.TplName = "layout/error.html"
+		}
+	}()
+
+	host_id, err := p.GetInt("host_id")
+	if err != nil {
+		// 当获取不传入host_id的时候，设置host_id为0，这样就去数据库中取出所有的主机权限信息
+		host_id = 0
+	}
+	newRelayModel := model.NewRelayModel()
+	roleList, err := newRelayModel.GetRelayRoleByHostId(host_id)
+	if err != nil {
+		logs.Error("get host role failed")
+		return
+	}
+
+	p.Data["role_list"] = roleList
+	p.Data["IsAdmin"] = true
+	return
+}
