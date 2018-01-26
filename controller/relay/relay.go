@@ -72,12 +72,22 @@ func (p *RelayController) GetHostRole(){
 			p.TplName = "layout/error.html"
 		}
 	}()
-
-	host_id, err := p.GetInt("host_id")
-	if err != nil {
-		// 当获取不传入host_id的时候，设置host_id为0，这样就去数据库中取出所有的主机权限信息
+	newHostModel := model.NewHostModel()
+	var host_id int
+	host_addr := p.GetString("host_addr")
+	if len(host_addr) == 0{
+		// 当获取不传入host_addr的时候，设置host_id为0，这样就去数据库中取出所有的主机权限信息
 		host_id = 0
+	} else {
+		host, err := newHostModel.GetHostByIp(host_addr)
+		if err != nil {
+			logs.Error("get host by ip failed, err:%v", err)
+			return
+		}
+		host_id = host[0].Id
 	}
+
+
 	newRelayModel := model.NewRelayModel()
 	roleList, err := newRelayModel.GetRelayRoleByHostId(host_id)
 	if err != nil {

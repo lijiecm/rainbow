@@ -256,3 +256,470 @@ created by net/http.(*Server).Serve
 2018/01/26 09:48:22 [D] [asm_amd64.s:514] enter get host role controller
 2018/01/26 09:48:29 [D] [add.go:143] insert role[{%!s(int=9) lijie %!s(int=7)}] into database succ
 2018/01/26 09:48:29 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:19:41 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:19:41 [I] [asm_amd64.s:514] =====>, [0xc042106230]
+2018/01/26 10:19:43 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:38:59 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:39:02 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:39:02 [I] [asm_amd64.s:514] =====>, [0xc042106c40]
+2018/01/26 10:39:06 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:48:57 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 10:48:57 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 10:48:57 [D] [asset.go:33] select asset list info
+2018/01/26 10:48:57 [D] [asset.go:42] select idc list info
+2018/01/26 10:48:57 [I] [asm_amd64.s:514] [0xc042085080]
+2018/01/26 10:49:02 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 10:49:02 [D] [host.go:31] select hostlist info
+2018/01/26 10:49:02 [I] [asm_amd64.s:514] [0xc0420c17c0 0xc0420c1c20]
+2018/01/26 10:49:41 [D] [add.go:108] insert host into database succ, id:[8]
+2018/01/26 10:49:41 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 10:49:41 [D] [host.go:31] select hostlist info
+2018/01/26 10:49:41 [I] [asm_amd64.s:514] [0xc04214ed20 0xc04214edc0 0xc04214ee60]
+2018/01/26 10:49:48 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:49:54 [E] [add.go:132] host_ip[192.168.2.101] is not exists
+2018/01/26 10:49:54 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:12821: runtime error: index out of range
+goroutine 282 [running]:
+net/http.(*conn).serve.func1(0xc0421d20a0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422a46f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0423824b0)
+	D:/project/src/rainbow/controller/relay/add.go:137 +0x5a6
+reflect.Value.call(0x9fcd40, 0xc0423824b0, 0x613, 0xa00d11, 0x4, 0xcd5940, 0x0, 0x0, 0xc0420b8038, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fcd40, 0xc0423824b0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042084c60, 0xc82a40, 0xc042354000, 0xc04220c100)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042084d10, 0xc82a40, 0xc042354000, 0xc04220c100)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421d20a0, 0xc83200, 0xc0420660c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 10:49:54 [E] [add.go:132] host_ip[192.168.2.101] is not exists
+2018/01/26 10:49:54 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:12850: runtime error: index out of range
+goroutine 353 [running]:
+net/http.(*conn).serve.func1(0xc0421d2140)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422a46f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc04217c690)
+	D:/project/src/rainbow/controller/relay/add.go:137 +0x5a6
+reflect.Value.call(0x9fcd40, 0xc04217c690, 0x613, 0xa00d11, 0x4, 0xcd5940, 0x0, 0x0, 0xc0420b8060, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fcd40, 0xc04217c690, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042084c60, 0xc82a40, 0xc042350380, 0xc042001d00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042084d10, 0xc82a40, 0xc042350380, 0xc042001d00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421d2140, 0xc83200, 0xc0424477c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 10:49:56 [E] [add.go:132] host_ip[192.168.2.101] is not exists
+2018/01/26 10:49:56 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:12856: runtime error: index out of range
+goroutine 355 [running]:
+net/http.(*conn).serve.func1(0xc0421d21e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc04206cc60)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x9698a0, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc04217c780)
+	D:/project/src/rainbow/controller/relay/add.go:137 +0x5a6
+reflect.Value.call(0x9fcd40, 0xc04217c780, 0x613, 0xa00d11, 0x4, 0xcd5940, 0x0, 0x0, 0xc0420041e8, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fcd40, 0xc04217c780, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042084c60, 0xc82a40, 0xc042350460, 0xc042001e00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042084d10, 0xc82a40, 0xc042350460, 0xc042001e00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421d21e0, 0xc83200, 0xc042447940)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 10:53:38 [D] [init.go:163] connect to mysql succ
+2018/01/26 10:53:38 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 10:53:42 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 10:53:43 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 10:53:43 [D] [asset.go:33] select asset list info
+2018/01/26 10:53:43 [D] [asset.go:42] select idc list info
+2018/01/26 10:53:43 [I] [asm_amd64.s:514] [0xc04208bc30]
+2018/01/26 10:53:45 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:53:54 [D] [add.go:143] insert role[{%!s(int=10) lijie %!s(int=8)}] into database succ
+2018/01/26 10:53:54 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 10:54:05 [D] [add.go:143] insert role[{%!s(int=11) rd %!s(int=8)}] into database succ
+2018/01/26 10:54:05 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:01:43 [D] [init.go:163] connect to mysql succ
+2018/01/26 11:01:44 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 11:01:47 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 11:01:47 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 11:01:47 [D] [asset.go:33] select asset list info
+2018/01/26 11:01:47 [D] [asset.go:42] select idc list info
+2018/01/26 11:01:47 [I] [asm_amd64.s:514] [0xc0422849a0]
+2018/01/26 11:01:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:01:57 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:01:57 [E] [relay.go:82] host_ip[10.129.2.100] is not exists
+2018/01/26 11:01:57 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13668: runtime error: index out of range
+goroutine 52 [running]:
+net/http.(*conn).serve.func1(0xc0420486e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc042350960)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc042350960, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421b2378, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc042350960, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc042334620, 0xc042032b00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc042334620, 0xc042032b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0420486e0, 0xc83200, 0xc04200e580)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:01:57 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:01:57 [E] [relay.go:82] host_ip[10.129.2.100] is not exists
+2018/01/26 11:01:57 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13676: runtime error: index out of range
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc04240c820)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc0421502d0)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc0421502d0, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc0420040b8, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc0421502d0, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc042198000, 0xc0423a0500)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc042198000, 0xc0423a0500)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04240c820, 0xc83200, 0xc042468580)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:02:04 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:02:04 [E] [relay.go:82] host_ip[10.129.2.100] is not exists
+2018/01/26 11:02:04 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13690: runtime error: index out of range
+goroutine 86 [running]:
+net/http.(*conn).serve.func1(0xc04210fd60)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421300f0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc042350a50)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc042350a50, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc0420040c8, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc042350a50, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc0423348c0, 0xc042436a00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc0423348c0, 0xc042436a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210fd60, 0xc83200, 0xc042069d00)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:03:17 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:29 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:31 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:44 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:45 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:45 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:45 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:03:52 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13819: runtime error: index out of range
+goroutine 62 [running]:
+net/http.(*conn).serve.func1(0xc04210e320)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0420599b0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc042150960)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc042150960, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc042156098, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc042150960, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc042334a80, 0xc042032c00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc042334a80, 0xc042032c00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210e320, 0xc83200, 0xc0424682c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13821: runtime error: index out of range
+goroutine 94 [running]:
+net/http.(*conn).serve.func1(0xc0421c61e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422aed50)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc0423510e0)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc0423510e0, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421b21a0, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc0423510e0, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc0422ee8c0, 0xc042365400)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc0422ee8c0, 0xc042365400)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421c61e0, 0xc83200, 0xc042068340)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13822: runtime error: index out of range
+goroutine 63 [running]:
+net/http.(*conn).serve.func1(0xc04210e820)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422dab40)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc042150000)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc042150000, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004008, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc042150000, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc0423340e0, 0xc0423a0b00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc0423340e0, 0xc0423a0b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210e820, 0xc83200, 0xc0420684c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13820: runtime error: index out of range
+goroutine 93 [running]:
+net/http.(*conn).serve.func1(0xc0421c6140)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421b0480)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc042350000)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc042350000, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421b2020, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc042350000, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc0422ee0e0, 0xc042365300)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc0422ee0e0, 0xc042365300)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0421c6140, 0xc83200, 0xc042068140)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13823: runtime error: index out of range
+goroutine 64 [running]:
+net/http.(*conn).serve.func1(0xc04210eb40)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422dab40)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc0423be000)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc0423be000, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004040, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc0423be000, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc04233a0e0, 0xc0423a0a00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc04233a0e0, 0xc0423a0a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210eb40, 0xc83200, 0xc0424684c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13816: runtime error: index out of range
+goroutine 89 [running]:
+net/http.(*conn).serve.func1(0xc04210ff40)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421b0480)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc0423500f0)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc0423500f0, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004058, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc0423500f0, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc0422ee2a0, 0xc042032b00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc0422ee2a0, 0xc042032b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04210ff40, 0xc83200, 0xc042069f40)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:38 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:38 [E] [relay.go:82] host_ip[102.168.2.100] is not exists
+2018/01/26 11:04:38 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:13960: runtime error: index out of range
+goroutine 222 [running]:
+net/http.(*conn).serve.func1(0xc0420486e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421b0480)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x969980, 0xca95b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+rainbow/controller/relay.(*RelayController).GetHostRole(0xc0421501e0)
+	D:/project/src/rainbow/controller/relay/relay.go:87 +0x567
+reflect.Value.call(0x9fce20, 0xc0421501e0, 0x4213, 0xa00df1, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004070, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fce20, 0xc0421501e0, 0x4213, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc04207ad10, 0xc82a40, 0xc042334460, 0xc042032200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc04207adc0, 0xc82a40, 0xc042334460, 0xc042032200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0420486e0, 0xc83200, 0xc04200e7c0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 11:04:48 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:50 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:04:58 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:05:04 [D] [init.go:163] connect to mysql succ
+2018/01/26 11:05:04 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 11:06:03 [D] [init.go:163] connect to mysql succ
+2018/01/26 11:06:03 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 11:06:08 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 11:06:08 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 11:06:08 [D] [asset.go:33] select asset list info
+2018/01/26 11:06:08 [D] [asset.go:42] select idc list info
+2018/01/26 11:06:08 [I] [asm_amd64.s:514] [0xc042462370]
+2018/01/26 11:06:13 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:06:22 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:06:35 [D] [init.go:163] connect to mysql succ
+2018/01/26 11:06:36 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 11:07:09 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 11:07:10 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 11:07:10 [D] [asset.go:33] select asset list info
+2018/01/26 11:07:10 [D] [asset.go:42] select idc list info
+2018/01/26 11:07:10 [I] [asm_amd64.s:514] [0xc04208f550]
+2018/01/26 11:07:13 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:19 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:19 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:19 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:20 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:20 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:07:20 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 11:12:58 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 14:12:11 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 14:12:13 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 14:12:13 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 14:12:14 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 14:12:14 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 14:12:14 [D] [asset.go:33] select asset list info
+2018/01/26 14:12:14 [D] [asset.go:42] select idc list info
+2018/01/26 14:12:14 [I] [asm_amd64.s:514] [0xc0423ce6e0]
+2018/01/26 15:49:51 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 15:49:51 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 15:49:51 [D] [asset.go:33] select asset list info
+2018/01/26 15:49:51 [D] [asset.go:42] select idc list info
+2018/01/26 15:49:51 [I] [asm_amd64.s:514] [0xc0423ce370]
+2018/01/26 15:49:53 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:52:29 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 17:52:29 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 17:52:29 [D] [asset.go:33] select asset list info
+2018/01/26 17:52:29 [D] [asset.go:42] select idc list info
+2018/01/26 17:52:29 [I] [asm_amd64.s:514] [0xc0425e86e0]
+2018/01/26 17:52:31 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:52:36 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:52:46 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:52:59 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:53:05 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:53:11 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:56:42 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:56:42 [I] [asm_amd64.s:514] =====>, [0xc0420f2230]
+2018/01/26 17:56:47 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:57:02 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:03 [D] [net.go:72] select ip info
+2018/01/26 17:57:06 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:06 [D] [net.go:24] select idc list info
+2018/01/26 17:57:09 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:09 [D] [net.go:72] select ip info
+2018/01/26 17:57:14 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 17:57:14 [D] [host.go:31] select hostlist info
+2018/01/26 17:57:14 [I] [asm_amd64.s:514] [0xc042143540 0xc0421435e0 0xc042143680]
+2018/01/26 17:57:17 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:17 [D] [net.go:72] select ip info
+2018/01/26 17:57:23 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:23 [D] [net.go:72] select ip info
+2018/01/26 17:57:25 [D] [asm_amd64.s:514] enter net manage controller
+2018/01/26 17:57:25 [D] [net.go:24] select idc list info
+2018/01/26 17:57:37 [D] [asm_amd64.s:514] enter contractlist controller
+2018/01/26 17:57:40 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:57:44 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 17:57:44 [I] [asm_amd64.s:514] =====>, [0xc0420ec620]
+2018/01/26 17:57:49 [D] [asm_amd64.s:514] enter get host role controller

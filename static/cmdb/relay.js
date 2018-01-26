@@ -29,8 +29,6 @@ $(function(){
         var host_addr = $("#host_addr").val();
         var host_role = $("#host_role").val();
 
-        console.log(host_addr)
-        console.log(host_role)
         $.post("/relay/addhostrole", {host_addr:host_addr,host_role:host_role},
             function(data){
                 if ( data.success == "true" ){
@@ -41,5 +39,21 @@ $(function(){
             },
             "json"
         );
+    })
+});
+
+
+
+$(function(){
+
+    $("#search_ip_button").click(function(){
+        //$("#loading").show();
+        var host_addr = $("#search_ip").val();
+        var new_url = "/relay/role?"
+        if (host_addr != "") {
+            new_url = new_url + "host_addr=" + host_addr;
+        }
+        location.href = new_url;
+
     })
 });
