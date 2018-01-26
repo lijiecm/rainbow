@@ -19,3 +19,27 @@ $(function(){
         );
     })
 });
+
+
+
+$(function(){
+
+    $("#add_host_role_button").click(function(){
+        //$("#loading").show();
+        var host_addr = $("#host_addr").val();
+        var host_role = $("#host_role").val();
+
+        console.log(host_addr)
+        console.log(host_role)
+        $.post("/relay/addhostrole", {host_addr:host_addr,host_role:host_role},
+            function(data){
+                if ( data.success == "true" ){
+                    window.location.href="/relay/role"; 
+                }else{
+                    alert(data.message)
+                }
+            },
+            "json"
+        );
+    })
+});

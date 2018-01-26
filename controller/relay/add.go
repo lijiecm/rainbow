@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func (p *RelayController) AddHostRole(){
+func (p *RelayController) AddRole(){
 	errorMsg := "success"
 	
 	result := make(map[string]interface{})
@@ -36,7 +36,7 @@ func (p *RelayController) AddHostRole(){
 	}
 
 	username := p.GetString("username")
-	if len(role) == 0 {
+	if len(username) == 0 {
 		err =  fmt.Errorf("用户不可为空")
 		errorMsg =  err.Error()
 		logs.Warn(errorMsg)
@@ -90,6 +90,67 @@ func (p *RelayController) AddHostRole(){
 	p.Data["json"] =  result
 	p.ServeJSON()  
 }
+
+
+func (p *RelayController) AddHostRole(){
+	errorMsg := "success"
+	
+	result := make(map[string]interface{})
+	
+	result["success"] = "true"
+	result["message"] = errorMsg
+	
+	newRelayModel := model.NewRelayModel()
+	newHostModel := model.NewHostModel()
+	
+	var err error
+	defer func(){
+		if err != nil {
+			result["success"] = "false"
+			result["message"] = errorMsg
+			p.Data["json"] =  result
+			p.ServeJSON()  
+		}
+	}()
+
+	host_role := p.GetString("host_role")
+	if len(host_role) == 0 {
+		err =  fmt.Errorf("主机角色不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	host_addr := p.GetString("host_addr")
+	if len(host_addr) == 0 {
+		err =  fmt.Errorf("用户不可为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	host, err:= newHostModel.GetHostByIp(host_addr)
+	if err != nil {
+		logs.Error("get hostId from Ip failed:")
+		return
+	}
+	host_id := host[0].Id
+
+	var relayRole model.RelayRole
+	relayRole.Role = host_role
+	relayRole.HostId = host_id
+	
+	err = newRelayModel.AddRelayRole(relayRole)
+	if err != nil {
+		err = fmt.Errorf("主机增加权限失败:err:%v", err)
+		errorMsg = "主机增加权限失败"  
+	   	logs.Warn(err.Error())
+	   	return
+	}
+	p.Data["json"] =  result
+	p.ServeJSON()  
+}
+
 
 
 func (p *RelayController) AddRelayAuth(){

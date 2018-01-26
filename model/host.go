@@ -32,6 +32,19 @@ func (p *HostModel)HostList()(list []*Host, err error){
 	return
 }
 
+func (p *HostModel)GetHostByIp(ip string)(host []*Host, err error){
+
+	o := orm.NewOrm()
+	qs := o.QueryTable("host")
+	qs.Filter("ip",ip).All(&host)
+
+	if len(host) == 0 {
+		logs.Error("host_ip[%s] is not exists", ip)
+		return
+	}
+
+	return
+}
 
 func (p *HostModel)CreateHost(host Host)(err error){
 

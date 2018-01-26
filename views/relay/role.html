@@ -35,6 +35,7 @@
             <a href="#add_host" data-toggle="modal" class="config"></a>
         </div>
     </div>
+    
     <div class="portlet-body">
         <table class="table table-hover">
             <thead>
@@ -47,6 +48,10 @@
                 </tr>
             </thead>
             <tbody>
+                <div class="input-append" >
+                    <input class="m-wrap" type="text" placeholder="搜索IP" id="search_ip">
+                    <button class="btn green" type="button" id="search_ip_button">Search</button>
+                </div>
                 
                 {{range .role_list}}
                 <tr>

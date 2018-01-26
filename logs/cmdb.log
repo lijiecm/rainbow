@@ -1,63 +1,258 @@
-2018/01/25 16:22:59 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:22:59 [E] [relay.go:85] host_id[0] is not exists
-2018/01/25 16:23:01 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:23:01 [E] [relay.go:85] host_id[0] is not exists
-2018/01/25 16:25:23 [D] [init.go:163] connect to mysql succ
-2018/01/25 16:25:23 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 16:25:28 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 16:25:28 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 16:25:28 [D] [asset.go:33] select asset list info
-2018/01/25 16:25:28 [D] [asset.go:42] select idc list info
-2018/01/25 16:25:28 [I] [asm_amd64.s:514] [0xc04208b6b0]
-2018/01/25 16:25:30 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:25:30 [E] [relay.go:82] host_id[0] is not exists
-2018/01/25 16:25:30 [E] [asm_amd64.s:514] get host role failed
-2018/01/25 16:26:54 [D] [init.go:163] connect to mysql succ
-2018/01/25 16:26:55 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 16:26:58 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 16:26:58 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 16:26:58 [D] [asset.go:33] select asset list info
-2018/01/25 16:26:58 [D] [asset.go:42] select idc list info
-2018/01/25 16:26:58 [I] [asm_amd64.s:514] [0xc04208b6b0]
-2018/01/25 16:27:00 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:29:34 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:31:28 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:31:28 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
-2018/01/25 16:31:28 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
-2018/01/25 16:32:23 [D] [init.go:163] connect to mysql succ
-2018/01/25 16:32:24 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 16:32:27 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 16:32:27 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 16:32:27 [D] [asset.go:33] select asset list info
-2018/01/25 16:32:27 [D] [asset.go:42] select idc list info
-2018/01/25 16:32:27 [I] [asm_amd64.s:514] [0xc0420754a0]
-2018/01/25 16:32:30 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:32:30 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
-2018/01/25 16:32:30 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.role>: can't evaluate field role in type *model.RelayHostRole
-2018/01/25 16:33:30 [D] [init.go:163] connect to mysql succ
-2018/01/25 16:33:30 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 16:33:35 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 16:33:35 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 16:33:35 [D] [asset.go:33] select asset list info
-2018/01/25 16:33:35 [D] [asset.go:42] select idc list info
-2018/01/25 16:33:35 [I] [asm_amd64.s:514] [0xc0422cc160]
-2018/01/25 16:33:38 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:33:38 [D] [controller.go:263] template Execute err: template: relay/role.html:59:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:33:38 [E] [server.go:2568] template: relay/role.html:59:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:42:35 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:42:35 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:42:35 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:42:47 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:42:47 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:42:47 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:43:05 [D] [init.go:163] connect to mysql succ
-2018/01/25 16:43:06 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
-2018/01/25 16:43:09 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
-2018/01/25 16:43:09 [D] [asm_amd64.s:514] enter assetlist controller
-2018/01/25 16:43:09 [D] [asset.go:33] select asset list info
-2018/01/25 16:43:09 [D] [asset.go:42] select idc list info
-2018/01/25 16:43:09 [I] [asm_amd64.s:514] [0xc0420758c0]
-2018/01/25 16:43:11 [D] [asm_amd64.s:514] enter get host role controller
-2018/01/25 16:43:11 [D] [controller.go:263] template Execute err: template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:43:11 [E] [server.go:2568] template: relay/role.html:64:30: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
-2018/01/25 16:43:44 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 08:55:52 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:7350: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 279 [running]:
+net/http.(*conn).serve.func1(0xc042148c80)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421837b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421d0330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421837b0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042009940, 0xc83440, 0xc0421d2000, 0xc042364c80, 0xc0421483c0, 0xc0421950c0, 0x91a520, 0xc042062098, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).All(0xc042364c80, 0x91a520, 0xc042062098, 0x0, 0x0, 0x0, 0xc88100, 0xc042364c80, 0x0)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:194 +0xc1
+rainbow/model.(*HostModel).GetHostByIp(0xc0422132a0, 0xc042191bca, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1ed
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0422641e0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0422641e0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc042062080, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0422641e0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042088f20, 0xc82a40, 0xc042428460, 0xc042454500)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042088fd0, 0xc82a40, 0xc042428460, 0xc042454500)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042148c80, 0xc83200, 0xc0421c5000)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:20:45 [D] [init.go:163] connect to mysql succ
+2018/01/26 09:20:46 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 09:20:50 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 09:20:51 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 09:20:51 [D] [asset.go:33] select asset list info
+2018/01/26 09:20:51 [D] [asset.go:42] select idc list info
+2018/01/26 09:20:51 [I] [asm_amd64.s:514] [0xc04239c4d0]
+2018/01/26 09:20:53 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9726: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc042108320)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421280c0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421280c0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc042054880, 0xc0421086e0, 0xc0420d2e40, 0x91a520, 0xc042004070, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc042054880, 0x91a520, 0xc042004070, 0x0, 0x0, 0x0, 0xc88100, 0xc042054880)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0422e72a0, 0xc0420d9e9a, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0421f84b0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0421f84b0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004050, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0421f84b0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc0424341c0, 0xc04236a700)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc0424341c0, 0xc04236a700)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc042108320, 0xc83200, 0xc042189840)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9728: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 70 [running]:
+net/http.(*conn).serve.func1(0xc04219e140)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc042128f50)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc042128f50)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc042054d80, 0xc0421086e0, 0xc0420d3320, 0x91a520, 0xc042004098, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc042054d80, 0x91a520, 0xc042004098, 0x0, 0x0, 0x0, 0xc88100, 0xc042054d80)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0423972a0, 0xc0421903fa, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0421f85a0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0421f85a0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc042004080, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0421f85a0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc042434380, 0xc0421a4400)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc042434380, 0xc0421a4400)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04219e140, 0xc83200, 0xc042189240)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9729: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 72 [running]:
+net/http.(*conn).serve.func1(0xc04219e280)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421fe340)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421fe340)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc04229a100, 0xc0421086e0, 0xc04209b0a0, 0x91a520, 0xc0421c4048, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc04229a100, 0x91a520, 0xc0421c4048, 0x0, 0x0, 0x0, 0xc88100, 0xc04229a100)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc04239b2a0, 0xc042190f9a, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0421f8690)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0421f8690, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421c4028, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0421f8690, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc042434540, 0xc04236a200)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc042434540, 0xc04236a200)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04219e280, 0xc83200, 0xc042189500)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9727: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0423d0000)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421fe680)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0422de7e0)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421fe680)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc04229a300, 0xc0421086e0, 0xc0421640a0, 0x91a520, 0xc0421c40e0, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc04229a300, 0x91a520, 0xc0421c40e0, 0x0, 0x0, 0x0, 0xc88100, 0xc04229a300)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0422e32a0, 0xc0421c248a, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc04214c1e0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc04214c1e0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421c4060, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc04214c1e0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc0423040e0, 0xc04236a100)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc0423040e0, 0xc04236a100)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0423d0000, 0xc83200, 0xc042062100)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9724: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 52 [running]:
+net/http.(*conn).serve.func1(0xc0423923c0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421fed10)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421fed10)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc04229a680, 0xc0421086e0, 0xc0421645c0, 0x91a520, 0xc0421c4148, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc04229a680, 0x91a520, 0xc0421c4148, 0x0, 0x0, 0x0, 0xc88100, 0xc04229a680)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0422e32a0, 0xc04212c8aa, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0423e8000)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0423e8000, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421c40f0, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0423e8000, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc0422d80e0, 0xc0421a5b00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc0422d80e0, 0xc0421a5b00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0423923c0, 0xc83200, 0xc0420d7140)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9725: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0xc0420434a0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421ff480)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421ff480)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc04229aa80, 0xc0421086e0, 0xc042164a60, 0x91a520, 0xc0421c4170, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc04229aa80, 0x91a520, 0xc0421c4170, 0x0, 0x0, 0x0, 0xc88100, 0xc04229aa80)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0422e32a0, 0xc04212cbda, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0423e80f0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0423e80f0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421c4158, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0423e80f0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc0422d82a0, 0xc0421a5a00)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc0422d82a0, 0xc0421a5a00)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc0420434a0, 0xc83200, 0xc042188ec0)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:21:01 [server.go:2751] [HTTP] http: panic serving 127.0.0.1:9748: wrong object type `**model.Host` for rows scan, need *rainbow/model.Host
+goroutine 172 [running]:
+net/http.(*conn).serve.func1(0xc04219e6e0)
+	D:/go/src/net/http/server.go:1721 +0xd7
+panic(0x95c140, 0xc0421ffba0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego.recoverPanic(0xc0421c2330)
+	D:/project/src/github.com/astaxie/beego/config.go:156 +0x75e
+panic(0x95c140, 0xc0421ffba0)
+	D:/go/src/runtime/panic.go:489 +0x2dd
+github.com/astaxie/beego/orm.(*dbBase).ReadBatch(0xc042119820, 0xc83440, 0xc042108be0, 0xc04229ae00, 0xc0421086e0, 0xc042165040, 0x91a520, 0xc0421c41e0, 0xcb91a0, 0x0, ...)
+	D:/project/src/github.com/astaxie/beego/orm/db.go:903 +0x2b60
+github.com/astaxie/beego/orm.(*querySet).One(0xc04229ae00, 0x91a520, 0xc0421c41e0, 0x0, 0x0, 0x0, 0xc88100, 0xc04229ae00)
+	D:/project/src/github.com/astaxie/beego/orm/orm_queryset.go:201 +0xc9
+rainbow/model.(*HostModel).GetHostByIp(0xc0422e32a0, 0xc04212d44a, 0xd, 0x0, 0x0, 0x0)
+	D:/project/src/rainbow/model/host.go:39 +0x1e7
+rainbow/controller/relay.(*RelayController).AddHostRole(0xc0423e81e0)
+	D:/project/src/rainbow/controller/relay/add.go:132 +0x2fe
+reflect.Value.call(0x9fccc0, 0xc0423e81e0, 0x613, 0xa00c91, 0x4, 0xcd5940, 0x0, 0x0, 0xc0421c4188, 0x13, ...)
+	D:/go/src/reflect/value.go:434 +0x926
+reflect.Value.Call(0x9fccc0, 0xc0423e81e0, 0x613, 0xcd5940, 0x0, 0x0, 0xcd5940, 0x0, 0x0)
+	D:/go/src/reflect/value.go:302 +0xab
+github.com/astaxie/beego.(*ControllerRegister).ServeHTTP(0xc042074d10, 0xc82a40, 0xc0422d8620, 0xc04236a900)
+	D:/project/src/github.com/astaxie/beego/router.go:815 +0x1fef
+net/http.serverHandler.ServeHTTP(0xc042074dc0, 0xc82a40, 0xc0422d8620, 0xc04236a900)
+	D:/go/src/net/http/server.go:2568 +0x99
+net/http.(*conn).serve(0xc04219e6e0, 0xc83200, 0xc04200ef80)
+	D:/go/src/net/http/server.go:1825 +0x619
+created by net/http.(*Server).Serve
+	D:/go/src/net/http/server.go:2668 +0x2d5
+2018/01/26 09:47:53 [D] [init.go:163] connect to mysql succ
+2018/01/26 09:47:53 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/01/26 09:48:19 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/01/26 09:48:19 [D] [asm_amd64.s:514] enter assetlist controller
+2018/01/26 09:48:19 [D] [asset.go:33] select asset list info
+2018/01/26 09:48:19 [D] [asset.go:42] select idc list info
+2018/01/26 09:48:19 [I] [asm_amd64.s:514] [0xc0422928f0]
+2018/01/26 09:48:22 [D] [asm_amd64.s:514] enter get host role controller
+2018/01/26 09:48:29 [D] [add.go:143] insert role[{%!s(int=9) lijie %!s(int=7)}] into database succ
+2018/01/26 09:48:29 [D] [asm_amd64.s:514] enter get host role controller
