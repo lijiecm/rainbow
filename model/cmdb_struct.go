@@ -132,16 +132,17 @@ type RelayAuth struct {
 
 type Contract struct {
 	Id int `db:"id"`
-	SupplierName string `db:"supplier_name"`
-	ContractName string `db:"contract_name"`
-	ContractNumber string `db:"contract_number"`
-	ContractType string `db:"contract_type"`
-	Epo string `db:"epo"`
-	ContractYears int `db:"contract_years"`
-	PaymentStyle string `db:"payment_style"`
-	ContractServer string `db:"contract_server"`
-	ContractSignTime string `db:"contract_sign_time"`
-	ContractExpirationTime string `db:"contract_expiration_time"`
+	SupplierName string `orm:"size(128)"`
+	ContractName string `orm:"size(128)"`
+	ContractNumber string `orm:"size(64)"`
+	ContractType string `orm:"size(64)"`
+	ContractYears int `orm:"default(1)"`
+	PaymentStyle string `orm:"size(128)"`
+	ContractServer string `orm:"size(64)"`
+	ContractSignTime string `orm:"size(64)"`
+	ContractExpirationTime string `orm:"size(64)"`
+	Status int `orm:"default(0)"`
+	CreateTime string `orm:"size(64)"`
 }
 
 

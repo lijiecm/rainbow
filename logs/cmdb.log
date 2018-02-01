@@ -723,3 +723,151 @@ created by net/http.(*Server).Serve
 2018/01/26 17:57:44 [D] [asm_amd64.s:514] enter get host role controller
 2018/01/26 17:57:44 [I] [asm_amd64.s:514] =====>, [0xc0420ec620]
 2018/01/26 17:57:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:36:46 [D] [init.go:163] connect to mysql succ
+2018/02/01 14:36:47 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/01 14:36:55 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 14:36:55 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/01 14:36:55 [D] [asset.go:33] select asset list info
+2018/02/01 14:36:55 [D] [asset.go:42] select idc list info
+2018/02/01 14:36:55 [I] [asm_amd64.s:514] [0xc0422a29a0]
+2018/02/01 14:37:01 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:37:01 [I] [asm_amd64.s:514] =====>, [0xc0420c6770]
+2018/02/01 14:37:06 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:37:18 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:37:22 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:37:31 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 14:37:31 [I] [asm_amd64.s:514] =====>, [0xc04200c2a0]
+2018/02/01 14:37:34 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 14:43:19 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 14:54:27 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 14:55:15 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 14:55:38 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 15:03:58 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 15:03:58 [E] [controller.go:261] parse template err: contract/contract.html template: contract/contract.html:70: unexpected "=" in operand
+2018/02/01 15:12:51 [D] [init.go:163] connect to mysql succ
+2018/02/01 15:12:52 [E] [template.go:174] parse template err: contract/contract.html template: contract/contract.html:70: unexpected "=" in operand
+2018/02/01 15:12:52 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/01 15:13:20 [D] [init.go:163] connect to mysql succ
+2018/02/01 15:13:21 [E] [template.go:174] parse template err: contract/contract.html template: contract/contract.html:70: unexpected "=" in operand
+2018/02/01 15:13:21 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/01 15:14:10 [D] [init.go:163] connect to mysql succ
+2018/02/01 15:14:10 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/01 15:14:17 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 15:14:17 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/01 15:14:17 [D] [asset.go:33] select asset list info
+2018/02/01 15:14:17 [D] [asset.go:42] select idc list info
+2018/02/01 15:14:17 [I] [asm_amd64.s:514] [0xc0422f4160]
+2018/02/01 15:14:20 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 15:14:20 [D] [contract.go:31] select contract info
+2018/02/01 15:14:20 [W] [contract.go:31] select contract from mysql failed, err:Error 1146: Table 'cmdb.contract' doesn't exist
+2018/02/01 15:14:20 [W] [asm_amd64.s:514] get asset list failed, err:获取主机列表失败
+2018/02/01 15:14:48 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 15:14:48 [D] [contract.go:31] select contract info
+2018/02/01 15:14:48 [I] [asm_amd64.s:514] []
+2018/02/01 18:04:59 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:00 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:01 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:02 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:02 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:04 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:05 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:05 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:06 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 18:05:09 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/01 18:05:09 [D] [asset.go:33] select asset list info
+2018/02/01 18:05:09 [D] [asset.go:42] select idc list info
+2018/02/01 18:05:09 [I] [asm_amd64.s:514] [0xc042282b00]
+2018/02/01 18:05:13 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:05:13 [D] [contract.go:31] select contract info
+2018/02/01 18:05:13 [I] [asm_amd64.s:514] []
+2018/02/01 18:19:55 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:19:55 [D] [contract.go:31] select contract info
+2018/02/01 18:19:55 [I] [asm_amd64.s:514] []
+2018/02/01 18:21:06 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:21:06 [D] [contract.go:31] select contract info
+2018/02/01 18:21:06 [I] [asm_amd64.s:514] []
+2018/02/01 18:25:58 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:25:58 [D] [contract.go:31] select contract info
+2018/02/01 18:25:58 [I] [asm_amd64.s:514] []
+2018/02/01 18:26:19 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:26:19 [D] [contract.go:31] select contract info
+2018/02/01 18:26:19 [I] [asm_amd64.s:514] []
+2018/02/01 18:26:37 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:26:37 [D] [contract.go:31] select contract info
+2018/02/01 18:26:37 [I] [asm_amd64.s:514] []
+2018/02/01 18:29:30 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:29:30 [D] [contract.go:31] select contract info
+2018/02/01 18:29:30 [I] [asm_amd64.s:514] []
+2018/02/01 18:30:21 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:30:21 [D] [contract.go:31] select contract info
+2018/02/01 18:30:21 [I] [asm_amd64.s:514] []
+2018/02/01 18:30:29 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:30:29 [D] [contract.go:31] select contract info
+2018/02/01 18:30:29 [I] [asm_amd64.s:514] []
+2018/02/01 18:31:16 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:31:16 [D] [contract.go:31] select contract info
+2018/02/01 18:31:17 [I] [asm_amd64.s:514] []
+2018/02/01 18:32:30 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:32:30 [D] [contract.go:31] select contract info
+2018/02/01 18:32:30 [I] [asm_amd64.s:514] []
+2018/02/01 18:33:22 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:33:22 [D] [contract.go:31] select contract info
+2018/02/01 18:33:22 [I] [asm_amd64.s:514] []
+2018/02/01 18:35:01 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:35:01 [D] [contract.go:31] select contract info
+2018/02/01 18:35:01 [I] [asm_amd64.s:514] []
+2018/02/01 18:39:15 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:39:15 [D] [contract.go:31] select contract info
+2018/02/01 18:39:15 [I] [asm_amd64.s:514] []
+2018/02/01 18:39:19 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:39:19 [D] [contract.go:31] select contract info
+2018/02/01 18:39:19 [I] [asm_amd64.s:514] []
+2018/02/01 18:39:28 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:39:28 [D] [contract.go:31] select contract info
+2018/02/01 18:39:28 [I] [asm_amd64.s:514] []
+2018/02/01 18:42:40 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:42:40 [D] [contract.go:31] select contract info
+2018/02/01 18:42:40 [I] [asm_amd64.s:514] []
+2018/02/01 18:45:41 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 18:45:41 [D] [contract.go:31] select contract info
+2018/02/01 18:45:41 [I] [asm_amd64.s:514] []
+2018/02/01 19:06:50 [D] [init.go:163] connect to mysql succ
+2018/02/01 19:06:52 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/01 19:07:02 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/01 19:07:02 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/01 19:07:02 [D] [asset.go:33] select asset list info
+2018/02/01 19:07:02 [D] [asset.go:42] select idc list info
+2018/02/01 19:07:02 [I] [asm_amd64.s:514] [0xc0423f0210]
+2018/02/01 19:07:05 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 19:07:05 [D] [contract.go:31] select contract info
+2018/02/01 19:07:05 [I] [asm_amd64.s:514] []
+2018/02/01 19:07:39 [D] [add.go:120] insert host into database succ, id:[1]
+2018/02/01 19:07:39 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 19:07:39 [D] [contract.go:31] select contract info
+2018/02/01 19:07:39 [I] [asm_amd64.s:514] [0xc0425bc160]
+2018/02/01 19:07:39 [D] [controller.go:263] template Execute err: template: contract/contract.html:75:25: executing "contract/contract.html" at <.Status>: Status has arguments but cannot be invoked as function
+2018/02/01 19:07:39 [E] [server.go:2568] template: contract/contract.html:75:25: executing "contract/contract.html" at <.Status>: Status has arguments but cannot be invoked as function
+2018/02/01 19:08:41 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 19:08:41 [D] [contract.go:31] select contract info
+2018/02/01 19:08:41 [I] [asm_amd64.s:514] [0xc0423f0420]
+2018/02/01 19:08:41 [D] [controller.go:263] template Execute err: template: contract/contract.html:75:25: executing "contract/contract.html" at <.Status>: Status has arguments but cannot be invoked as function
+2018/02/01 19:08:41 [E] [server.go:2568] template: contract/contract.html:75:25: executing "contract/contract.html" at <.Status>: Status has arguments but cannot be invoked as function
+2018/02/01 19:10:58 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/01 19:10:58 [D] [contract.go:31] select contract info
+2018/02/01 19:10:58 [I] [asm_amd64.s:514] [0xc0423f0210]
+2018/02/01 19:11:18 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:13:29 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:13:29 [E] [controller.go:261] parse template err: relay/role.html template: relay/role.html:117: unexpected EOF
+2018/02/01 19:13:40 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:13:40 [E] [controller.go:261] parse template err: relay/role.html template: relay/role.html:117: unexpected EOF
+2018/02/01 19:14:14 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/01 19:14:14 [D] [asset.go:33] select asset list info
+2018/02/01 19:14:14 [D] [asset.go:42] select idc list info
+2018/02/01 19:14:14 [I] [asm_amd64.s:514] [0xc0423f0bb0]
+2018/02/01 19:14:19 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:14:19 [E] [controller.go:261] parse template err: relay/role.html template: relay/role.html:117: unexpected EOF
+2018/02/01 19:15:23 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:15:23 [D] [controller.go:263] template Execute err: template: relay/role.html:65:38: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/02/01 19:15:23 [E] [server.go:2568] template: relay/role.html:65:38: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
+2018/02/01 19:17:33 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/01 19:17:47 [D] [asm_amd64.s:514] enter get host role controller

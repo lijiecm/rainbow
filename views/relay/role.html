@@ -62,9 +62,16 @@
                     <td>
                         
                         <!--i>堡垒机</i-->
+                        {{ if eq true $.IsAdmin}}
                         <a class="host_relay" style="display: inline;" href="javascript:void(0)" title="授权">
                             <i class="icon-leaf" aria-hidden="true"></i>
                         </a>
+                        {{ else }}
+                        <a class="host_relay" style="display: inline;" href="javascript:void(0)" title="申请">
+                            <i class="icon-leaf" aria-hidden="true"></i>
+                        </a>
+                        {{end}}
+
                         <a class="role_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
                             <i class="icon-edit" aria-hidden="true"></i>
                         </a>

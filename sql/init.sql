@@ -120,5 +120,21 @@ CREATE TABLE `relay_auth` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `contract` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `supplier_name` varchar(128) NOT NULL,
+  `contract_name` varchar(128) NOT NULL,
+  `contract_number` varchar(64) NOT NULL,
+  `contract_type` varchar(64) NOT NULL,
+  `contract_years` int(11) DEFAULT '1',
+  `payment_style` varchar(128) NOT NULL,
+  `contract_server` varchar(64) NOT NULL,
+  `contract_sign_time` varchar(64) NOT NULL,
+  `contract_expiration_time` varchar(64) NOT NULL,
+  `create_time` varchar(64) NOT NULL,
+  `status` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
 
 INSERT INTO users ("username", "password", frozen) VALUES ("root", "25d55ad283aa400af464c76d713c07ad", 0)
