@@ -137,14 +137,14 @@ CREATE TABLE `contract` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE `order` (
+CREATE TABLE `hardware_order` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `contract_id` int(11) DEFAULT '0',
   `type` varchar(128) NOT NULL,
   `count` int(11) DEFAULT '0',
   `arrival_count` int(11) DEFAULT '0',
   `model` varchar(64) NOT NULL,
-  `conf` varchar(64) NOT NULL,
+  `asset_conf_id` int(11) DEFAULT '0',
   `site_name` varchar(64) NOT NULL,
   `order_sign_time` varchar(64) NOT NULL,
   `create_time` varchar(64) NOT NULL,

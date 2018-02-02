@@ -9,5 +9,8 @@ func init(){
 	beego.Router("/contract/updatecontract", &contract.ContractController{}, "*:UpdateContract")
 	beego.Router("/contract/delcontract", &contract.ContractController{}, "*:DelContract")
 	beego.Router("/contract/order", &contract.ContractController{}, "*:Order")  
+	beego.Router("/contract/addorder", &contract.ContractController{}, "*:AddOrder")  
+	beego.Router("/contract/updateorder", &contract.ContractController{}, "*:UpdateOrder") 
+	beego.Router("/contract/delorder", &contract.ContractController{}, "*:DelOrder") 
 }
 

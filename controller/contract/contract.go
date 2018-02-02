@@ -33,7 +33,7 @@ func (p *ContractController) Contract(){
 	if err != nil {
 		err =  fmt.Errorf("获取主机列表失败")
 		errorMsg =  err.Error()
-		logs.Warn("get asset list failed, err:%v", err)
+		logs.Warn("get contract list failed, err:%v", err)
 		return
 	}
 
@@ -45,14 +45,31 @@ func (p *ContractController) Contract(){
 
 func (p *ContractController) Order(){
 	
-		logs.Debug("enter contractlist controller")
-		p.Layout = "layout/layout.html"  
-		m := make(map[string]interface{})
-		m["code"] = 200
-		m["message"] = "success"
-		m["type"] = "order"
+	logs.Debug("enter orderlist controller")
+	p.Layout = "layout/layout.html"  
+	p.TplName = "contract/order.html"
+	errorMsg := "success"
+	var err error
+	defer func(){
+		if err != nil {
+			p.Data["error"] = errorMsg
+			p.TplName = "layout/error.html"
+		}
+	}()
 	
-		p.Data["netmanage"] = m
-		p.TplName = "contract/order.html"
+	contractModel := model.NewContractModel()
+	orderList,err := contractModel.GetOrderList()
+
+	if err != nil {
+		err =  fmt.Errorf("获取订单列表失败")
+		errorMsg =  err.Error()
+		logs.Warn("get order list failed, err:%v", err)
+		return
 	}
+
+	logs.Info("%v", orderList)
+	p.Data["order_list"] = orderList
+
+	return
+}
 	

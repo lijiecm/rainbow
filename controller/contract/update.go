@@ -134,3 +134,120 @@ func (p *ContractController) UpdateContract(){
 	p.ServeJSON()  
 
 }
+
+
+
+func (p *ContractController) UpdateOrder(){
+	errorMsg := "success"
+	
+	result := make(map[string]interface{})
+	
+	result["success"] = "true"
+	result["message"] = errorMsg
+
+	contractModel := model.NewContractModel()
+	var hardwareOrder model.HardwareOrder
+	var err error
+
+	defer func(){
+		if err != nil {
+			result["success"] = "false"
+			result["message"] = errorMsg
+			p.Data["json"] =  result
+			p.ServeJSON()  
+		}
+	}()
+
+	order_id, err := p.GetInt("order_id")
+	if err != nil {
+		err =  fmt.Errorf("订单ID必须为整数")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	contract_id, err := p.GetInt("contract_id")
+	if err != nil {
+		err =  fmt.Errorf("合同ID必须为整数")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	hardware_type := p.GetString("hardware_type")
+	if len(hardware_type) == 0 {
+		err =  fmt.Errorf("类型不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	count, err := p.GetInt("count")
+	if err != nil {
+		err =  fmt.Errorf("设备总数必须为整数")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	arrival_count, err := p.GetInt("arrival_count")
+	if err != nil {
+		err =  fmt.Errorf("已到货设备总数必须为整数")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	model := p.GetString("model")
+	if len(model) == 0 {
+		err =  fmt.Errorf("型号不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	asset_conf_id, err := p.GetInt("asset_conf_id")
+	if err != nil {
+		err =  fmt.Errorf("配置必须为整数")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	site_name := p.GetString("site_name")
+	if len(site_name) == 0 {
+		err =  fmt.Errorf("机房信息不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	order_sign_time:= p.GetString("order_sign_time")  
+	if len(order_sign_time) == 0 {
+		err =  fmt.Errorf("服务类型不能为空")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+
+	nowTime := time.Now()
+    create_time := nowTime.String()
+	hardwareOrder.Id = order_id
+	hardwareOrder.ContractId = contract_id
+	hardwareOrder.Type = hardware_type
+	hardwareOrder.Count = count
+	hardwareOrder.ArrivalCount = arrival_count
+	hardwareOrder.Model = model
+	hardwareOrder.AssetConfId = asset_conf_id
+	hardwareOrder.SiteName = site_name
+	hardwareOrder.OrderSignTime = order_sign_time
+	hardwareOrder.CreateTime = create_time
+
+	err = contractModel.UpdateOrder(hardwareOrder)
+	if err != nil {
+		err = fmt.Errorf("更新合同失败:%v", err)
+		errorMsg = "更新合同失败"  
+	   	logs.Warn(err.Error())
+	   	return
+	}
+	p.Data["json"] =  result
+	p.ServeJSON()  
+
+}

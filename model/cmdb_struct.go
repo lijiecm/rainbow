@@ -146,7 +146,7 @@ type Contract struct {
 }
 
 
-type Order struct {
+type HardwareOrder struct {
 	/*
 	字段依次为：id,合同id,类型(服务器、网络设备),订单总数,订单到货数,型号(DELL720,CISCO),配置(A3,A6,A7),机房,订单采购时间，订单创建时间
 	*/
@@ -156,7 +156,7 @@ type Order struct {
 	Count int `orm:"default(0)"`
 	ArrivalCount int `orm:"default(0)"`
 	Model string `orm:"size(64)"`
-	AssetConfId string `orm:"default(0)"`
+	AssetConfId int `orm:"default(0)"`
 	SiteName string `orm:"size(64)"`
 	OrderSignTime string `orm:"size(64)"`
 	CreateTime string `orm:"size(64)"`

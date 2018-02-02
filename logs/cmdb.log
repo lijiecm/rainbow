@@ -1042,3 +1042,120 @@ created by net/http.(*Server).Serve
 2018/02/02 11:37:06 [D] [asm_amd64.s:514] enter contractlist controller
 2018/02/02 11:37:06 [D] [contract.go:31] select contract info
 2018/02/02 11:37:06 [I] [asm_amd64.s:514] []
+2018/02/02 13:33:12 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 13:33:13 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 13:33:15 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 13:33:15 [D] [asset.go:33] select asset list info
+2018/02/02 13:33:15 [D] [asset.go:42] select idc list info
+2018/02/02 13:33:15 [I] [asm_amd64.s:514] [0xc042328790]
+2018/02/02 13:33:17 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 13:33:57 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 13:39:15 [D] [init.go:163] connect to mysql succ
+2018/02/02 13:39:15 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 13:39:19 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 13:39:19 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 13:39:19 [D] [asset.go:33] select asset list info
+2018/02/02 13:39:19 [D] [asset.go:42] select idc list info
+2018/02/02 13:39:19 [I] [asm_amd64.s:514] [0xc04207b130]
+2018/02/02 13:39:21 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 13:39:21 [D] [contract.go:61] select order info
+2018/02/02 13:39:21 [W] [contract.go:61] select order from mysql failed, err:Error 1054: Unknown column 'T0.asset_conf_id' in 'field list'
+2018/02/02 13:39:21 [W] [asm_amd64.s:514] get order list failed, err:获取订单列表失败
+2018/02/02 13:45:49 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 13:45:49 [D] [contract.go:61] select order info
+2018/02/02 13:45:49 [W] [contract.go:61] select order from mysql failed, err:Error 1054: Unknown column 'T0.asset_conf_id' in 'field list'
+2018/02/02 13:45:49 [W] [asm_amd64.s:514] get order list failed, err:获取订单列表失败
+2018/02/02 13:46:17 [D] [init.go:163] connect to mysql succ
+2018/02/02 13:46:18 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 13:46:21 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 13:46:21 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 13:46:21 [D] [asset.go:33] select asset list info
+2018/02/02 13:46:21 [D] [asset.go:42] select idc list info
+2018/02/02 13:46:21 [I] [asm_amd64.s:514] [0xc042089970]
+2018/02/02 13:46:23 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 13:46:23 [D] [contract.go:61] select order info
+2018/02/02 13:46:23 [I] [asm_amd64.s:514] []
+2018/02/02 14:02:56 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:02:56 [D] [contract.go:61] select order info
+2018/02/02 14:02:56 [I] [asm_amd64.s:514] []
+2018/02/02 14:03:06 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:03:06 [D] [contract.go:61] select order info
+2018/02/02 14:03:06 [I] [asm_amd64.s:514] []
+2018/02/02 14:17:48 [D] [init.go:163] connect to mysql succ
+2018/02/02 14:17:49 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 14:18:02 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 14:18:02 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 14:18:02 [D] [asset.go:33] select asset list info
+2018/02/02 14:18:02 [D] [asset.go:42] select idc list info
+2018/02/02 14:18:02 [I] [asm_amd64.s:514] [0xc0423164d0]
+2018/02/02 14:18:05 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:18:05 [D] [contract.go:61] select order info
+2018/02/02 14:18:05 [I] [asm_amd64.s:514] []
+2018/02/02 14:19:19 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:19:19 [D] [contract.go:61] select order info
+2018/02/02 14:19:19 [I] [asm_amd64.s:514] []
+2018/02/02 14:21:10 [D] [init.go:163] connect to mysql succ
+2018/02/02 14:21:11 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 14:21:20 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 14:21:20 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 14:21:20 [D] [asset.go:33] select asset list info
+2018/02/02 14:21:20 [D] [asset.go:42] select idc list info
+2018/02/02 14:21:20 [I] [asm_amd64.s:514] [0xc0424c0160]
+2018/02/02 14:21:22 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:21:22 [D] [contract.go:61] select order info
+2018/02/02 14:21:22 [I] [asm_amd64.s:514] []
+2018/02/02 14:21:40 [W] [asm_amd64.s:514] 获取订单设备配置失败
+2018/02/02 14:22:34 [D] [add.go:228] insert contract into database succ, id:[1]
+2018/02/02 14:22:34 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:22:34 [D] [contract.go:61] select order info
+2018/02/02 14:22:34 [I] [asm_amd64.s:514] [0xc0423caf00]
+2018/02/02 14:23:55 [D] [init.go:163] connect to mysql succ
+2018/02/02 14:23:55 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 14:23:58 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 14:23:58 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 14:23:58 [D] [asset.go:33] select asset list info
+2018/02/02 14:23:58 [D] [asset.go:42] select idc list info
+2018/02/02 14:23:59 [I] [asm_amd64.s:514] [0xc0422e6160]
+2018/02/02 14:24:01 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 14:24:01 [D] [contract.go:61] select order info
+2018/02/02 14:24:01 [I] [asm_amd64.s:514] [0xc04228e480]
+2018/02/02 15:13:47 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:13:47 [D] [contract.go:61] select order info
+2018/02/02 15:13:47 [I] [asm_amd64.s:514] [0xc042167000]
+2018/02/02 15:14:31 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:14:31 [D] [contract.go:61] select order info
+2018/02/02 15:14:31 [I] [asm_amd64.s:514] [0xc0422ce000]
+2018/02/02 15:17:19 [D] [init.go:163] connect to mysql succ
+2018/02/02 15:17:19 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 15:17:25 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 15:17:25 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 15:17:25 [D] [asset.go:33] select asset list info
+2018/02/02 15:17:25 [D] [asset.go:42] select idc list info
+2018/02/02 15:17:25 [I] [asm_amd64.s:514] [0xc0422d8160]
+2018/02/02 15:17:27 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:17:27 [D] [contract.go:61] select order info
+2018/02/02 15:17:27 [I] [asm_amd64.s:514] [0xc0422b0400]
+2018/02/02 15:18:17 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:18:17 [D] [contract.go:61] select order info
+2018/02/02 15:18:17 [I] [asm_amd64.s:514] [0xc0422b1580]
+2018/02/02 15:18:23 [D] [update.go:243] update order into database succ, id:[1]
+2018/02/02 15:18:23 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:18:23 [D] [contract.go:61] select order info
+2018/02/02 15:18:23 [I] [asm_amd64.s:514] [0xc0421d8100]
+2018/02/02 15:22:33 [D] [init.go:163] connect to mysql succ
+2018/02/02 15:22:33 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 15:22:37 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 15:22:37 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 15:22:37 [D] [asset.go:33] select asset list info
+2018/02/02 15:22:37 [D] [asset.go:42] select idc list info
+2018/02/02 15:22:37 [I] [asm_amd64.s:514] [0xc04237c630]
+2018/02/02 15:22:39 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:22:39 [D] [contract.go:61] select order info
+2018/02/02 15:22:39 [I] [asm_amd64.s:514] [0xc0421c9600]
+2018/02/02 15:23:50 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:23:50 [D] [contract.go:61] select order info
+2018/02/02 15:23:50 [I] [asm_amd64.s:514] [0xc042296700]
+2018/02/02 15:23:53 [D] [del.go:80] delete order succ, id:[1], num:[1]
+2018/02/02 15:23:53 [D] [asm_amd64.s:514] enter orderlist controller
+2018/02/02 15:23:53 [D] [contract.go:61] select order info
+2018/02/02 15:23:53 [I] [asm_amd64.s:514] []

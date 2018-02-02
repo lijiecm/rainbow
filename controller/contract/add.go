@@ -128,3 +128,111 @@ func (p *ContractController) AddContract(){
 	p.ServeJSON()  
 
 }
+
+
+
+func (p *ContractController) AddOrder(){
+	errorMsg := "success"
+
+	result := make(map[string]interface{})
+	
+	result["success"] = "true"
+	result["message"] = errorMsg
+
+	contractModel := model.NewContractModel()
+	var hardwareOrder model.HardwareOrder
+	var err error
+	defer func(){
+		if err != nil {
+			result["success"] = "false"
+			result["message"] = errorMsg
+			p.Data["json"] =  result
+			p.ServeJSON()  
+		}
+	}()
+	
+	contract_id, err := p.GetInt("contract_id")
+	if err != nil {
+		err =  fmt.Errorf("获取合同id无效")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	hardware_type := p.GetString("hardware_type")
+	if len(hardware_type) == 0 {
+		err =  fmt.Errorf("获取类型失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	count, err := p.GetInt("count")
+	if err != nil {
+		err =  fmt.Errorf("获取订单设备总数失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	arrival_count, err := p.GetInt("arrival_count")
+	if err != nil {
+		err =  fmt.Errorf("获取订单设备已到货数失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	model := p.GetString("model")
+	if len(model) == 0 {
+		err =  fmt.Errorf("获取订单设备型号失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	asset_conf_id, err := p.GetInt("asset_conf_id")
+	if err != nil {
+		err =  fmt.Errorf("获取订单设备配置失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+	site_name  := p.GetString("site_name")  
+	if len(site_name) == 0 {
+		err =  fmt.Errorf("获取机房信息失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+	order_sign_time := p.GetString("order_sign_time")
+	if len(order_sign_time) == 0 {
+		err =  fmt.Errorf("获取订单创建时间失败")
+		errorMsg =  err.Error()
+		logs.Warn(errorMsg)
+		return
+	}
+
+
+	nowTime := time.Now()
+    create_time := nowTime.String()
+
+	hardwareOrder.ContractId = contract_id
+	hardwareOrder.Type = hardware_type
+	hardwareOrder.Count = count
+	hardwareOrder.ArrivalCount = arrival_count
+	hardwareOrder.Model = model
+	hardwareOrder.AssetConfId = asset_conf_id
+	hardwareOrder.SiteName = site_name
+	hardwareOrder.OrderSignTime = order_sign_time
+	hardwareOrder.CreateTime = create_time
+
+	err = contractModel.CreateOrder(hardwareOrder)
+	if err != nil {
+		err = fmt.Errorf("添加订单失败:%v", err)
+		errorMsg = "添加订单失败"  
+	   	logs.Warn(err.Error())
+	   	return
+	}
+	p.Data["json"] =  result
+	p.ServeJSON()  
+
+}
