@@ -131,7 +131,7 @@ type RelayAuth struct {
 }
 
 type Contract struct {
-	Id int `db:"id"`
+	Id int
 	SupplierName string `orm:"size(128)"`
 	ContractName string `orm:"size(128)"`
 	ContractNumber string `orm:"size(64)"`
@@ -145,6 +145,32 @@ type Contract struct {
 	CreateTime string `orm:"size(64)"`
 }
 
+
+type Order struct {
+	/*
+	字段依次为：id,合同id,类型(服务器、网络设备),订单总数,订单到货数,型号(DELL720,CISCO),配置(A3,A6,A7),机房,订单采购时间，订单创建时间
+	*/
+	Id int
+	ContractId int `orm:"default(0)"`
+	Type string `orm:"size(128)"`
+	Count int `orm:"default(0)"`
+	ArrivalCount int `orm:"default(0)"`
+	Model string `orm:"size(64)"`
+	AssetConfId string `orm:"default(0)"`
+	SiteName string `orm:"size(64)"`
+	OrderSignTime string `orm:"size(64)"`
+	CreateTime string `orm:"size(64)"`
+}
+
+type EquipmentSn struct {
+	/*
+	字段依次为:id, 订单id, sn号, 设备到期时间
+	*/
+	Id int
+	OrderId int `orm:"default(0)"`
+	sn string `orm:"size(64)"`
+	ExpirationTime string `orm:"size(64)"`
+}
 
 type OperaLog struct {
 	OperaLogId int `db:"id"`

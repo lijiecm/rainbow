@@ -137,4 +137,27 @@ CREATE TABLE `contract` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `contract_id` int(11) DEFAULT '0',
+  `type` varchar(128) NOT NULL,
+  `count` int(11) DEFAULT '0',
+  `arrival_count` int(11) DEFAULT '0',
+  `model` varchar(64) NOT NULL,
+  `conf` varchar(64) NOT NULL,
+  `site_name` varchar(64) NOT NULL,
+  `order_sign_time` varchar(64) NOT NULL,
+  `create_time` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `equipment_sn` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT '0',
+  `sn` varchar(64) NOT NULL,
+  `expiration_time` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
 INSERT INTO users ("username", "password", frozen) VALUES ("root", "25d55ad283aa400af464c76d713c07ad", 0)

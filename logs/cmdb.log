@@ -1032,3 +1032,13 @@ created by net/http.(*Server).Serve
 2018/02/02 11:31:26 [D] [asm_amd64.s:514] enter contractlist controller
 2018/02/02 11:31:26 [D] [contract.go:31] select contract info
 2018/02/02 11:31:26 [I] [asm_amd64.s:514] []
+2018/02/02 11:33:09 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:33:11 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:33:11 [D] [contract.go:31] select contract info
+2018/02/02 11:33:11 [I] [asm_amd64.s:514] []
+2018/02/02 11:33:12 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/02 11:33:12 [I] [asm_amd64.s:514] =====>, [0xc0420ddea0]
+2018/02/02 11:33:16 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/02 11:37:06 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:37:06 [D] [contract.go:31] select contract info
+2018/02/02 11:37:06 [I] [asm_amd64.s:514] []
