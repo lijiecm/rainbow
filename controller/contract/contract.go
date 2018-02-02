@@ -41,9 +41,7 @@ func (p *ContractController) Contract(){
 	p.Data["contract_list"] = contractList
 	
 	return
-	
 }
-
 
 func (p *ContractController) Order(){
 	

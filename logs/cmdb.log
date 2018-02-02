@@ -871,3 +871,164 @@ created by net/http.(*Server).Serve
 2018/02/01 19:15:23 [E] [server.go:2568] template: relay/role.html:65:38: executing "relay/role.html" at <.IsAdmin>: can't evaluate field IsAdmin in type *model.RelayHostRole
 2018/02/01 19:17:33 [D] [asm_amd64.s:514] enter get host role controller
 2018/02/01 19:17:47 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/02 09:17:46 [D] [init.go:163] connect to mysql succ
+2018/02/02 09:17:47 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 09:55:39 [D] [init.go:163] connect to mysql succ
+2018/02/02 09:55:39 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 09:55:42 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 09:55:42 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 09:55:42 [D] [asset.go:33] select asset list info
+2018/02/02 09:55:42 [D] [asset.go:42] select idc list info
+2018/02/02 09:55:42 [I] [asm_amd64.s:514] [0xc042075130]
+2018/02/02 09:55:45 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 09:55:45 [D] [contract.go:31] select contract info
+2018/02/02 09:55:45 [I] [asm_amd64.s:514] [0xc0422922c0]
+2018/02/02 09:57:09 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 09:57:09 [D] [contract.go:31] select contract info
+2018/02/02 09:57:09 [I] [asm_amd64.s:514] [0xc0420756b0]
+2018/02/02 09:58:09 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 09:58:09 [D] [contract.go:31] select contract info
+2018/02/02 09:58:09 [I] [asm_amd64.s:514] [0xc04227e210]
+2018/02/02 09:58:16 [D] [update.go:120] update contract into database succ, id:[0]
+2018/02/02 09:58:16 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 09:58:16 [D] [contract.go:31] select contract info
+2018/02/02 09:58:16 [I] [asm_amd64.s:514] [0xc0421a22c0]
+2018/02/02 09:58:25 [D] [update.go:120] update contract into database succ, id:[0]
+2018/02/02 09:58:25 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 09:58:25 [D] [contract.go:31] select contract info
+2018/02/02 09:58:25 [I] [asm_amd64.s:514] [0xc0421a29a0]
+2018/02/02 10:50:06 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:50:06 [D] [contract.go:31] select contract info
+2018/02/02 10:50:06 [I] [asm_amd64.s:514] [0xc042074fd0]
+2018/02/02 10:50:49 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:50:49 [D] [contract.go:31] select contract info
+2018/02/02 10:50:49 [I] [asm_amd64.s:514] [0xc04241a160]
+2018/02/02 10:50:56 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:50:56 [D] [contract.go:31] select contract info
+2018/02/02 10:50:56 [I] [asm_amd64.s:514] [0xc04227e2c0]
+2018/02/02 10:51:42 [D] [init.go:163] connect to mysql succ
+2018/02/02 10:51:43 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 10:51:47 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 10:51:47 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 10:51:47 [D] [asset.go:33] select asset list info
+2018/02/02 10:51:47 [D] [asset.go:42] select idc list info
+2018/02/02 10:51:47 [I] [asm_amd64.s:514] [0xc042075c30]
+2018/02/02 10:51:49 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:51:49 [D] [contract.go:31] select contract info
+2018/02/02 10:51:49 [I] [asm_amd64.s:514] [0xc04229c2c0]
+2018/02/02 10:52:32 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:52:32 [D] [contract.go:31] select contract info
+2018/02/02 10:52:32 [I] [asm_amd64.s:514] [0xc04229a210]
+2018/02/02 10:52:38 [D] [update.go:120] update contract into database succ, id:[0]
+2018/02/02 10:52:38 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:52:38 [D] [contract.go:31] select contract info
+2018/02/02 10:52:38 [I] [asm_amd64.s:514] [0xc04223a370]
+2018/02/02 10:54:13 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:54:13 [D] [contract.go:31] select contract info
+2018/02/02 10:54:13 [I] [asm_amd64.s:514] [0xc0422c6000]
+2018/02/02 10:54:41 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:54:41 [D] [contract.go:31] select contract info
+2018/02/02 10:54:41 [I] [asm_amd64.s:514] [0xc0422c6160]
+2018/02/02 10:59:41 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 10:59:41 [D] [contract.go:31] select contract info
+2018/02/02 10:59:41 [I] [asm_amd64.s:514] [0xc0423ce160]
+2018/02/02 11:01:53 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:01:53 [D] [contract.go:31] select contract info
+2018/02/02 11:01:53 [I] [asm_amd64.s:514] [0xc0420754a0]
+2018/02/02 11:02:10 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:02:10 [D] [contract.go:31] select contract info
+2018/02/02 11:02:10 [I] [asm_amd64.s:514] [0xc0422d2000]
+2018/02/02 11:05:11 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:05:11 [D] [contract.go:31] select contract info
+2018/02/02 11:05:11 [I] [asm_amd64.s:514] [0xc04231e160]
+2018/02/02 11:05:29 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:05:29 [D] [contract.go:31] select contract info
+2018/02/02 11:05:29 [I] [asm_amd64.s:514] [0xc042290370]
+2018/02/02 11:06:58 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:06:58 [D] [contract.go:31] select contract info
+2018/02/02 11:06:58 [I] [asm_amd64.s:514] [0xc0420754a0]
+2018/02/02 11:07:56 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:07:56 [D] [contract.go:31] select contract info
+2018/02/02 11:07:56 [I] [asm_amd64.s:514] [0xc042290160]
+2018/02/02 11:09:08 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:09:08 [D] [contract.go:31] select contract info
+2018/02/02 11:09:08 [I] [asm_amd64.s:514] [0xc042290160]
+2018/02/02 11:10:03 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:10:03 [D] [contract.go:31] select contract info
+2018/02/02 11:10:03 [I] [asm_amd64.s:514] [0xc042290790]
+2018/02/02 11:11:56 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:11:56 [D] [contract.go:31] select contract info
+2018/02/02 11:11:56 [I] [asm_amd64.s:514] [0xc042262160]
+2018/02/02 11:14:03 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:14:03 [D] [contract.go:31] select contract info
+2018/02/02 11:14:03 [I] [asm_amd64.s:514] [0xc0420753f0]
+2018/02/02 11:15:45 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:15:45 [D] [contract.go:31] select contract info
+2018/02/02 11:15:45 [I] [asm_amd64.s:514] [0xc042075290]
+2018/02/02 11:16:11 [D] [update.go:120] update contract into database succ, id:[0]
+2018/02/02 11:16:11 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:16:11 [D] [contract.go:31] select contract info
+2018/02/02 11:16:11 [I] [asm_amd64.s:514] [0xc042075a20]
+2018/02/02 11:16:23 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:16:23 [D] [contract.go:31] select contract info
+2018/02/02 11:16:23 [I] [asm_amd64.s:514] [0xc0422fc2c0]
+2018/02/02 11:19:07 [D] [init.go:163] connect to mysql succ
+2018/02/02 11:19:07 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 11:19:11 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 11:19:11 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 11:19:11 [D] [asset.go:33] select asset list info
+2018/02/02 11:19:12 [D] [asset.go:42] select idc list info
+2018/02/02 11:19:12 [I] [asm_amd64.s:514] [0xc04207b4a0]
+2018/02/02 11:19:13 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:19:13 [D] [contract.go:31] select contract info
+2018/02/02 11:19:13 [I] [asm_amd64.s:514] [0xc04207ba20]
+2018/02/02 11:19:20 [D] [update.go:126] update contract into database succ, id:[1]
+2018/02/02 11:19:20 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:19:20 [D] [contract.go:31] select contract info
+2018/02/02 11:19:20 [I] [asm_amd64.s:514] [0xc0422182c0]
+2018/02/02 11:19:37 [D] [update.go:126] update contract into database succ, id:[1]
+2018/02/02 11:19:37 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:19:37 [D] [contract.go:31] select contract info
+2018/02/02 11:19:37 [I] [asm_amd64.s:514] [0xc042218580]
+2018/02/02 11:19:57 [D] [update.go:126] update contract into database succ, id:[1]
+2018/02/02 11:19:57 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:19:57 [D] [contract.go:31] select contract info
+2018/02/02 11:19:57 [I] [asm_amd64.s:514] [0xc04207b970]
+2018/02/02 11:21:24 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:21:24 [D] [contract.go:31] select contract info
+2018/02/02 11:21:24 [I] [asm_amd64.s:514] [0xc04207a2c0]
+2018/02/02 11:21:39 [D] [update.go:126] update contract into database succ, id:[1]
+2018/02/02 11:21:39 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:21:39 [D] [contract.go:31] select contract info
+2018/02/02 11:21:39 [I] [asm_amd64.s:514] [0xc042218630]
+2018/02/02 11:22:30 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:22:30 [D] [contract.go:31] select contract info
+2018/02/02 11:22:30 [I] [asm_amd64.s:514] [0xc0420be420]
+2018/02/02 11:22:38 [D] [update.go:126] update contract into database succ, id:[1]
+2018/02/02 11:22:38 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:22:38 [D] [contract.go:31] select contract info
+2018/02/02 11:22:38 [I] [asm_amd64.s:514] [0xc0420beb00]
+2018/02/02 11:29:49 [D] [init.go:163] connect to mysql succ
+2018/02/02 11:29:49 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 11:29:54 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 11:29:54 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 11:29:54 [D] [asset.go:33] select asset list info
+2018/02/02 11:29:54 [D] [asset.go:42] select idc list info
+2018/02/02 11:29:54 [I] [asm_amd64.s:514] [0xc0420753f0]
+2018/02/02 11:29:56 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:29:56 [D] [contract.go:31] select contract info
+2018/02/02 11:29:56 [I] [asm_amd64.s:514] [0xc042302790]
+2018/02/02 11:31:17 [D] [init.go:163] connect to mysql succ
+2018/02/02 11:31:17 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/02 11:31:21 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/02 11:31:21 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/02 11:31:21 [D] [asset.go:33] select asset list info
+2018/02/02 11:31:21 [D] [asset.go:42] select idc list info
+2018/02/02 11:31:21 [I] [asm_amd64.s:514] [0xc0423d82c0]
+2018/02/02 11:31:22 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:31:22 [D] [contract.go:31] select contract info
+2018/02/02 11:31:23 [I] [asm_amd64.s:514] [0xc0421fc0b0]
+2018/02/02 11:31:26 [D] [del.go:38] delete contract succ, id:[1], num:[1]
+2018/02/02 11:31:26 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/02 11:31:26 [D] [contract.go:31] select contract info
+2018/02/02 11:31:26 [I] [asm_amd64.s:514] []

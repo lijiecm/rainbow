@@ -41,6 +41,30 @@ func (p *ContractModel)CreateContract(contract Contract)(err error){
 		logs.Warn("insert from mysql failed, err:%v", err)
 		return
 	}
-	logs.Debug("insert host into database succ, id:[%d]", id)
+	logs.Debug("insert contract into database succ, id:[%d]", id)
+	return
+}
+
+
+func (p *ContractModel)UpdateContract(contract Contract)(err error){
+
+	o := orm.NewOrm()
+	id, err := o.Update(&contract)
+	if err != nil {
+		logs.Error("update contract failed, err:%v", err)
+		return
+	}
+	logs.Debug("update contract into database succ, id:[%d]", id)
+	return
+}
+
+func (p *ContractModel)DelContract(contractId int)(err error){
+	o := orm.NewOrm()
+	num, err := o.Delete(&Contract{Id: contractId})
+	if err !=nil {
+		logs.Error("del contract failed, err:%v", err)
+		return
+	}
+	logs.Debug("delete contract succ, id:[%d], num:[%d]", contractId, num)
 	return
 }

@@ -78,10 +78,10 @@
                     <td><span class="label label-success label-mini">已生效</span></td>
                     {{end}}   
                     <td>
-                        <a class="host_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
+                        <a class="contract_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
                                 <i class="icon-edit" aria-hidden="true"></i>
                             </a>
-                        <a class="host_delete" style="display: inline;" href="javascript:void(0)" title="删除">
+                        <a class="delete_contract" style="display: inline;" href="javascript:void(0)" title="删除">
                             <i class="icon-remove" aria-hidden="true"></i>
                         </a>
                     </td>
@@ -188,44 +188,52 @@
     </div>
 </div>
         
-<div id="change_host_model" class="modal hide">
+<div id="change_contract_model" class="modal hide">
     <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button"></button>
         <h3>更新合同</h3>
     </div>
-    <div class="modal-body">
+    
+    <div class="modal-body" id="get_contract_info">
+        <div class="control-group">
+            <label class="control-label">Id:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_contract_id">
+            </div>
+        </div>
         <div class="control-group">
             <label class="control-label">供应商:<span class="required">*</span></label>
             <div class="controls">
-                <input type="text" class="span6 m-wrap" id="app_name">
+                <input type="text" class="span6 m-wrap" id="update_supplier_name">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">合同名称:<span class="required">*</span></label>
             <div class="controls">
-                <input type="text" class="span6 m-wrap" id="mechine_type">
+                <input type="text" class="span6 m-wrap" id="update_contract_name">
             </div>
         </div>
     
         <div class="control-group">
             <label class="control-label">合同编号:<span class="required">*</span></label>
             <div class="controls">
-                <input type="text" class="span6 m-wrap" id="host_oobip">
+                <input type="text" class="span6 m-wrap" id="update_contract_number">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">合同类型:<span class="required">*</span></label>
             <div class="controls">
-                <select class="span6 m-wrap" id="host_env">
-                    <option value="pref">新增合同</option>
-                    <option value="dev">续签合同</option>
+                <select class="span6 m-wrap" id="update_contract_type">
+                    <option value="add">新增合同</option>
+                    <option value="renew">续签合同</option>
                 </select>
             </div>
         </div>
+
         <div class="control-group">
             <label class="control-label">合同年限:<span class="required">*</span></label>
             <div class="controls">
-                <select class="span6 m-wrap" id="host_env">
+                <select class="span6 m-wrap" id="update_contract_years">
                     <option value="1">1年</option>
                     <option value="2">2年</option>
                     <option value="3">3年</option>
@@ -233,28 +241,37 @@
                 </select>
             </div>
         </div>
+       
+        <div class="control-group">
+                <label class="control-label">付款方式:<span class="required">*</span></label>
+                <div class="controls">
+                    <select class="span6 m-wrap" id="update_payment_style">
+                        <option value="月付">月付</option>
+                        <option value="季付">季付</option>
+                        <option value="年付">年付</option>
+                        <option value="合同金额付款">合同金额付款</option>
+                    </select>
+                </div>
+            </div>
 
         <div class="control-group">
-            <label class="control-label">付款方式:<span class="required">*</span></label>
+            <label class="control-label">服务类型:<span class="required">*</span></label>
             <div class="controls">
-                <select class="span6 m-wrap" id="host_env">
-                    <option value="1">月付</option>
-                    <option value="2">季付</option>
-                    <option value="3">年付</option>
-                    <option value="5">合同金额付款</option>
-                </select>
+                <input type="text" class="span6 m-wrap" id="update_contract_server">
             </div>
         </div>
 
         <div class="control-group">
-            <label class="control-label">状态:<span class="required">*</span></label>
-            <div class="controls">
-                <select class="span6 m-wrap" id="status">
-                    <option value="buffer">已生效</option>
-                    <option value="offline">未生效</option>
-                </select>
+                <label class="control-label">状态:<span class="required">*</span></label>
+                <div class="controls">
+                    <select class="span6 m-wrap" id="update_status">
+                        <option value="0">已生效</option>
+                        <option value="1">未生效</option>
+                    </select>
+                </div>
             </div>
-        </div>
+
+        
         <div class="control-group">
             <label class="control-label">合同签订时间:<span class="required">*</span></label>
             <div class="controls">
@@ -274,7 +291,7 @@
 
 
 <script>
-     $('#contract_sign_time').datetimepicker({
+    $('#contract_sign_time').datetimepicker({
         //minView: "month", //选择日期后，不会再跳转去选择时分秒
         minView: "month",
         language:  'zh-CN',
@@ -289,5 +306,22 @@
         todayBtn:  1,
         autoclose: 1
     });
+
+    $('#update_contract_sign_time').datetimepicker({
+        //minView: "month", //选择日期后，不会再跳转去选择时分秒
+        minView: "month",
+        language:  'zh-CN',
+        todayBtn:  1,
+        autoclose: 1
+    });
+
+    $('#update_contract_expiration_time').datetimepicker({
+        //minView: "month", //选择日期后，不会再跳转去选择时分秒
+        minView: "month",
+        language:  'zh-CN',
+        todayBtn:  1,
+        autoclose: 1
+    });
+
 
 </script>
