@@ -2645,3 +2645,44 @@ created by net/http.(*Server).Serve
 2018/02/05 13:26:53 [D] [update.go:80] update host into database succ, id:[1]
 2018/02/05 13:26:53 [D] [asm_amd64.s:514] enter get host role controller
 2018/02/05 13:26:53 [I] [asm_amd64.s:514] =====>, [0xc0420ea700 0xc0420ea7e0]
+2018/02/05 13:52:05 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 13:52:05 [I] [asm_amd64.s:514] =====>, [0xc0420c41c0 0xc0420c42a0]
+2018/02/05 13:52:07 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 13:52:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 13:52:52 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 13:52:52 [I] [asm_amd64.s:514] =====>, [0xc042142770 0xc042142850]
+2018/02/05 13:58:43 [D] [init.go:163] connect to mysql succ
+2018/02/05 13:58:44 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/05 13:58:47 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/05 13:58:47 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/05 13:58:47 [D] [asset.go:33] select asset list info
+2018/02/05 13:58:47 [D] [asset.go:42] select idc list info
+2018/02/05 13:58:47 [I] [asm_amd64.s:514] [0xc042158210]
+2018/02/05 13:58:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 13:58:49 [I] [asm_amd64.s:514] =====>, [0xc0420d03f0 0xc0420d04d0]
+2018/02/05 14:00:57 [D] [init.go:163] connect to mysql succ
+2018/02/05 14:00:57 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/05 14:00:59 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/05 14:00:59 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/05 14:01:00 [D] [asset.go:33] select asset list info
+2018/02/05 14:01:00 [D] [asset.go:42] select idc list info
+2018/02/05 14:01:00 [I] [asm_amd64.s:514] [0xc0422b6210]
+2018/02/05 14:01:01 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:01:01 [I] [asm_amd64.s:514] =====>, [0xc0420d83f0 0xc0420d85b0]
+2018/02/05 14:01:56 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:01:56 [I] [asm_amd64.s:514] =====>, [0xc0420d8380 0xc0420d8540]
+2018/02/05 14:02:00 [D] [del.go:37] delete relayauth succ, id:[7], num:[1]
+2018/02/05 14:02:00 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:02:00 [I] [asm_amd64.s:514] =====>, [0xc0420e2700]
+2018/02/05 14:02:10 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:06:15 [D] [init.go:163] connect to mysql succ
+2018/02/05 14:06:15 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/05 14:06:19 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/05 14:06:20 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/05 14:06:20 [D] [asset.go:33] select asset list info
+2018/02/05 14:06:20 [D] [asset.go:42] select idc list info
+2018/02/05 14:06:20 [I] [asm_amd64.s:514] [0xc042089600]
+2018/02/05 14:06:23 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:07:05 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:07:09 [D] [del.go:80] delete relayrole succ, id:[10], num:[1]
+2018/02/05 14:07:09 [D] [asm_amd64.s:514] enter get host role controller

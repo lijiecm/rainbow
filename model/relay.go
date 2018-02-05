@@ -137,6 +137,17 @@ func (p *RelayModel)UpdatelayRole(relayAuth RelayAuth)(err error){
 }
 
 
+func (p *RelayModel)DelRelay(relayId int)(err error){
+	o := orm.NewOrm()
+	num, err := o.Delete(&RelayAuth{Id: relayId})
+	if err !=nil {
+		logs.Error("del relayauth failed, err:%v", err)
+		return
+	}
+	logs.Debug("delete relayauth succ, id:[%d], num:[%d]", relayId, num)
+	return
+}
+
 func (p *RelayModel)AddRelayAuth(relayAuth RelayAuth)(err error){
 
 	o := orm.NewOrm()
@@ -161,5 +172,16 @@ func (p *RelayModel)GetRelayAuthById(relayId int)(relayAuth []*RelayAuth, err er
 		return
 	}
 
+	return
+}
+
+func (p *RelayModel)DelHostRole(roleId int)(err error){
+	o := orm.NewOrm()
+	num, err := o.Delete(&RelayRole{Id: roleId})
+	if err !=nil {
+		logs.Error("del relayrole failed, err:%v", err)
+		return
+	}
+	logs.Debug("delete relayrole succ, id:[%d], num:[%d]", roleId, num)
 	return
 }

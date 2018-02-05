@@ -50,6 +50,26 @@ $(function(){
             "json"
         );
     })
+
+
+    $(".relay_delete").click(function(){
+        //$("#loading").show();
+        
+        var del_relay=confirm("你确定要删除授权记录吗？");  
+        if (del_relay == true) {
+            var relay_id = $(this).parent().parent().children("td:eq(0)").html();
+            $.post("/relay/delrole", {relay_id:relay_id},
+                function(data){
+                    if ( data.success == "true" ){
+                        window.location.href="/relay/host";  
+                    }else{
+                        alert(data.message)
+                    }
+                },
+                "json"
+            );
+        } 
+    });
     
 });
 
@@ -88,4 +108,24 @@ $(function(){
         location.href = new_url;
 
     })
+
+
+    $(".role_delete").click(function(){
+        //$("#loading").show();
+        
+        var del_role=confirm("你确定要删除主机角色吗？");  
+        if (del_role == true) {
+            var role_id = $(this).parent().parent().children("td:eq(0)").html();
+            $.post("/relay/delhostrole", {role_id:role_id},
+                function(data){
+                    if ( data.success == "true" ){
+                        window.location.href="/relay/role";  
+                    }else{
+                        alert(data.message)
+                    }
+                },
+                "json"
+            );
+        } 
+    });
 });
