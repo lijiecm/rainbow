@@ -62,10 +62,10 @@
                     <td>
                         <!--i>堡垒机</i-->
             
-                        <a class="role_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
+                        <a class="relay_edit" style="display: inline;" href="javascript:void(0)" title="编辑">
                                 <i class="icon-edit" aria-hidden="true"></i>
                             </a>
-                        <a class="role_delete" style="display: inline;" href="javascript:void(0)" title="删除">
+                        <a class="relay_delete" style="display: inline;" href="javascript:void(0)" title="删除">
                             <i class="icon-remove" aria-hidden="true"></i>
                         </a>
                     </td>
@@ -127,5 +127,39 @@
         </div>
        
         <button class="btn btn-default" id="add_role_button">授权</button>
+    </div>
+</div>
+
+
+<div id="change_relay_model" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>权限更改</h3>
+    </div>
+    <div class="modal-body" id="get_relay_info">
+        <div class="control-group">
+            <label class="control-label">Id:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="update_relay_id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">IP:<span class="required">*</span></label>
+            <div class="controls">
+                <input type="text" class="span6 m-wrap" id="upate_ip">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">角色:<span class="required">*</span></label>
+            <div class="controls">
+                <select class="span6 m-wrap" id="update_role">
+                    {{range .role_list}}
+                        <option value={{.Role}}>{{.Role}}</option>
+                    {{end}}
+                </select>
+            </div>
+        </div>
+       
+        <button class="btn btn-default" id="update_role_button">更改权限</button>
     </div>
 </div>

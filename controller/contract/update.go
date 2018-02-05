@@ -136,7 +136,6 @@ func (p *ContractController) UpdateContract(){
 }
 
 
-
 func (p *ContractController) UpdateOrder(){
 	errorMsg := "success"
 	
@@ -242,8 +241,8 @@ func (p *ContractController) UpdateOrder(){
 
 	err = contractModel.UpdateOrder(hardwareOrder)
 	if err != nil {
-		err = fmt.Errorf("更新合同失败:%v", err)
-		errorMsg = "更新合同失败"  
+		err = fmt.Errorf("更新订单失败:%v", err)
+		errorMsg = "更新订单失败"  
 	   	logs.Warn(err.Error())
 	   	return
 	}

@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
-	//"fmt"
+	"fmt"
 )
 
 type RelayHost struct {
@@ -71,8 +71,6 @@ func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayHostRole,
 		_, err = o.Raw("select rr.id,h.hostname,h.ip,rr.role from host h, relay_role rr where h.id = rr.host_id;").QueryRows(&roleList)
 		} else {
 		_, err = o.Raw("select rr.id,h.hostname,h.ip,rr.role from host h, relay_role rr where h.id = rr.host_id and rr.host_id = ?;",host_id).QueryRows(&roleList)
-
-	
 	}
 	
 	if len(roleList) == 0 {
@@ -82,6 +80,24 @@ func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayHostRole,
 
 	return
 }
+
+
+func (p *RelayModel)GetRoleIdByHostAndId(ip, role string)(roleIdMap []orm.Params,err error){
+
+	o := orm.NewOrm()
+	num, err := o.Raw("select rr.id from host h, relay_role rr where h.id = rr.host_id and h.ip = ? and rr.role = ? limit 1;",ip,role).Values(&roleIdMap)
+	
+	if err != nil  || int(num) == 0{
+		err = fmt.Errorf("get role id from ip[%s], role[%s] failed,", ip,role)
+		logs.Error("get role id from ip[%s], role[%s] failed,", ip,role)
+		return
+	}
+
+	logs.Info("====:%d=====",num)
+
+	return
+}
+
 
 func (p *RelayModel)GetRoleIdByRoleAndIp(host_id int,role string)(relayRole []*RelayRole,err error){
 
@@ -108,6 +124,19 @@ func (p *RelayModel)AddRelayRole(relayRole RelayRole)(err error){
 	return
 }
 
+func (p *RelayModel)UpdatelayRole(relayAuth RelayAuth)(err error){
+
+	o := orm.NewOrm()
+	id, err := o.Update(&relayAuth)
+	if err != nil {
+		logs.Warn("update host from mysql failed, err:%v", err)
+		return
+	}
+	logs.Debug("update host into database succ, id:[%d]", id)
+	return
+}
+
+
 func (p *RelayModel)AddRelayAuth(relayAuth RelayAuth)(err error){
 
 	o := orm.NewOrm()
@@ -118,5 +147,19 @@ func (p *RelayModel)AddRelayAuth(relayAuth RelayAuth)(err error){
 	}
 
 	logs.Debug("insert role[%s] into database succ", relayAuth)
+	return
+}
+
+func (p *RelayModel)GetRelayAuthById(relayId int)(relayAuth []*RelayAuth, err error){
+
+	o := orm.NewOrm()
+	qs := o.QueryTable("relay_auth")
+	qs.Filter("id",relayId).All(&relayAuth)
+
+	if len(relayAuth) == 0 {
+		logs.Error("relay_id[%d] is not exists", relayId)
+		return
+	}
+
 	return
 }
