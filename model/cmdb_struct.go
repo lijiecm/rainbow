@@ -173,12 +173,12 @@ type EquipmentSn struct {
 }
 
 type OperaLog struct {
-	OperaLogId int `db:"id"`
-	HostType string `db:"host_type"`
-	HostId int `db:"host_id"`
-	LogType string `db:"log_type"`
-	LogInfo string `db:"log_info"`
-	OperaUser string `db:"opera_user"`
+	Id int
+	HostType string `orm:"size(128)"`
+	HostId int `orm:"default(0)"`
+	LogType string `orm:"size(128)"`
+	LogInfo string `orm:"type(longtext)"`
+	OperaUser string `orm:"size(64)"`
 }
 
 

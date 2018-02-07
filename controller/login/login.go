@@ -37,7 +37,7 @@ func (this *LoginViewController) Get() {
 func (this *LoginController) DoLogin() {
 	username := this.GetString("username")
 	password := this.GetString("password")
-	logs.Debug("======> username[%s], password[%s]",username,password)
+	//logs.Debug("======> username[%s], password[%s]",username,password)
 	if username == "" || password == "" {
 		this.ResponseErrorCode(tools.ParameterError, http.StatusBadRequest, "")
 	}

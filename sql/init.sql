@@ -159,5 +159,14 @@ CREATE TABLE `equipment_sn` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `opera_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `host_type` varchar(64) NOT NULL,
+  `host_id` int(11) DEFAULT '0',  
+  `log_type` varchar(128) NOT NULL,
+  `log_info` longtext NOT NULL,
+  `opera_user` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT INTO users ("username", "password", frozen) VALUES ("root", "25d55ad283aa400af464c76d713c07ad", 0)

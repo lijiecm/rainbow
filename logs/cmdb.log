@@ -2686,3 +2686,40 @@ created by net/http.(*Server).Serve
 2018/02/05 14:07:05 [D] [asm_amd64.s:514] enter get host role controller
 2018/02/05 14:07:09 [D] [del.go:80] delete relayrole succ, id:[10], num:[1]
 2018/02/05 14:07:09 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:31:22 [D] [asm_amd64.s:514] enter idclist controller
+2018/02/05 14:31:22 [D] [asset.go:73] select idc list info
+2018/02/05 14:31:27 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/05 14:31:27 [D] [contract.go:31] select contract info
+2018/02/05 14:31:27 [I] [asm_amd64.s:514] []
+2018/02/05 14:31:30 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:31:30 [I] [asm_amd64.s:514] =====>, [0xc0421ee2a0]
+2018/02/05 14:39:46 [D] [asm_amd64.s:514] enter net manage controller
+2018/02/05 14:39:46 [D] [net.go:24] select idc list info
+2018/02/05 14:39:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:39:49 [I] [asm_amd64.s:514] =====>, [0xc0420dc380]
+2018/02/05 14:39:50 [D] [asm_amd64.s:514] enter net manage controller
+2018/02/05 14:39:50 [D] [net.go:24] select idc list info
+2018/02/05 14:39:52 [D] [asm_amd64.s:514] enter net manage controller
+2018/02/05 14:39:52 [D] [net.go:24] select idc list info
+2018/02/05 14:39:55 [D] [asm_amd64.s:514] enter confmanage controller
+2018/02/05 14:39:55 [D] [asset.go:102] select conf list info
+2018/02/05 14:40:19 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:40:19 [I] [asm_amd64.s:514] =====>, [0xc0421402a0]
+2018/02/05 14:40:22 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:40:42 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:40:47 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 14:40:49 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 16:00:41 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/05 16:00:41 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/05 16:00:41 [D] [asset.go:33] select asset list info
+2018/02/05 16:00:41 [D] [asset.go:42] select idc list info
+2018/02/05 16:00:41 [I] [asm_amd64.s:514] [0xc0420898c0]
+2018/02/05 16:00:48 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 16:00:48 [I] [asm_amd64.s:514] =====>, [0xc0420ea460]
+2018/02/05 16:00:51 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 16:00:53 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 16:00:53 [I] [asm_amd64.s:514] =====>, [0xc0420ea7e0]
+2018/02/05 16:03:37 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/05 16:03:37 [I] [asm_amd64.s:514] =====>, [0xc0421402a0]
+2018/02/05 16:04:31 [D] [asm_amd64.s:514] enter idclist controller
+2018/02/05 16:04:31 [D] [asset.go:73] select idc list info

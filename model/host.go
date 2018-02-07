@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"fmt"
 )
 
 type HostModel struct {
@@ -39,6 +40,7 @@ func (p *HostModel)GetHostByIp(ip string)(host []*Host, err error){
 	qs.Filter("ip",ip).All(&host)
 
 	if len(host) == 0 {
+		err =  fmt.Errorf("host_ip[%s] is not exists", ip)
 		logs.Error("host_ip[%s] is not exists", ip)
 		return
 	}

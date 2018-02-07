@@ -23,7 +23,6 @@ type RelayHostRole struct {
 	Role string 
 }
 
-
 type RelayModel struct {
 }
 
@@ -81,7 +80,6 @@ func (p *RelayModel)GetRelayRoleByHostId(host_id int)(roleList []*RelayHostRole,
 	return
 }
 
-
 func (p *RelayModel)GetRoleIdByHostAndId(ip, role string)(roleIdMap []orm.Params,err error){
 
 	o := orm.NewOrm()
@@ -93,11 +91,8 @@ func (p *RelayModel)GetRoleIdByHostAndId(ip, role string)(roleIdMap []orm.Params
 		return
 	}
 
-	logs.Info("====:%d=====",num)
-
 	return
 }
-
 
 func (p *RelayModel)GetRoleIdByRoleAndIp(host_id int,role string)(relayRole []*RelayRole,err error){
 
@@ -183,5 +178,19 @@ func (p *RelayModel)DelHostRole(roleId int)(err error){
 		return
 	}
 	logs.Debug("delete relayrole succ, id:[%d], num:[%d]", roleId, num)
+	return
+}
+
+
+func (p *RelayModel)AddOperaLog(operaLog OperaLog)(err error){
+
+	o := orm.NewOrm()
+	_, err = o.Insert(&operaLog)
+	if err != nil {
+		logs.Warn("insert from mysql failed, err:%v", err)
+		return
+	}
+
+	logs.Debug("insert operalog[%s] into database succ", operaLog)
 	return
 }
