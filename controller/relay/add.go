@@ -200,8 +200,11 @@ func (p *RelayController) AddRelayAuth(){
 	logs.Debug("%d",days)
 
 	//days需要创建一个start_time为当前时间，并且将当前时间加上days为授权结束时间
-	start_time := "aaa"
-	end_time := "bbb"
+	nowTime := time.Now()
+    t := nowTime.String()
+	start_time := t[:19]
+	dt := nowTime.AddDate(0,0,days)
+	end_time := dt.String()[:19]
 
 	relayAuth.Username = username
 	relayAuth.RoleId = role_id
