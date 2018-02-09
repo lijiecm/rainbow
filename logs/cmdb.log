@@ -2754,3 +2754,12 @@ created by net/http.(*Server).Serve
 2018/02/09 14:28:13 [D] [asset.go:33] select asset list info
 2018/02/09 14:28:13 [D] [asset.go:42] select idc list info
 2018/02/09 14:28:13 [I] [asm_amd64.s:514] [0xc042262370]
+2018/02/09 15:39:16 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 15:39:16 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/09 15:39:16 [D] [asset.go:33] select asset list info
+2018/02/09 15:39:16 [D] [asset.go:42] select idc list info
+2018/02/09 15:39:16 [I] [asm_amd64.s:514] [0xc04236a210]
+2018/02/09 15:39:18 [D] [asm_amd64.s:514] enter idclist controller
+2018/02/09 15:39:18 [D] [asset.go:73] select idc list info
+2018/02/09 15:39:20 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/09 15:39:20 [I] [asm_amd64.s:514] =====>, [0xc04200c230]
