@@ -2723,3 +2723,34 @@ created by net/http.(*Server).Serve
 2018/02/05 16:03:37 [I] [asm_amd64.s:514] =====>, [0xc0421402a0]
 2018/02/05 16:04:31 [D] [asm_amd64.s:514] enter idclist controller
 2018/02/05 16:04:31 [D] [asset.go:73] select idc list info
+2018/02/09 09:24:27 [D] [init.go:163] connect to mysql succ
+2018/02/09 09:24:28 [I] [asm_amd64.s:2197] http server Running on http://0.0.0.0:9090
+2018/02/09 09:24:34 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 09:24:35 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/09 09:24:35 [D] [asset.go:33] select asset list info
+2018/02/09 09:24:35 [D] [asset.go:42] select idc list info
+2018/02/09 09:24:35 [I] [asm_amd64.s:514] [0xc042099080]
+2018/02/09 09:24:37 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/09 09:24:37 [I] [asm_amd64.s:514] =====>, [0xc04200c2a0]
+2018/02/09 09:24:41 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/09 09:24:53 [D] [asm_amd64.s:514] enter net manage controller
+2018/02/09 09:24:53 [D] [net.go:24] select idc list info
+2018/02/09 09:24:56 [D] [asm_amd64.s:514] enter get host role controller
+2018/02/09 09:24:56 [I] [asm_amd64.s:514] =====>, [0xc0420e8a10]
+2018/02/09 14:27:58 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:00 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:00 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:00 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:01 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:01 [D] [asm_amd64.s:514] ======> username[root], password[12345678]
+2018/02/09 14:28:01 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/09 14:28:01 [D] [asset.go:33] select asset list info
+2018/02/09 14:28:01 [D] [asset.go:42] select idc list info
+2018/02/09 14:28:01 [I] [asm_amd64.s:514] [0xc042099b80]
+2018/02/09 14:28:06 [D] [asm_amd64.s:514] enter contractlist controller
+2018/02/09 14:28:06 [D] [contract.go:31] select contract info
+2018/02/09 14:28:06 [I] [asm_amd64.s:514] []
+2018/02/09 14:28:13 [D] [asm_amd64.s:514] enter assetlist controller
+2018/02/09 14:28:13 [D] [asset.go:33] select asset list info
+2018/02/09 14:28:13 [D] [asset.go:42] select idc list info
+2018/02/09 14:28:13 [I] [asm_amd64.s:514] [0xc042262370]
